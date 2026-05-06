@@ -21,26 +21,26 @@ const Home: React.FC = () => {
         <HeroBackground />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <FadeIn className="relative">
-            {/* Aura Glow Effect */}
+            {/* Nidam Glow Effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-tr from-accentSecondary/40 via-accentPrimary/30 to-blue-600/20 blur-[100px] md:blur-[140px] rounded-full pointer-events-none -z-10 mix-blend-screen" />
 
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-md hover:bg-textPrimary/10 transition-colors cursor-default relative z-10">
               <span className="w-2 h-2 rounded-full bg-accentSecondary animate-pulse" />
-              <span className="text-xs font-medium tracking-wider uppercase text-accentSecondary" style={{ fontFamily: "'Sora', sans-serif" }}>Aura Web Agency</span>
+              <span className="text-xs font-medium tracking-wider uppercase text-accentSecondary" style={{ fontFamily: "'Sora', sans-serif" }}>Digital Systems Agency</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-[clamp(2.25rem,5vw+1rem,4.5rem)] font-bold mb-6 leading-[1.1] tracking-tight relative z-10" style={{ fontFamily: "'Sora', sans-serif" }}>
-              Professional Websites Built <br className="hidden md:block" />
+              We Don't Build Websites. <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPrimary via-accentSecondary to-accentPrimary bg-[length:200%_auto] animate-shimmer">
-                for Real Businesses.
+                We Build Client Systems.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-textSecondary max-w-2xl mx-auto mb-8 leading-relaxed relative z-10">
-              Launch a clean, modern website for your business. Choose from our catalog or describe your idea — Aura builds it fast and professionally.
+              A high-performance website. Automated lead capture. WhatsApp follow-up. All connected into one system that moves people from their first click to becoming your client.
             </p>
 
             {/* CTAs */}
@@ -48,23 +48,23 @@ const Home: React.FC = () => {
               <div className="relative group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 pointer-events-none" />
                 <Button to="/contact" variant="primary" className="relative w-full px-8 py-3.5 text-sm font-semibold tracking-wide flex justify-center">
-                  Start Your Website Project
+                  Build My Client System
                 </Button>
               </div>
-              <Button to="/catalog" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-textPrimary/40 flex justify-center">
-                View Website Catalog
+              <Button to="/case-studies/othman-tours" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-textPrimary/40 flex justify-center">
+                See a Real Result
               </Button>
             </div>
 
-            {/* Trust indicators */}
+            {/* Trust line */}
             <div className="flex flex-col items-center justify-center gap-3 text-xs text-textSecondary font-medium relative z-10">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10">
-                <Shield size={14} className="text-accentSecondary" /> Trusted by growing small businesses.
+                <Shield size={14} className="text-accentSecondary" /> Trusted by service businesses ready to grow — not just go online.
               </div>
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-2">
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 40+ websites launched</span>
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 100% client satisfaction</span>
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Fast delivery</span>
+                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 40+ systems deployed</span>
+                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> From first click to signed client</span>
+                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Results in 7 days</span>
               </div>
             </div>
           </FadeIn>
@@ -79,17 +79,90 @@ const Home: React.FC = () => {
       </div>
 
       {/* ============================================================
-          FEATURES
+          THE PROBLEM
+      ============================================================ */}
+      <Section className="bg-bgSecondary border-y border-textPrimary/5">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <FadeIn className="text-center mb-16">
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">The Real Issue</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+              You Don't Have a Traffic Problem.{' '}
+              <span className="text-textSecondary font-light">You Have a Flow Problem.</span>
+            </h2>
+          </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-textPrimary/5 rounded-2xl overflow-hidden border border-textPrimary/5 mb-16">
+              {[
+                {
+                  number: '01',
+                  title: 'They find you.',
+                  body: "Someone searches, sees your ad, or gets a referral. They land on your website. That's the moment — and most businesses waste it.",
+                  color: 'text-accentSecondary',
+                  glow: 'from-accentSecondary/10',
+                },
+                {
+                  number: '02',
+                  title: 'Nothing captures them.',
+                  body: "No clear next step. No offer. No form. They read a bit, get confused, and leave. They don't come back. You never knew they were there.",
+                  color: 'text-accentPrimary',
+                  glow: 'from-accentPrimary/10',
+                },
+                {
+                  number: '03',
+                  title: 'The silence costs you.',
+                  body: 'No follow-up. No message. No system. That lead went cold — and probably hired someone else who had a process ready.',
+                  color: 'text-red-400',
+                  glow: 'from-red-500/10',
+                },
+              ].map((step, i) => (
+                <div key={i} className={`bg-bgSecondary p-8 md:p-10 relative group hover:bg-bgPrimary/60 transition-colors duration-300`}>
+                  <div className={`absolute inset-0 bg-gradient-to-b ${step.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+                  <div className={`text-5xl font-serif font-bold mb-4 opacity-15 ${step.color} relative z-10`}>{step.number}</div>
+                  <h3 className={`text-lg font-semibold mb-3 ${step.color} relative z-10`}>{step.title}</h3>
+                  <p className="text-textSecondary text-sm leading-relaxed relative z-10">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={200}>
+            <div className="max-w-2xl mx-auto text-center space-y-6">
+              <p className="text-textSecondary text-base md:text-lg leading-relaxed">
+                Most businesses spend money on ads, social media, or word of mouth — and then send people to a website that doesn't do anything. No structure. No clear path. No follow-up. The visitors arrive and disappear.
+              </p>
+              <p className="text-textSecondary text-base md:text-lg leading-relaxed">
+                It's not that people aren't interested. It's that there's nothing pulling them forward. Every day without a system is another day of invisible, silent revenue loss.
+              </p>
+              <p className="text-textPrimary text-base md:text-lg leading-relaxed font-medium">
+                That's exactly what we fix.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
+      {/* ============================================================
+          FEATURES — SYSTEM PILLARS
       ============================================================ */}
       <Section className="bg-bgPrimary">
         <div className="container mx-auto px-6">
-          <FadeIn>
+          <FadeIn className="text-center mb-12">
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">What We Actually Build</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-3">
+              Not a Website. A Complete Client System.
+            </h2>
+            <p className="text-textSecondary text-sm max-w-xl mx-auto leading-relaxed">
+              Every business we work with gets a connected system — designed to attract, capture, follow up, and convert. Automatically.
+            </p>
+          </FadeIn>
+          <FadeIn delay={100}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: Layers, title: 'Catalog or Custom', desc: 'Choose a beautiful layout from our catalog or describe your unique idea.' },
-                { icon: Cpu, title: 'Full Build & Delivery', desc: 'We build your website fast, handling both front-end design and back-end logic.' },
-                { icon: Shield, title: 'Monthly Checks & Fixes', desc: 'We offer reliable monthly website checks and handle any immediate fixes required.' },
-                { icon: Code, title: 'You Own the Code', desc: 'You maintain 100% ownership of your website and assets forever. No lock-ins.' },
+                { icon: TrendingUp, title: 'Visitor-to-Lead Flow', desc: 'Your website is structured around a single goal: turning every visitor into a qualified lead. Clear path. Clear action. No guessing.' },
+                { icon: Zap, title: 'Instant Lead Capture', desc: 'Smart forms and WhatsApp triggers fire the moment someone shows interest — so no lead goes cold before you even see it.' },
+                { icon: BarChart3, title: 'Automated Follow-Up', desc: 'Your system sends the right message at the right moment. Prospects hear from you instantly, without any manual effort on your side.' },
+                { icon: Rocket, title: 'Built to Scale', desc: 'As your business grows, your system grows with it. Every piece is connected, optimized monthly, and built to perform long-term.' },
               ].map((feature, i) => (
                 <Card key={i} className="group">
                   <div className="w-12 h-12 rounded-lg bg-surface flex items-center justify-center mb-6 group-hover:bg-accentPrimary/20 transition-colors">
@@ -105,35 +178,52 @@ const Home: React.FC = () => {
       </Section>
 
       {/* ============================================================
-          SOCIAL PROOF — METRICS + TESTIMONIALS
+          SYSTEM PHILOSOPHY
       ============================================================ */}
       <Section className="bg-bgSecondary/40 border-y border-textPrimary/5">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">A Calm, Reliable Partner</p>
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">How We Think</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold">
-              Trusted by Small Businesses.<br />
-              <span className="text-textSecondary font-light text-3xl md:text-4xl">Built for Growth.</span>
+              Built on Clarity.<br />
+              <span className="text-textSecondary font-light text-3xl md:text-4xl">Designed for Results.</span>
             </h2>
+            <p className="text-textSecondary text-base max-w-xl mx-auto mt-6 leading-relaxed">
+              We don't build for aesthetics alone. Every decision — structure, message, flow — is made to move your visitor one step closer to becoming a client.
+            </p>
           </FadeIn>
 
-          {/* Stats */}
+          {/* Philosophy Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {[
-              { value: '40+', label: 'Local Businesses', sub: 'shifted online seamlessly', icon: Users, color: 'text-accentPrimary' },
-              { value: '100%', label: 'Code Ownership', sub: 'you own your website fully', icon: Code, color: 'text-accentSecondary' },
-              { value: '24/7', label: 'Monitor & Fix', sub: 'monthly maintenance checks', icon: Shield, color: 'text-accentLuxury' },
-            ].map((stat, i) => (
+              {
+                icon: Layers,
+                color: 'text-accentPrimary',
+                title: 'Structure Before Design',
+                desc: 'A beautiful website that confuses visitors is just an expensive mistake. We map the client journey first — then build around it.',
+              },
+              {
+                icon: Zap,
+                color: 'text-accentSecondary',
+                title: 'Every Touchpoint Is Intentional',
+                desc: 'From the first headline to the final follow-up message, each moment is designed to reduce friction and deepen trust.',
+              },
+              {
+                icon: Globe,
+                color: 'text-accentLuxury',
+                title: 'Systems That Work Without You',
+                desc: 'The best client systems run quietly in the background. Leads arrive, inquiries are captured, and conversations begin — while you focus on your work.',
+              },
+            ].map((card, i) => (
               <FadeIn key={i} delay={i * 100}>
-                <div className="bg-surface/40 border border-textPrimary/5 rounded-2xl p-8 text-center hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out">
-                  <div className="flex justify-center mb-4">
+                <div className="bg-surface/40 border border-textPrimary/5 rounded-2xl p-8 text-center hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out h-full flex flex-col items-center">
+                  <div className="flex justify-center mb-5">
                     <div className="w-10 h-10 rounded-full bg-textPrimary/5 flex items-center justify-center">
-                      <stat.icon size={18} className={stat.color} />
+                      <card.icon size={18} className={card.color} />
                     </div>
                   </div>
-                  <div className={`text-4xl md:text-5xl font-serif font-bold mb-2 ${stat.color}`}>{stat.value}</div>
-                  <p className="text-textPrimary font-medium text-sm mb-1">{stat.label}</p>
-                  <p className="text-textSecondary text-xs">{stat.sub}</p>
+                  <p className={`text-sm font-bold uppercase tracking-widest mb-3 ${card.color}`}>{card.title}</p>
+                  <p className="text-textSecondary text-sm leading-relaxed">{card.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -142,9 +232,9 @@ const Home: React.FC = () => {
           {/* Testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { quote: "Aura made getting our clinic online completely stress-free. We chose a beautiful layout from their catalog, and within days, we had a fully functional site we completely own.", name: 'Sarah M.', role: 'Owner', company: 'Wellness Clinic', initials: 'SM' },
-              { quote: "Having peace of mind knowing Aura handles our monthly website checks and fixes is invaluable. They are calm, professional, and reliably deliver exactly what we need.", name: 'David T.', role: 'Director', company: 'Local Accounting', initials: 'DT' },
-              { quote: "We had a custom idea for our bakery's ordering system. Aura built the front-end and back-end flawlessly. Excellent communication and a truly premium service.", name: 'Elena R.', role: 'Founder', company: 'Artisan Bakes', initials: 'ER' },
+              { quote: "Nidam made getting our clinic online completely stress-free. We chose a beautiful layout from their catalog, and within days, we had a fully functional site we completely own.", name: 'Sarah M.', role: 'Owner', company: 'Wellness Clinic', initials: 'SM' },
+              { quote: "Having peace of mind knowing Nidam handles our monthly website checks and fixes is invaluable. They are calm, professional, and reliably deliver exactly what we need.", name: 'David T.', role: 'Director', company: 'Local Accounting', initials: 'DT' },
+              { quote: "We had a custom idea for our bakery's ordering system. Nidam built the front-end and back-end flawlessly. Excellent communication and a truly premium service.", name: 'Elena R.', role: 'Founder', company: 'Artisan Bakes', initials: 'ER' },
             ].map((t, i) => (
               <FadeIn key={i} delay={i * 100}>
                 <div className="bg-gradient-to-br from-surface to-bgSecondary p-8 rounded-2xl border border-textPrimary/5 relative hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out flex flex-col h-full">
@@ -174,7 +264,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Real Projects. Real Business Results.</h2>
-            <p className="text-textSecondary text-lg max-w-2xl mx-auto">Explore how AURA turns business ideas into clean, modern, conversion-focused websites.</p>
+            <p className="text-textSecondary text-lg max-w-2xl mx-auto">Explore how NIDAM turns business ideas into clean, modern, conversion-focused websites.</p>
           </FadeIn>
           
           <FadeIn delay={100}>
@@ -227,7 +317,7 @@ const Home: React.FC = () => {
               
               <div className="relative z-10">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-accentPrimary/10 border border-accentPrimary/20 text-accentPrimary text-xs font-bold uppercase tracking-wider mb-6">
-                  AURA INTELLIGENCE V2.0 IS LIVE
+                  NIDAM INTELLIGENCE V2.0 IS LIVE
                 </div>
                 <h3 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-textPrimary to-textSecondary">
                   The Next Generation of Web Architecture
@@ -253,52 +343,111 @@ const Home: React.FC = () => {
       </Section>
 
       {/* ============================================================
-          HOW AURA WORKS
+          HOW WE WORK — CLARIFY → CAPTURE → CONNECT → CONVERT
       ============================================================ */}
       <Section className="bg-bgSecondary border-y border-textPrimary/5">
         <div className="container mx-auto px-6">
-          <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentPrimary mb-4">The Process</p>
-            <h2 className="text-4xl font-serif font-bold mb-4">How Aura Works</h2>
-            <p className="text-textSecondary">A simple, transparent path to launching your business online.</p>
+
+          <FadeIn className="text-center mb-6">
+            <p className="text-xs uppercase tracking-widest text-accentPrimary mb-4">Our Method</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">How We Work</h2>
+            <p className="text-textSecondary text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              We don't just hand you a website and disappear. We build a structured system around your business — one that guides every visitor through a clear path until they become a paying client.
+            </p>
           </FadeIn>
 
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="absolute top-1/2 left-0 w-full h-px bg-textPrimary/10 -translate-y-1/2 hidden md:block" />
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {[
-                {
-                  step: '01', title: 'Select or Envision',
-                  desc: 'Select a proven layout from our catalog or share your unique vision with us on a free call.',
-                  detail: 'Step 1 · Free Consultation',
-                  color: 'text-accentSecondary', border: 'border-accentSecondary/30',
-                },
-                {
-                  step: '02', title: 'Professional Build',
-                  desc: 'We develop your complete website quickly, handling all design, front-end, and back-end logic.',
-                  detail: 'Step 2 · Fast Delivery',
-                  color: 'text-accentPrimary', border: 'border-accentPrimary/40',
-                },
-                {
-                  step: '03', title: 'Launch & Maintain',
-                  desc: 'Your site goes live under your full ownership. We provide ongoing monthly checks and quick fixes.',
-                  detail: 'Step 3 · Monthly Support',
-                  color: 'text-accentLuxury', border: 'border-accentLuxury/30',
-                },
-              ].map((p, i) => (
-                <FadeIn key={i} delay={i * 200} className="relative z-10 bg-bgSecondary p-6 text-center rounded-2xl border border-transparent hover:border-accentPrimary/50 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 ease-out">
-                  <div className={`w-16 h-16 mx-auto bg-surface rounded-full border ${p.border} flex items-center justify-center text-xl font-bold ${p.color} mb-6 shadow-[0_0_20px_rgba(139,92,246,0.15)]`}>
-                    {p.step}
+          {/* 4C Flow Connector Strip */}
+          <FadeIn delay={100} className="flex items-center justify-center gap-0 mb-16 overflow-x-auto pb-2">
+            {['Clarify', 'Capture', 'Connect', 'Convert'].map((label, i) => (
+              <React.Fragment key={label}>
+                <div className={`flex-shrink-0 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border ${
+                  i === 0 ? 'border-accentSecondary/50 text-accentSecondary bg-accentSecondary/10' :
+                  i === 1 ? 'border-accentPrimary/50 text-accentPrimary bg-accentPrimary/10' :
+                  i === 2 ? 'border-accentLuxury/50 text-accentLuxury bg-accentLuxury/10' :
+                  'border-green-400/50 text-green-400 bg-green-400/10'
+                }`}>
+                  {label}
+                </div>
+                {i < 3 && (
+                  <div className="flex-shrink-0 w-8 h-px bg-textPrimary/20 relative">
+                    <ArrowRight size={10} className="absolute -right-1 -top-[5px] text-textSecondary/40" />
                   </div>
-                  <h3 className={`text-2xl font-serif font-bold mb-3 ${p.color}`}>{p.title}</h3>
-                  <p className="text-textSecondary text-sm leading-relaxed mb-4">{p.desc}</p>
-                  <span className={`text-xs px-3 py-1 rounded-full bg-textPrimary/5 border border-textPrimary/10 ${p.color}`}>{p.detail}</span>
-                </FadeIn>
-              ))}
-            </div>
+                )}
+              </React.Fragment>
+            ))}
+          </FadeIn>
+
+          {/* Steps Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+            {[
+              {
+                number: '01',
+                keyword: 'Clarify',
+                title: 'We understand your business.',
+                desc: 'Before building anything, we ask the right questions. Who are your clients? What do they need to see before they trust you? We map the full picture first.',
+                tag: 'Discovery Call',
+                color: 'text-accentSecondary',
+                border: 'border-accentSecondary/30',
+                glow: 'shadow-[0_0_20px_rgba(99,202,183,0.12)]',
+                bg: 'bg-accentSecondary/5',
+              },
+              {
+                number: '02',
+                keyword: 'Capture',
+                title: 'We build your system.',
+                desc: 'A fast, clear website with a built-in lead form and WhatsApp trigger. Every page is designed with one goal: give your visitor a reason to take action — and make it effortless.',
+                tag: 'Build & Launch',
+                color: 'text-accentPrimary',
+                border: 'border-accentPrimary/30',
+                glow: 'shadow-[0_0_20px_rgba(139,92,246,0.12)]',
+                bg: 'bg-accentPrimary/5',
+              },
+              {
+                number: '03',
+                keyword: 'Connect',
+                title: 'We activate the follow-up.',
+                desc: 'When a lead comes in, your system responds instantly — automated WhatsApp messages, confirmation flows, and smart notifications keep the conversation alive without any manual effort.',
+                tag: 'Automation',
+                color: 'text-accentLuxury',
+                border: 'border-accentLuxury/30',
+                glow: 'shadow-[0_0_20px_rgba(212,175,55,0.12)]',
+                bg: 'bg-accentLuxury/5',
+              },
+              {
+                number: '04',
+                keyword: 'Convert',
+                title: 'Leads become clients.',
+                desc: 'With the right message, at the right moment, through the right channel — your visitor moves from curious to committed. That is what a system does that a website alone never can.',
+                tag: 'Revenue',
+                color: 'text-green-400',
+                border: 'border-green-400/30',
+                glow: 'shadow-[0_0_20px_rgba(74,222,128,0.12)]',
+                bg: 'bg-green-400/5',
+              },
+            ].map((step, i) => (
+              <FadeIn key={i} delay={i * 120} className="group">
+                <div className={`h-full rounded-2xl border ${step.border} ${step.glow} ${step.bg} p-7 flex flex-col gap-4 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 ease-out`}>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-4xl font-serif font-bold opacity-20 ${step.color}`}>{step.number}</span>
+                    <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${step.border} ${step.color} bg-bgSecondary`}>{step.tag}</span>
+                  </div>
+                  <div>
+                    <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${step.color}`}>{step.keyword}</p>
+                    <h3 className="text-base font-semibold text-textPrimary leading-snug mb-3">{step.title}</h3>
+                    <p className="text-textSecondary text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
+
+          {/* Closing line */}
+          <FadeIn delay={500} className="text-center">
+            <p className="text-textSecondary text-sm max-w-xl mx-auto">
+              Every client we work with goes through this exact process. It's not a formula — it's a commitment to making sure your investment actually works for your business.
+            </p>
+          </FadeIn>
+
         </div>
       </Section>
 
@@ -325,7 +474,7 @@ const Home: React.FC = () => {
                 <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">The Agency Promise</p>
                 <h2 className="text-4xl font-serif font-bold mb-6">A Calm Approach to Web Development</h2>
                 <p className="text-textSecondary mb-6 leading-relaxed">
-                  We built Aura with one goal: to remove the technical stress from running a small business. You shouldn't have to worry about servers, codebases, or broken links.
+                  We built Nidam with one goal: to remove the technical stress from running a small business. You shouldn't have to worry about servers, codebases, or broken links.
                 </p>
                 <p className="text-textSecondary mb-8 leading-relaxed">
                   We handle the engineering—delivering beautiful, fast websites that you fully own. And when things change, our monthly checks and rapid fixes ensure your digital presence is always perfect.
@@ -392,135 +541,214 @@ const Home: React.FC = () => {
       </Section>
 
       {/* ============================================================
-          PRICING STRATEGY PREVIEW
+          SERVICES — SYSTEM-BASED OFFERS
       ============================================================ */}
       <Section className="bg-bgSecondary">
         <div className="container mx-auto px-6">
+
           <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">Investment</p>
-            <h2 className="text-4xl font-serif font-bold mb-4">Transparent Pricing.<br />
-              <span className="text-textSecondary font-light text-3xl">Professional Quality.</span>
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">What We Build</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+              Choose Your System.
             </h2>
-            <p className="text-textSecondary text-sm max-w-lg mx-auto mt-4">
-              Every package includes full code ownership and dedicated monthly checks. No hidden fees.
+            <p className="text-textSecondary text-base max-w-xl mx-auto leading-relaxed">
+              Every offer is built around one goal: turning your visitors into paying clients. Pick the level that fits where you are right now.
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Starter */}
-            <FadeIn delay={0}>
-              <div className="p-8 rounded-2xl border border-textPrimary/10 bg-bgPrimary hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out flex flex-col">
-                <div>
-                  <h3 className="text-xl font-bold text-textSecondary mb-2">Essential</h3>
-                  <p className="text-xs text-textSecondary mb-1">Starting from</p>
-                  <div className="text-4xl font-serif font-bold mb-1">$1,500</div>
-                  <p className="text-xs text-textSecondary mb-6">Essential presence for new businesses</p>
+          {/* 4 Core Offers */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+            {[
+              {
+                badge: 'Step 01',
+                name: 'System Audit',
+                tagline: 'Find out exactly where you are losing clients.',
+                desc: 'We review your current online presence — your website, your messaging, your follow-up process — and give you a clear, honest picture of what is broken and what to fix first.',
+                outcome: 'You get a full gap report and a priority action plan.',
+                color: 'text-accentSecondary',
+                border: 'border-accentSecondary/30',
+                bg: 'bg-accentSecondary/5',
+                glow: 'hover:shadow-[0_0_30px_rgba(99,202,183,0.12)]',
+                price: 'From $300',
+                featured: false,
+              },
+              {
+                badge: 'Step 02',
+                name: 'Foundation System',
+                tagline: 'A clean, professional base that works.',
+                desc: 'We build your website with a clear structure, a strong first impression, and a direct path to contact. No fluff — just a solid foundation that stops visitors from leaving without acting.',
+                outcome: 'You get a fast, conversion-ready website your business can grow on.',
+                color: 'text-accentPrimary',
+                border: 'border-accentPrimary/40',
+                bg: 'bg-accentPrimary/5',
+                glow: 'hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]',
+                price: 'From $1,500',
+                featured: false,
+              },
+              {
+                badge: 'Step 03',
+                name: 'Lead System',
+                tagline: 'Turn your website into a client machine.',
+                desc: 'We add lead capture, an automated WhatsApp response, and a follow-up flow on top of your foundation. Every visitor who shows interest gets a message before they forget you exist.',
+                outcome: 'You get a system that captures and follows up with leads automatically — 24/7.',
+                color: 'text-accentPrimary',
+                border: 'border-accentPrimary/50',
+                bg: 'bg-accentPrimary/8',
+                glow: 'hover:shadow-[0_0_40px_rgba(139,92,246,0.20)]',
+                price: 'From $3,500',
+                featured: true,
+              },
+              {
+                badge: 'Step 04',
+                name: 'Full Growth System',
+                tagline: 'Everything. Done. For you.',
+                desc: 'From the first click to the signed contract — we build and connect every piece of your digital presence. Website, lead capture, WhatsApp automation, follow-up sequences, and ongoing optimization.',
+                outcome: 'You get a complete client-acquisition system that runs while you focus on delivery.',
+                color: 'text-accentLuxury',
+                border: 'border-accentLuxury/40',
+                bg: 'bg-accentLuxury/5',
+                glow: 'hover:shadow-[0_0_30px_rgba(212,175,55,0.12)]',
+                price: 'From $6,500',
+                featured: false,
+              },
+            ].map((offer, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <div className={`relative h-full rounded-2xl border ${offer.border} ${offer.bg} ${offer.glow} p-8 flex flex-col gap-5 hover:-translate-y-1 transition-all duration-300 ease-out ${offer.featured ? 'shadow-[0_0_40px_rgba(139,92,246,0.15)]' : ''}`}>
+                  {offer.featured && (
+                    <div className="absolute -top-3 left-8">
+                      <span className="bg-accentPrimary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Most Popular</span>
+                    </div>
+                  )}
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <span className={`text-[10px] font-bold uppercase tracking-widest ${offer.color} mb-1 block`}>{offer.badge}</span>
+                      <h3 className="text-xl font-bold text-textPrimary">{offer.name}</h3>
+                      <p className={`text-sm font-medium mt-0.5 ${offer.color}`}>{offer.tagline}</p>
+                    </div>
+                    <div className={`text-right shrink-0`}>
+                      <p className={`text-lg font-bold font-serif ${offer.color}`}>{offer.price}</p>
+                    </div>
+                  </div>
+                  <p className="text-textSecondary text-sm leading-relaxed">{offer.desc}</p>
+                  <div className={`flex items-start gap-2 pt-4 border-t ${offer.border}`}>
+                    <CheckCircle size={15} className={`${offer.color} shrink-0 mt-0.5`} />
+                    <p className="text-textPrimary text-sm font-medium leading-snug">{offer.outcome}</p>
+                  </div>
+                  <Button to="/contact" variant={offer.featured ? 'primary' : 'outline'} className="w-full mt-auto">
+                    Get Started
+                  </Button>
                 </div>
-                <ul className="space-y-4 mb-8 text-sm text-textSecondary flex-1">
-                  {['Professional Landing Page', 'Mobile Responsive', 'Contact Form Integration', 'Monthly Website Checks', '100% Code Ownership'].map((f, i) => (
-                    <li key={i} className="flex gap-2"><CheckCircle size={16} className="text-accentSecondary shrink-0 mt-0.5" />{f}</li>
-                  ))}
-                </ul>
-                <Button to="/contact" variant="outline" className="w-full">Book a Strategy Call</Button>
-              </div>
-            </FadeIn>
-
-            {/* Growth — Featured */}
-            <FadeIn delay={100}>
-              <div className="p-8 rounded-2xl border border-accentPrimary/50 bg-surface relative md:-translate-y-4 hover:-translate-y-1.5 md:hover:-translate-y-[22px] hover:shadow-2xl hover:border-accentPrimary transition-all duration-300 ease-out flex flex-col shadow-[0_0_30px_rgba(139,92,246,0.15)]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accentPrimary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                  Popular
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-textPrimary mb-2">Professional</h3>
-                  <p className="text-xs text-textSecondary mb-1">Starting from</p>
-                  <div className="text-4xl font-serif font-bold mb-1 text-accentPrimary">$3,500</div>
-                  <p className="text-xs text-textSecondary mb-6">Advanced features and custom integration</p>
-                </div>
-                <ul className="space-y-4 mb-8 text-sm text-textPrimary flex-1">
-                  {['Multi-Page Website (up to 5)', 'CMS / Blog Integration', 'Custom Service Pages', 'Monthly Checks & Fixes', '100% Code Ownership'].map((f, i) => (
-                    <li key={i} className="flex gap-2"><CheckCircle size={16} className="text-accentPrimary shrink-0 mt-0.5" />{f}</li>
-                  ))}
-                </ul>
-                <Button to="/contact" variant="primary" className="w-full">Book a Strategy Call</Button>
-              </div>
-            </FadeIn>
-
-            {/* Premium */}
-            <FadeIn delay={200}>
-              <div className="p-8 rounded-2xl border border-accentLuxury/30 bg-bgPrimary hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentLuxury/60 transition-all duration-300 ease-out flex flex-col">
-                <div>
-                  <h3 className="text-xl font-bold text-accentLuxury mb-2">Premium</h3>
-                  <p className="text-xs text-textSecondary mb-1">Starting from</p>
-                  <div className="text-4xl font-serif font-bold mb-1">$7,000</div>
-                  <p className="text-xs text-textSecondary mb-6">Full-scale web applications and back-ends</p>
-                </div>
-                <ul className="space-y-4 mb-8 text-sm text-textSecondary flex-1">
-                  {['Custom Web Application', 'Complex Back-end Logic', 'Inventory / Booking System', 'Priority Monthly Fixes', '100% Code Ownership'].map((f, i) => (
-                    <li key={i} className="flex gap-2"><CheckCircle size={16} className="text-accentLuxury shrink-0 mt-0.5" />{f}</li>
-                  ))}
-                </ul>
-                <Button to="/contact" variant="gold" className="w-full">Book a Strategy Call</Button>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
+
+          {/* Monthly Retainer Add-on */}
+          <FadeIn delay={400}>
+            <div className="max-w-5xl mx-auto rounded-2xl border border-textPrimary/10 bg-bgPrimary/60 backdrop-blur-sm p-8 flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-surface border border-textPrimary/10 flex items-center justify-center">
+                <Rocket size={20} className="text-accentSecondary" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-accentSecondary">Optional Add-on · Monthly</span>
+                </div>
+                <h3 className="text-lg font-bold text-textPrimary mb-1">Growth Partner Retainer</h3>
+                <p className="text-textSecondary text-sm leading-relaxed max-w-2xl">
+                  We stay in your corner every month — monitoring performance, updating your content, refining your messages, and making sure your system keeps improving as your business grows. You focus on clients. We handle the rest.
+                </p>
+              </div>
+              <div className="flex flex-col items-center md:items-end gap-3 shrink-0">
+                <p className="text-textSecondary text-xs">From</p>
+                <p className="text-2xl font-serif font-bold text-textPrimary">$350<span className="text-sm text-textSecondary font-normal">/mo</span></p>
+                <Button to="/contact" variant="outline" className="whitespace-nowrap text-sm px-6 py-2.5">Add to My System</Button>
+              </div>
+            </div>
+          </FadeIn>
 
           <FadeIn className="text-center mt-10">
             <p className="text-xs text-textSecondary">
-              Not sure which package?{' '}
-              <Link to="/contact" className="text-accentPrimary hover:underline">Book a strategy call</Link>{' '}
-              — we'll scope the right system together.
+              Not sure where to start?{' '}
+              <Link to="/contact" className="text-accentPrimary hover:underline">Book a free strategy call</Link>{' '}
+              — we'll map the right system together.
             </p>
           </FadeIn>
+
         </div>
       </Section>
 
       {/* ============================================================
-          INLINE CTA #2
+          INLINE CTA #2 — AUDIT NUDGE
       ============================================================ */}
       <Section className="py-16 bg-bgPrimary border-b border-textPrimary/5">
         <div className="container mx-auto px-6 text-center">
           <FadeIn>
-            <h3 className="text-2xl font-serif font-bold mb-3">Your site should be your best growth asset.</h3>
-            <p className="text-textSecondary text-sm mb-6 max-w-md mx-auto">Scope your project in a free 30-minute call. Zero obligation.</p>
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-3">Free · No Obligation</p>
+            <h3 className="text-2xl font-serif font-bold mb-3">Not sure where you're losing clients? Find out — free.</h3>
+            <p className="text-textSecondary text-sm mb-6 max-w-md mx-auto">We'll review your website and tell you exactly what's stopping visitors from becoming leads.</p>
             <div className="relative inline-block group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-500 pointer-events-none" />
               <Button to="/contact" variant="primary" className="relative px-10 py-4 text-base font-semibold">
-                Book a Strategy Call
+                Request My Free Audit
               </Button>
             </div>
+            <p className="mt-4 text-xs text-textSecondary">Spots are limited — we review 4 businesses per week.</p>
           </FadeIn>
         </div>
       </Section>
 
       {/* ============================================================
-          FINAL CTA BANNER
+          FINAL CTA BANNER — AUDIT CONVERSION
       ============================================================ */}
       <Section className="relative">
         <MeshBackground />
         <div className="container mx-auto px-6 text-center relative z-10">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8">
-              Give Your Business a <br />
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-red-400">Every day without a system costs you a client</span>
+            </div>
+
+            {/* Headline */}
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+              You're Getting Visitors. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentPrimary via-accentSecondary to-accentLuxury bg-[length:200%_auto] animate-shimmer">
-                Professional Online Presence
+                Are Any of Them Becoming Clients?
               </span>
             </h2>
-            <p className="text-textSecondary max-w-lg mx-auto mb-10 leading-relaxed">
-              Aura provides calm, reliable web development with monthly checks and fixes—so you can fully focus on running your business.
+
+            {/* Body */}
+            <p className="text-textSecondary max-w-xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
+              Most business websites look fine — but quietly lose leads every single day. No clear call-to-action. No follow-up. No system. We'll audit your online presence and show you exactly where the gaps are.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+            {/* Primary CTA */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 pointer-events-none" />
                 <Button variant="primary" to="/contact" className="relative py-5 px-12 text-lg font-semibold">
-                  Book a Strategy Call
+                  Request My Free Audit
                 </Button>
               </div>
               <Button to="/catalog" variant="outline" icon className="py-5 px-8">
-                Explore Catalog
+                See Our Work First
               </Button>
             </div>
-            <p className="mt-6 text-xs text-textSecondary">No commitment. Just a strategic conversation.</p>
+
+            {/* Trust / Urgency line */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-textSecondary">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle size={13} className="text-accentSecondary" /> Free — no strings attached
+              </span>
+              <span className="hidden sm:block w-px h-3 bg-textPrimary/20" />
+              <span className="flex items-center gap-1.5">
+                <Clock size={13} className="text-accentSecondary" /> Takes under 48 hours
+              </span>
+              <span className="hidden sm:block w-px h-3 bg-textPrimary/20" />
+              <span className="flex items-center gap-1.5">
+                <Shield size={13} className="text-accentSecondary" /> Only 4 audit spots per week
+              </span>
+            </div>
           </FadeIn>
         </div>
       </Section>
@@ -560,7 +788,7 @@ const Home: React.FC = () => {
       ============================================================ */}
       <Section className="py-12 border-t border-textPrimary/5">
         <div className="container mx-auto px-6 text-center">
-          <h3 className="text-xl font-bold mb-4">Join the Aura Mailing List</h3>
+          <h3 className="text-xl font-bold mb-4">Join the Nidam Mailing List</h3>
           <p className="text-textSecondary mb-6 text-sm">Practical tips on growing your small business online. No spam.</p>
           <div className="flex justify-center gap-2 max-w-md mx-auto">
             <input

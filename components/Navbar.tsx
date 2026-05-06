@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="text-2xl font-serif font-bold text-textPrimary tracking-tight">
-          AURA
+          NIDAM
           <span className="text-accentPrimary text-3xl leading-none">.</span>
         </Link>
 

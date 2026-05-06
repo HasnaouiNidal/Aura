@@ -84,7 +84,7 @@ const Catalog: React.FC = () => {
         <div className="container mx-auto px-6">
           <FadeIn>
             <h2 className="text-3xl font-serif font-bold mb-4">Don't see your category?</h2>
-            <p className="text-textSecondary mb-8 max-w-lg mx-auto text-sm">Every AURA project starts with a strategy call. Tell us your goal — we'll architect the right system for it.</p>
+            <p className="text-textSecondary mb-8 max-w-lg mx-auto text-sm">Every NIDAM project starts with a strategy call. Tell us your goal — we'll architect the right system for it.</p>
             <div className="relative inline-block group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-500 pointer-events-none" />
               <Button to="/contact" variant="primary" className="relative px-10 py-4">Book Free Strategy Call</Button>

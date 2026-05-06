@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <h2 className="text-3xl font-serif font-bold text-textPrimary mb-6">
-              AURA<span className="text-accentPrimary">.</span>
+              NIDAM<span className="text-accentPrimary">.</span>
             </h2>
             <p className="text-textSecondary max-w-sm mb-8 leading-relaxed">
               Elevating digital presence through intelligent design and AI-powered engineering. 
@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-textPrimary/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-textSecondary text-sm">
-            © {new Date().getFullYear()} AURA Agency. All rights reserved.
+            © {new Date().getFullYear()} NIDAM Agency. All rights reserved.
           </p>
           <p className="text-textSecondary text-sm">
-            Designed by AURA Intelligence.
+            Designed by NIDAM Intelligence.
           </p>
         </div>
       </div>

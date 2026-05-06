@@ -41,7 +41,7 @@ const About: React.FC = () => {
                   <span className="text-textSecondary font-light">By Design.</span>
                 </h2>
                 <p className="text-textPrimary/90 leading-relaxed">
-                  I started AURA with a simple conviction: most agencies are bloated. They charge for meetings, not results. As a solo architect leveraging a proprietary AI build system, I cut through all of that.
+                  I started NIDAM with a simple conviction: most agencies are bloated. They charge for meetings, not results. As a solo architect leveraging a proprietary AI build system, I cut through all of that.
                 </p>
                 <p className="text-textPrimary/90 leading-relaxed">
                   My background in high-end product design and full-stack engineering lets me cover the entire vertical — from the first pixel of a design system to the last line of a TypeScript codebase. No middlemen. No account managers. Just precision-built systems.
@@ -88,7 +88,7 @@ const About: React.FC = () => {
               {
                 number: '02', tagline: 'What We Build', icon: Workflow,
                 headline: 'Digital systems, not static sites.',
-                body: 'AURA delivers complete web architectures — from design system to codebase — scalable, owned by you, and built to compound in value. All in 5 days.',
+                body: 'NIDAM delivers complete web architectures — from design system to codebase — scalable, owned by you, and built to compound in value. All in 5 days.',
                 accent: 'text-accentPrimary',
               },
               {
@@ -116,11 +116,11 @@ const About: React.FC = () => {
         </div>
       </Section>
 
-      {/* Why AURA */}
+      {/* Why NIDAM */}
       <Section>
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">Why AURA</p>
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">Why NIDAM</p>
             <h2 className="text-3xl font-serif font-bold">The Architectural Advantage</h2>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -149,7 +149,7 @@ const About: React.FC = () => {
             <blockquote className="font-serif text-xl md:text-2xl font-light leading-relaxed text-textPrimary/90">
               <span className="text-textPrimary font-medium">Most agencies sell time.</span> We sell outcomes.
               <br /><br />
-              AURA was built on one conviction: that the gap between a world-class digital product and the one you currently have is not talent, budget, or time —{' '}
+              NIDAM was built on one conviction: that the gap between a world-class digital product and the one you currently have is not talent, budget, or time —{' '}
               <span className="text-textPrimary font-medium">it's architecture.</span>
               <br /><br />
               We deploy AI not to cut corners, but to eliminate waste. The 40 hours a traditional team spends on scaffolding,{' '}
@@ -158,7 +158,7 @@ const About: React.FC = () => {
               We don't ship templates. We don't guess at design. We build systems — precise, fast, and built to compound in value over time.
             </blockquote>
             <p className="mt-12 text-accentLuxury font-serif text-xl font-semibold tracking-wide">
-              This is AURA. The architecture studio for brands that intend to lead.
+              This is NIDAM. The architecture studio for brands that intend to lead.
             </p>
           </FadeIn>
         </div>
