@@ -83,30 +83,36 @@ const About: React.FC = () => {
                 number: '01', tagline: 'What We Believe', icon: Target,
                 headline: 'Design without strategy is decoration.',
                 body: 'Every pixel has purpose. Every interaction has intent. We build with conversion psychology and performance science — not aesthetic intuition alone.',
-                accent: 'text-accentSecondary',
+                textAccent: 'text-accentSecondary',
+                numStyle: 'text-accentSecondary/20 dark:text-accentSecondary/30 dark:[text-shadow:0_0_15px_var(--color-accentSecondary)]',
+                iconBox: 'bg-accentSecondary/5 border-accentSecondary/10 dark:bg-accentSecondary/10 dark:border-accentSecondary/20',
               },
               {
                 number: '02', tagline: 'What We Build', icon: Workflow,
                 headline: 'Digital systems, not static sites.',
                 body: 'NIDAM delivers complete web architectures — from design system to codebase — scalable, owned by you, and built to compound in value. All in 5 days.',
-                accent: 'text-accentPrimary',
+                textAccent: 'text-accentPrimary',
+                numStyle: 'text-accentPrimary/20 dark:text-accentPrimary/30 dark:[text-shadow:0_0_15px_var(--color-accentPrimary)]',
+                iconBox: 'bg-accentPrimary/5 border-accentPrimary/10 dark:bg-accentPrimary/10 dark:border-accentPrimary/20',
               },
               {
                 number: '03', tagline: 'How We Are Different', icon: Sparkles,
                 headline: 'AI velocity. Human precision.',
                 body: 'Our proprietary AI-accelerated build system eliminates waste — delivering agency-quality outcomes without agency timelines, overhead, or compromise.',
-                accent: 'text-accentLuxury',
+                textAccent: 'text-accentLuxury',
+                numStyle: 'text-accentLuxury/25 dark:text-accentLuxury/30 dark:[text-shadow:0_0_15px_var(--color-accentLuxury)]',
+                iconBox: 'bg-accentLuxury/5 border-accentLuxury/10 dark:bg-accentLuxury/10 dark:border-accentLuxury/20',
               },
             ].map((pillar, i) => (
               <FadeIn key={i} delay={i * 150}>
                 <div className="bg-bgSecondary/40 p-10 h-full rounded-2xl border border-textPrimary/5 hover:-translate-y-1 hover:border-accentPrimary/40 hover:shadow-[0_4px_20px_rgba(139,92,246,0.15)] transition-all duration-300 ease-out">
                   <div className="flex items-start justify-between mb-8">
-                    <span className={`text-5xl font-serif font-bold opacity-10 ${pillar.accent}`}>{pillar.number}</span>
-                    <div className="w-10 h-10 rounded-lg bg-textPrimary/5 border border-textPrimary/10 flex items-center justify-center">
-                      <pillar.icon size={18} className={pillar.accent} />
+                    <span className={`text-5xl font-serif font-bold transition-colors duration-500 ${pillar.numStyle}`}>{pillar.number}</span>
+                    <div className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-colors duration-500 ${pillar.iconBox}`}>
+                      <pillar.icon size={18} className={pillar.textAccent} />
                     </div>
                   </div>
-                  <p className={`text-xs uppercase tracking-widest mb-3 ${pillar.accent}`}>{pillar.tagline}</p>
+                  <p className={`text-xs uppercase tracking-widest mb-3 ${pillar.textAccent}`}>{pillar.tagline}</p>
                   <h3 className="text-xl font-serif font-bold mb-4 leading-snug text-textPrimary">"{pillar.headline}"</h3>
                   <p className="text-textPrimary/80 text-sm leading-relaxed">{pillar.body}</p>
                 </div>

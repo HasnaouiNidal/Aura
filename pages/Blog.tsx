@@ -11,7 +11,7 @@ const Blog: React.FC = () => {
     cat: 'Client Strategy', 
     date: 'Feb 12, 2024', 
     excerpt: 'We audit dozens of premium service websites every month. Almost all of them make the same mistake: prioritizing aesthetic flair over a friction-free booking process. Here is what we\'ve learned rebuilding digital systems for high-end service businesses.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200'
+    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200'
   };
 
   const supportingPosts = [
@@ -22,7 +22,7 @@ const Blog: React.FC = () => {
       cat: 'Digital Systems', 
       date: 'Mar 05, 2024', 
       excerpt: 'A great design might keep a visitor on your page for an extra ten seconds, but if your follow-up system is broken, you\'re just paying for expensive traffic.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'
     },
     { 
       id: 3, 
@@ -31,7 +31,7 @@ const Blog: React.FC = () => {
       cat: 'Case Study Insights', 
       date: 'Apr 22, 2024', 
       excerpt: 'Behind the scenes of our work with Othman Tours. How replacing a generic contact form with an intentional WhatsApp flow doubled their qualified leads.',
-      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800'
+      image: 'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800'
     },
   ];
 
