@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       {/* ============================================================
           HERO SECTION
       ============================================================ */}
-      <div className="relative min-h-[70vh] flex flex-col justify-start pt-32 md:pt-40 pb-16">
+      <div className="relative min-h-[calc(100vh+75px)] flex flex-col justify-center pt-8 pb-16">
         <HeroBackground />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <FadeIn className="relative">
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-textPrimary/10 to-transparent hidden lg:block" />
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-textSecondary/50">
+        <div className="absolute bottom-18 left-1/2 -translate-x-1/2 animate-bounce text-textSecondary/90">
           <ChevronDown size={24} />
         </div>
       </div>
