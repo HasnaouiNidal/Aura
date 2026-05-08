@@ -14,67 +14,67 @@ export interface ProjectData {
     docsButtonText?: string; // Custom text for the docs button
 }
 
-interface ProjectCardProps {
-    project: ProjectData;
-    className?: string;
-}
-
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) => {
     return (
-        <div className={`group relative bg-surface border border-textPrimary/5 rounded-2xl overflow-hidden transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-textPrimary/10 ${className}`}>
+        <div className={`group relative bg-surface/10 border border-textPrimary/[0.03] backdrop-blur-md rounded-sm overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] hover:bg-surface/30 hover:border-textPrimary/[0.08] ${className}`}>
+            
+            {/* Subtle Top Gradient Line on Hover */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-textPrimary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-30" />
 
-            {/* 
-                Browser Window Wrapper 
-                Adds realistic SaaS showcase feel with dot controls and a URL bar hint
-            */}
-            <div className="bg-[#1A1D24] border-b border-textPrimary/5 px-4 py-3 flex items-center gap-2">
-                <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] opacity-80" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] opacity-80" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F] opacity-80" />
-                </div>
-            </div>
-
-            {/* Custom Height Preview Container (220px) */}
-            <div className="relative h-[220px] overflow-hidden bg-bgPrimary">
+            {/* Cinematic Preview Container */}
+            <div className="relative h-[280px] overflow-hidden bg-bgSecondary border-b border-textPrimary/[0.02]">
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                    className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[0.95] group-hover:contrast-[1.1] transition-all duration-[1500ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105"
                 />
 
-                {/* Advanced Gradient Overlay & Shadow */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1115] via-transparent to-transparent opacity-90" />
-                <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none" />
+                {/* Atmospheric Depth & Soft Vignette */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,0,0.2)_100%)] pointer-events-none transition-opacity duration-1000 group-hover:opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary/90 via-transparent to-black/20 opacity-80" />
 
-                {/* Category Badge & View Project Indicator */}
-                <div className="absolute top-4 left-4 z-20 flex justify-between w-[calc(100%-2rem)] items-start">
-                    <span className="bg-surface/80 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-widest text-textPrimary border border-textPrimary/10 shadow-sm">
-                        {project.category}
-                    </span>
-                    <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out bg-accentPrimary/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-[10px] font-bold tracking-wide shadow-[0_0_15px_rgba(139,92,246,0.5)] flex items-center gap-1">
-                        View Project <ArrowRight size={10} />
-                    </span>
+                {/* Editorial Category Tag */}
+                <div className="absolute top-6 left-6 z-20 flex justify-between w-[calc(100%-3rem)] items-start">
+                    <div className="flex items-center gap-3">
+                        <span className="w-4 h-[1px] bg-white/40" />
+                        <span className="text-[9px] uppercase tracking-[0.25em] font-light text-white/90 drop-shadow-md">
+                            {project.category}
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            {/* Content Section with improved spacing and visual balance */}
-            <div className="p-6 relative z-20 bg-surface">
-                <h3 className="text-xl font-serif font-bold mb-2 text-textPrimary group-hover:text-accentPrimary transition-colors duration-300">
-                    {project.title}
-                </h3>
-                <p className="text-sm text-textSecondary line-clamp-2 leading-relaxed mb-6 opacity-80">
-                    {project.description}
-                </p>
+            {/* Editorial Content Section */}
+            <div className="p-8 relative z-20 flex flex-col h-[calc(100%-280px)]">
+                <div className="flex-1">
+                    <h3 className="text-2xl md:text-[1.75rem] font-serif font-light tracking-tight mb-4 text-textPrimary group-hover:text-textPrimary/80 transition-colors duration-1000 leading-snug">
+                        {project.title}
+                    </h3>
+                    <p className="text-[13px] text-textSecondary/60 line-clamp-2 leading-[1.9] font-light mb-10">
+                        {project.description}
+                    </p>
+                </div>
 
-                {/* Buttons Component */}
-                <div className="flex items-stretch gap-3 w-full">
-                    <Button to={project.docsUrl || `/catalog/${project.id}`} variant="primary" className="flex-[3] py-3 text-xs shadow-md justify-center">
-                        {project.docsButtonText || 'View Details'}
-                    </Button>
-                    <Button to={project.demoUrl || '#'} variant="outline" className="flex-[2] py-3 text-xs border-textPrimary/10 hover:bg-textPrimary/5 justify-center flex items-center gap-1.5">
-                        <ExternalLink size={14} /> Demo
-                    </Button>
+                {/* Elegant Minimal Interaction */}
+                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-textPrimary/[0.03]">
+                    <Link 
+                        to={project.docsUrl || `/catalog/${project.id}`} 
+                        className="text-[10px] uppercase tracking-[0.2em] font-light text-textPrimary/80 hover:text-textPrimary transition-colors duration-500 flex items-center gap-2"
+                    >
+                        {project.docsButtonText || 'Explore Case'}
+                        <ArrowRight size={12} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-500" strokeWidth={1} />
+                    </Link>
+                    
+                    {project.demoUrl && (
+                        <Link 
+                            to={project.demoUrl} 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-auto text-[10px] uppercase tracking-[0.2em] font-light text-textSecondary/40 hover:text-textPrimary/80 transition-colors duration-500 flex items-center gap-1.5"
+                        >
+                            Live <ExternalLink size={10} strokeWidth={1} />
+                        </Link>
+                    )}
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '
 
 export const ProjectGrid: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => {
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${className}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 pb-24 md:[&>*:nth-child(even)]:mt-16 md:[&>*:nth-child(odd)]:mt-0 lg:[&>*:nth-child(3n+1)]:mt-0 lg:[&>*:nth-child(3n+2)]:mt-16 lg:[&>*:nth-child(3n+3)]:mt-32 ${className}`}>
             {children}
         </div>
     );

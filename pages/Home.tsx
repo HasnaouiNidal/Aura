@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, Code, Zap, Layers, Cpu, CheckCircle, ChevronDown,
-  Plus, Star, TrendingUp, Clock, BarChart3, Globe, Shield, Users, Rocket, ExternalLink
+  Plus, Star, TrendingUp, Clock, BarChart3, Globe, Shield, Users, Rocket, ExternalLink,
+  MessageCircle, UserPlus, CalendarCheck
 } from 'lucide-react';
 import { Button, Card, Section, FadeIn, MeshBackground, HeroBackground } from '../components/UI';
 import { ProjectGrid, ProjectCard } from '../components/ProjectSystem';
@@ -18,56 +19,118 @@ const Home: React.FC = () => {
           HERO SECTION
       ============================================================ */}
       <div className="relative min-h-[calc(100vh+75px)] flex flex-col justify-center pt-8 pb-16">
+        {/* Subtle Noise Texture & Glows Container */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilter">
+              <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+          </svg>
+          
+          <FadeIn className="absolute inset-0">
+            <div className="absolute top-[40%] left-[55%] -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-tr from-accentSecondary/20 via-accentPrimary/15 to-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
+            <div className="absolute top-[60%] left-[35%] -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[450px] h-[250px] md:h-[450px] bg-accentLuxury/10 blur-[100px] rounded-full mix-blend-screen" />
+          </FadeIn>
+        </div>
+
         <HeroBackground />
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <FadeIn className="relative">
-            {/* Nidam Glow Effect */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-tr from-accentSecondary/40 via-accentPrimary/30 to-blue-600/20 blur-[100px] md:blur-[140px] rounded-full pointer-events-none -z-10 mix-blend-screen" />
+          <div className="relative">
+            
+            {/* Floating Element: Lead Capture (Action/Discovery) */}
+            <FadeIn delay={600} className="absolute top-[10%] -left-[5%] md:-left-[0%] lg:-left-[1%] hidden sm:block -z-10 pointer-events-none ">
+              <div className="w-48 p-3 bg-surface/20 backdrop-blur-sm border border-textPrimary/5 rounded-2xl shadow-[0_10px_30px_rgba(139,92,246,0.05)] flex items-center gap-3 -rotate-19 opacity-100 animate-[float-micro_10s_ease-in-out_infinite]" style={{ animationDelay: '0s' }}>
+                <div className="w-8 h-8 rounded-full bg-accentPrimary/10 flex items-center justify-center shrink-1">
+                  <UserPlus size={14} className="text-accentPrimary/70" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">Lead Captured</p>
+                  <p className="text-[9px] text-textSecondary/60">Via Landing Page</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Floating Element: Booking Confirmed (Action/Discovery) */}
+            <FadeIn delay={1000} className="absolute top-[65%] -left-[5%] md:-left-[2%] lg:left-[2%] hidden sm:block -z-10 pointer-events-none">
+              <div className="w-44 p-2.5 bg-surface/15 backdrop-blur-sm border border-textPrimary/5 rounded-2xl shadow-[0_10px_30px_rgba(212,175,55,0.05)] flex items-center gap-3 rotate-2 opacity-[1] animate-[float-micro_12s_ease-in-out_infinite]" style={{ animationDelay: '3s' }}>
+                <div className="w-7 h-7 rounded-full bg-accentLuxury/10 flex items-center justify-center shrink-0">
+                  <CalendarCheck size={12} className="text-accentLuxury/70" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[9px] font-bold text-textPrimary/80 mb-0.5">Strategy Session</p>
+                  <p className="text-[8px] text-textSecondary/60">Scheduled</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Floating Element: WhatsApp Follow-up (System/Result) */}
+            <FadeIn delay={800} className="absolute top-[40%] -right-[8%] md:-right-[6%] lg:-right-[2%] hidden sm:block -z-10 pointer-events-none">
+              <div className="w-52 p-3 bg-surface/20 backdrop-blur-sm border border-textPrimary/5 rounded-2xl shadow-[0_10px_30px_rgba(34,211,238,0.05)] flex items-center gap-3 rotate-3 opacity-100 animate-[float-micro_14s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}>
+                <div className="w-8 h-8 rounded-full bg-[#25D366]/10 flex items-center justify-center shrink-0">
+                  <MessageCircle size={14} className="text-[#25D366]/70" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">Automated Follow-up</p>
+                  <p className="text-[9px] text-textSecondary/60">Message delivered...</p>
+                </div>
+              </div>
+            </FadeIn>
 
             {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-md hover:bg-textPrimary/10 transition-colors cursor-default relative z-10">
-              <span className="w-2 h-2 rounded-full bg-accentSecondary animate-pulse" />
-              <span className="text-xs font-medium tracking-wider uppercase text-accentSecondary" style={{ fontFamily: "'Sora', sans-serif" }}>Digital Systems Agency</span>
-            </div>
+            <FadeIn delay={100}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-md hover:bg-textPrimary/10 transition-colors cursor-default relative z-10">
+                <span className="w-2 h-2 rounded-full bg-accentSecondary animate-pulse" />
+                <span className="text-xs font-medium tracking-wider uppercase text-accentSecondary" style={{ fontFamily: "'Sora', sans-serif" }}>Digital Systems Agency</span>
+              </div>
+            </FadeIn>
 
             {/* Main Headline */}
-            <h1 className="text-[clamp(2.25rem,5vw+1rem,4.5rem)] font-bold mb-6 leading-[1.1] tracking-tight relative z-10" style={{ fontFamily: "'Sora', sans-serif" }}>
-              We Don't Build Websites. <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPrimary via-accentSecondary to-accentPrimary bg-[length:200%_auto] animate-shimmer">
-                We Build Client Systems.
-              </span>
-            </h1>
+            <FadeIn delay={200}>
+              <h1 className="text-[clamp(2.25rem,5vw+1rem,4.5rem)] font-bold mb-6 leading-[1.1] tracking-tight relative z-10" style={{ fontFamily: "'Sora', sans-serif" }}>
+                We Don't Build Websites. <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPrimary via-accentSecondary to-accentPrimary bg-[length:200%_auto] animate-[shimmer_12s_linear_infinite]">
+                  We Build Client Systems.
+                </span>
+              </h1>
+            </FadeIn>
 
             {/* Subheadline */}
-            <p className="text-base md:text-lg text-textSecondary max-w-2xl mx-auto mb-8 leading-relaxed relative z-10">
-              A high-performance website. Automated lead capture. WhatsApp follow-up. All connected into one system that moves people from their first click to becoming your client.
-            </p>
+            <FadeIn delay={300}>
+              <p className="text-base md:text-lg text-textSecondary max-w-2xl mx-auto mb-8 leading-relaxed relative z-10">
+                A high-performance website. Automated lead capture. WhatsApp follow-up. All connected into one system that moves people from their first click to becoming your client.
+              </p>
+            </FadeIn>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 relative z-10">
-              <div className="relative group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 pointer-events-none" />
-                <Button to="/contact" variant="primary" className="relative w-full px-8 py-3.5 text-sm font-semibold tracking-wide flex justify-center">
-                  Build My Client System
+            <FadeIn delay={400}>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 relative z-10">
+                <div className="relative group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-700 pointer-events-none" />
+                  <Button to="/contact" variant="primary" className="relative w-full px-8 py-3.5 text-sm font-semibold tracking-wide flex justify-center hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-500">
+                    Build My Client System
+                  </Button>
+                </div>
+                <Button to="/case-studies/othman-tours" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-accentSecondary/40 hover:bg-accentSecondary/5 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] flex justify-center transition-all duration-500">
+                  See a Real Result
                 </Button>
               </div>
-              <Button to="/case-studies/othman-tours" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-textPrimary/40 flex justify-center">
-                See a Real Result
-              </Button>
-            </div>
+            </FadeIn>
 
             {/* Trust line */}
-            <div className="flex flex-col items-center justify-center gap-3 text-xs text-textSecondary font-medium relative z-10">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10">
-                <Shield size={14} className="text-accentSecondary" /> Trusted by service businesses ready to grow — not just go online.
+            <FadeIn delay={500}>
+              <div className="flex flex-col items-center justify-center gap-3 text-xs text-textSecondary font-medium relative z-10">
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10">
+                  <Shield size={14} className="text-accentSecondary" /> Trusted by service businesses ready to grow — not just go online.
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-2">
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 40+ systems deployed</span>
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> From first click to signed client</span>
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Results in 7 days</span>
+                </div>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-2">
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 40+ systems deployed</span>
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> From first click to signed client</span>
-                <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Results in 7 days</span>
-              </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           <div className="absolute top-1/2 left-0 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-textPrimary/10 to-transparent hidden lg:block" />
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-textPrimary/10 to-transparent hidden lg:block" />
@@ -79,103 +142,241 @@ const Home: React.FC = () => {
       </div>
 
       {/* ============================================================
-          THE PROBLEM
+          THE REAL ISSUE (PROBLEM DIAGNOSIS)
       ============================================================ */}
-      <Section className="bg-bgSecondary border-y border-textPrimary/5">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">The Real Issue</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
-              You Don't Have a Traffic Problem.{' '}
-              <span className="text-textSecondary font-light">You Have a Flow Problem.</span>
+      <section className="relative py-20 md:py-28 overflow-hidden bg-bgPrimary border-y border-textPrimary/5">
+        {/* Subtle Background Glow & Noise */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterProblem">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterProblem)"/>
+          </svg>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accentSecondary/5 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+          {/* Section Header */}
+          <FadeIn className="text-center mb-16 md:mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-sm cursor-default">
+               <span className="w-1.5 h-1.5 rounded-full bg-accentSecondary/80" />
+               <span className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary">The Real Issue</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] tracking-tight">
+              You Don't Have a Traffic Problem.<br className="hidden md:block" />
+              <span className="text-textSecondary/60 font-light text-3xl md:text-4xl lg:text-5xl block mt-3">You Have a Flow Problem.</span>
             </h2>
           </FadeIn>
 
-          <FadeIn delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-textPrimary/5 rounded-2xl overflow-hidden border border-textPrimary/5 mb-16">
+          {/* Flow Cards */}
+          <div className="relative mb-16 md:mb-20">
+            {/* Visual Flow Line (Desktop) */}
+            <div className="absolute top-[40%] left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-textPrimary/10 to-transparent hidden md:block z-0" />
+            
+            {/* Visual Flow Dots (Desktop) */}
+            <div className="absolute top-[40%] left-[33.33%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden md:block z-0" />
+            <div className="absolute top-[40%] left-[66.66%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden md:block z-0" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
               {[
-                {
-                  number: '01',
-                  title: 'They find you.',
-                  body: "Someone searches, sees your ad, or gets a referral. They land on your website. That's the moment — and most businesses waste it.",
-                  color: 'text-accentSecondary',
-                  glow: 'from-accentSecondary/10',
+                { 
+                  delay: 200, 
+                  number: '01', 
+                  title: 'They find you.', 
+                  body: "Someone sees your ad or gets a referral. They land on your site. That's the moment — and most businesses waste it.", 
+                  color: 'text-textPrimary',
+                  bgAccent: 'group-hover:bg-textPrimary/[0.02]',
+                  borderHover: 'hover:border-textPrimary/15'
                 },
-                {
-                  number: '02',
-                  title: 'Nothing captures them.',
-                  body: "No clear next step. No offer. No form. They read a bit, get confused, and leave. They don't come back. You never knew they were there.",
+                { 
+                  delay: 400, 
+                  number: '02', 
+                  title: 'Nothing captures them.', 
+                  body: "No clear next step. No offer. No form. They read a bit, get confused, and leave. You never knew they were there.", 
                   color: 'text-accentPrimary',
-                  glow: 'from-accentPrimary/10',
+                  bgAccent: 'group-hover:bg-accentPrimary/[0.03]',
+                  borderHover: 'hover:border-accentPrimary/30',
+                  emphasize: true
                 },
-                {
-                  number: '03',
-                  title: 'The silence costs you.',
-                  body: 'No follow-up. No message. No system. That lead went cold — and probably hired someone else who had a process ready.',
-                  color: 'text-red-400',
-                  glow: 'from-red-500/10',
+                { 
+                  delay: 600, 
+                  number: '03', 
+                  title: 'The silence costs you.', 
+                  body: 'No follow-up. No system. That lead went cold — and probably hired someone else who had a process ready.', 
+                  color: 'text-textSecondary',
+                  bgAccent: 'group-hover:bg-textPrimary/[0.02]',
+                  borderHover: 'hover:border-textPrimary/15'
                 },
               ].map((step, i) => (
-                <div key={i} className={`bg-bgSecondary p-8 md:p-10 relative group hover:bg-bgPrimary/60 transition-colors duration-300`}>
-                  <div className={`absolute inset-0 bg-gradient-to-b ${step.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
-                  <div className={`text-5xl font-serif font-bold mb-4 opacity-15 ${step.color} relative z-10`}>{step.number}</div>
-                  <h3 className={`text-lg font-semibold mb-3 ${step.color} relative z-10`}>{step.title}</h3>
-                  <p className="text-textSecondary text-sm leading-relaxed relative z-10">{step.body}</p>
-                </div>
+                <FadeIn key={i} delay={step.delay} className="h-full">
+                  <div className={`h-full bg-surface/30 backdrop-blur-md border ${step.emphasize ? 'border-accentPrimary/20 shadow-[0_15px_40px_-15px_rgba(139,92,246,0.15)] md:-translate-y-2' : 'border-textPrimary/5 shadow-[0_8px_30px_-15px_rgba(0,0,0,0.1)]'} rounded-2xl p-8 relative group hover:-translate-y-2 transition-all duration-500 ${step.borderHover}`}>
+                    {/* Subtle Background Tint on Hover */}
+                    <div className={`absolute inset-0 rounded-2xl ${step.bgAccent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+                    
+                    <div className={`text-4xl font-serif font-bold mb-6 opacity-20 ${step.color}`}>{step.number}</div>
+                    <h3 className={`text-xl font-semibold mb-3 ${step.color}`}>{step.title}</h3>
+                    <p className="text-textSecondary/80 text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </FadeIn>
               ))}
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={200}>
-            <div className="max-w-2xl mx-auto text-center space-y-6">
-              <p className="text-textSecondary text-base md:text-lg leading-relaxed">
-                Most businesses spend money on ads, social media, or word of mouth — and then send people to a website that doesn't do anything. No structure. No clear path. No follow-up. The visitors arrive and disappear.
-              </p>
-              <p className="text-textSecondary text-base md:text-lg leading-relaxed">
-                It's not that people aren't interested. It's that there's nothing pulling them forward. Every day without a system is another day of invisible, silent revenue loss.
-              </p>
-              <p className="text-textPrimary text-base md:text-lg leading-relaxed font-medium">
-                That's exactly what we fix.
-              </p>
+          {/* Insight Block */}
+          <FadeIn delay={800}>
+            <div className="max-w-3xl mx-auto bg-surface/40 backdrop-blur-xl border border-textPrimary/10 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden group hover:border-textPrimary/20 transition-colors duration-500">
+              <div className="absolute inset-0 bg-gradient-to-b from-textPrimary/[0.02] to-transparent opacity-50 pointer-events-none" />
+              
+              <div className="relative z-10 space-y-5">
+                <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
+                  Most businesses spend money on ads, social media, or word of mouth — and then send people to a website that doesn't do anything. The visitors arrive and disappear.
+                </p>
+                <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
+                  It's not that people aren't interested. It's that there's nothing pulling them forward. Every day without a system is another day of invisible, silent revenue loss.
+                </p>
+                <div className="pt-6 mt-6 border-t border-textPrimary/10">
+                  <p className="text-textPrimary text-lg md:text-xl font-semibold tracking-wide">
+                    That's exactly what we fix.
+                  </p>
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
           FEATURES — SYSTEM PILLARS
       ============================================================ */}
-      <Section className="bg-bgPrimary">
-        <div className="container mx-auto px-6">
-          <FadeIn className="text-center mb-12">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">What We Actually Build</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-3">
-              Not a Website. A Complete Client System.
+      <section className="relative py-24 md:py-32 overflow-hidden bg-bgPrimary">
+        {/* Atmospheric Background */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterSystem">
+              <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterSystem)"/>
+          </svg>
+          <div className="absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-accentPrimary/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[20%] right-[20%] w-[600px] h-[400px] bg-accentSecondary/5 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <FadeIn className="text-center mb-20 md:mb-28 max-w-3xl mx-auto">
+            <p className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary mb-6">What We Actually Build</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] tracking-tight mb-6">
+              Not a Website.<br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentPrimary via-accentSecondary to-accentLuxury">A Complete Client System.</span>
             </h2>
-            <p className="text-textSecondary text-sm max-w-xl mx-auto leading-relaxed">
-              Every business we work with gets a connected system — designed to attract, capture, follow up, and convert. Automatically.
+            <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
+              Every business we work with gets a connected infrastructure — engineered to attract, capture, follow up, and convert. Quietly. Automatically.
             </p>
           </FadeIn>
-          <FadeIn delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="relative">
+            {/* Elegant Subconscious Connection Path (Desktop) */}
+            <div className="absolute top-[35%] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-textPrimary/10 to-transparent hidden lg:block z-0" />
+            <div className="absolute top-[35%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
+            <div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
+            <div className="absolute top-[35%] left-[75%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
               {[
-                { icon: TrendingUp, title: 'Visitor-to-Lead Flow', desc: 'Your website is structured around a single goal: turning every visitor into a qualified lead. Clear path. Clear action. No guessing.' },
-                { icon: Zap, title: 'Instant Lead Capture', desc: 'Smart forms and WhatsApp triggers fire the moment someone shows interest — so no lead goes cold before you even see it.' },
-                { icon: BarChart3, title: 'Automated Follow-Up', desc: 'Your system sends the right message at the right moment. Prospects hear from you instantly, without any manual effort on your side.' },
-                { icon: Rocket, title: 'Built to Scale', desc: 'As your business grows, your system grows with it. Every piece is connected, optimized monthly, and built to perform long-term.' },
+                { 
+                  icon: TrendingUp, 
+                  title: 'Visitor Flow', 
+                  desc: 'Every pixel directs traffic forward. No dead ends. The architecture forces a decision.', 
+                  delay: 200, 
+                  color: 'text-textPrimary/70', 
+                  bg: 'bg-surface/30', 
+                  borderHover: 'hover:border-textPrimary/30',
+                  glowHover: 'from-textPrimary/[0.03]',
+                  iconBorderHover: 'group-hover:border-textPrimary/20',
+                  offset: 'lg:mt-4',
+                  importance: 'normal',
+                  iconGlow: 'from-textPrimary/5'
+                },
+                { 
+                  icon: Zap, 
+                  title: 'Instant Capture', 
+                  desc: 'Smart forms and psychological triggers convert anonymous visitors into named leads the second they show intent.', 
+                  delay: 400, 
+                  color: 'text-accentPrimary', 
+                  bg: 'bg-surface/50', 
+                  borderHover: 'hover:border-accentPrimary/40',
+                  glowHover: 'from-accentPrimary/[0.05]',
+                  iconBorderHover: 'group-hover:border-accentPrimary/30',
+                  offset: 'lg:-mt-2',
+                  importance: 'high',
+                  iconGlow: 'from-accentPrimary/20'
+                },
+                { 
+                  icon: BarChart3, 
+                  title: 'Automated Follow-up', 
+                  desc: 'The system initiates contact. WhatsApp sequences fire immediately, preventing leads from cooling down while you sleep.', 
+                  delay: 600, 
+                  color: 'text-accentSecondary', 
+                  bg: 'bg-surface/50', 
+                  borderHover: 'hover:border-accentSecondary/40',
+                  glowHover: 'from-accentSecondary/[0.05]',
+                  iconBorderHover: 'group-hover:border-accentSecondary/30',
+                  offset: 'lg:-mt-4',
+                  importance: 'high',
+                  iconGlow: 'from-accentSecondary/20'
+                },
+                { 
+                  icon: Rocket, 
+                  title: 'Scale & Predict', 
+                  desc: 'The foundation is set. Your client acquisition becomes a predictable, measurable engine.', 
+                  delay: 800, 
+                  color: 'text-textSecondary/80', 
+                  bg: 'bg-surface/20', 
+                  borderHover: 'hover:border-accentLuxury/30',
+                  glowHover: 'from-accentLuxury/[0.03]',
+                  iconBorderHover: 'group-hover:border-accentLuxury/20',
+                  offset: 'lg:mt-6',
+                  importance: 'low',
+                  iconGlow: 'from-accentLuxury/10'
+                },
               ].map((feature, i) => (
-                <Card key={i} className="group">
-                  <div className="w-12 h-12 rounded-lg bg-surface flex items-center justify-center mb-6 group-hover:bg-accentPrimary/20 transition-colors">
-                    <feature.icon className="text-accentPrimary group-hover:text-textPrimary transition-colors" size={24} />
+                <FadeIn key={i} delay={feature.delay} className={`h-full ${feature.offset}`}>
+                  <div className={`h-full ${feature.bg} backdrop-blur-xl border border-textPrimary/5 rounded-3xl p-8 relative group hover:-translate-y-2 ${feature.borderHover} hover:bg-surface/60 transition-all duration-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.3)] flex flex-col`}>
+                    
+                    {/* Interaction Glow */}
+                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-b ${feature.glowHover} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+
+                    {/* Integrated Icon Area */}
+                    <div className="relative mb-10 self-start">
+                      <div className={`absolute inset-0 bg-gradient-to-tr ${feature.iconGlow} to-transparent blur-[12px] rounded-full scale-[1.5] opacity-50 group-hover:opacity-100 transition-all duration-700`} />
+                      <div className={`w-12 h-12 rounded-2xl bg-bgPrimary/60 border border-textPrimary/5 flex items-center justify-center relative z-10 ${feature.iconBorderHover} transition-colors duration-700 shadow-sm`}>
+                        <feature.icon className={`${feature.color} group-hover:scale-110 transition-transform duration-700`} size={20} strokeWidth={1.5} />
+                      </div>
+                    </div>
+
+                    <h3 className={`text-xl font-serif font-semibold mb-4 tracking-wide ${feature.importance === 'high' ? 'text-textPrimary' : 'text-textPrimary/90'}`}>{feature.title}</h3>
+                    <p className={`text-sm leading-relaxed ${feature.importance === 'high' ? 'text-textSecondary/90' : 'text-textSecondary/70'} flex-grow`}>{feature.desc}</p>
+                    
+                    {/* UI Micro-signals */}
+                    {feature.title === 'Instant Capture' && (
+                      <div className="mt-6 inline-flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accentPrimary animate-pulse shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
+                        <span className="text-[9px] uppercase tracking-wider text-textSecondary font-medium">Lead Syncing</span>
+                      </div>
+                    )}
+                    {feature.title === 'Automated Follow-up' && (
+                      <div className="mt-6 inline-flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accentSecondary animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                        <span className="text-[9px] uppercase tracking-wider text-textSecondary font-medium">Message Sent</span>
+                      </div>
+                    )}
                   </div>
-                  <h3 className="text-xl font-serif font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-textSecondary text-sm leading-relaxed">{feature.desc}</p>
-                </Card>
+                </FadeIn>
               ))}
             </div>
-          </FadeIn>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
           SYSTEM PHILOSOPHY
@@ -260,285 +461,577 @@ const Home: React.FC = () => {
       {/* ============================================================
           FEATURED CASE STUDY
       ============================================================ */}
-      <Section className="bg-bgPrimary py-24 border-b border-textPrimary/5">
-        <div className="container mx-auto px-6">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Real Projects. Real Business Results.</h2>
-            <p className="text-textSecondary text-lg max-w-2xl mx-auto">Explore how NIDAM turns business ideas into clean, modern, conversion-focused websites.</p>
+      <section className="relative py-28 md:py-36 overflow-hidden bg-bgPrimary border-y border-textPrimary/5">
+        {/* Background Atmosphere */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterPortfolio">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterPortfolio)"/>
+          </svg>
+          <div className="absolute top-[30%] left-[10%] w-[600px] h-[600px] bg-accentSecondary/5 blur-[130px] rounded-full" />
+          <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-accentLuxury/5 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <FadeIn className="mb-20">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-sm cursor-default">
+                   <span className="w-1.5 h-1.5 rounded-full bg-accentLuxury/80" />
+                   <span className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary">Featured Case Study</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] tracking-tight">
+                  Real Projects.<br/>
+                  <span className="text-textSecondary/60 font-light text-3xl md:text-4xl lg:text-5xl block mt-2">Real Business Results.</span>
+                </h2>
+              </div>
+              <p className="text-textSecondary/90 text-sm md:text-base max-w-sm leading-relaxed mb-2 md:text-right">
+                Explore how we engineer luxury digital infrastructure that drives measurable conversions.
+              </p>
+            </div>
           </FadeIn>
           
-          <FadeIn delay={100}>
-            <div className="relative group bg-surface/50 border border-textPrimary/10 rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_0_40px_rgba(139,92,246,0.15)] transition-all duration-500 flex flex-col md:flex-row items-center gap-0 md:gap-8">
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accentPrimary/10 via-transparent to-accentSecondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <FadeIn delay={200}>
+            <div className="relative group rounded-[2.5rem] flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
               
-              <div className="w-full md:w-1/2 p-8 md:p-12 relative z-10">
-                <div className="inline-block px-3 py-1 mb-6 rounded-full bg-textPrimary/5 border border-textPrimary/10 text-xs font-bold uppercase tracking-wider text-accentSecondary">
-                  Luxury Transport / Tourism
-                </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-textPrimary">Othman Tours</h3>
-                <p className="text-textSecondary mb-8 leading-relaxed">
-                  A premium website for a Northern Morocco transport brand, designed with a luxury landing page, fleet showcase, destination sections, B2B agency offers, testimonials, and WhatsApp booking CTA.
+              {/* Left Side: Strategic Framing */}
+              <div className="w-full lg:w-[45%] lg:pr-16 relative z-10">
+                <h3 className="text-4xl md:text-5xl font-serif font-bold mb-5 text-textPrimary tracking-tight">Othman Tours</h3>
+                <p className="text-textSecondary/80 text-sm md:text-base leading-relaxed mb-10 max-w-md">
+                  A high-end transportation brand needed more than a digital brochure. They needed a high-performance booking engine disguised as a luxury web experience.
                 </p>
-                <div className="flex flex-wrap items-center gap-4">
-                  <Button to="/case-studies/othman-tours" variant="primary" className="px-6 py-3 shadow-[0_0_15px_rgba(139,92,246,0.25)] flex items-center gap-2">
-                    View Case Study <ArrowRight size={16} />
-                  </Button>
-                  <Button to="https://othman-liard.vercel.app/" variant="outline" className="px-6 py-3 border-textPrimary/10 flex items-center gap-2" target="_blank" rel="noopener noreferrer">
-                    Live Website <ExternalLink size={16} />
+
+                {/* Strategic Details */}
+                <div className="space-y-6 mb-12">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentPrimary/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentPrimary transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Luxury Positioning</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">Elevated visual identity to attract high-ticket B2B and private clientele.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentSecondary/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentSecondary transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Booking-Focused System</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">Frictionless fleet selection process integrated directly with WhatsApp automation.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-5">
+                  <Button to="/case-studies/othman-tours" variant="primary" className="group/btn px-8 py-3.5 rounded-full overflow-hidden relative shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-700 hover:-translate-y-1 border border-transparent hover:border-white/10">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
+                    <span className="relative z-10 flex items-center gap-2 text-sm font-medium">Read Case Study <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" /></span>
                   </Button>
                 </div>
               </div>
               
-              <div className="w-full md:w-1/2 p-6 md:p-12 relative z-10 flex justify-center">
-                <div className="rounded-xl overflow-hidden border border-textPrimary/10 shadow-2xl bg-black w-full max-w-lg transform group-hover:scale-105 transition-transform duration-700 ease-out">
-                   <div className="h-8 bg-[#1A1D24] border-b border-textPrimary/5 px-4 flex items-center gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
-                   </div>
-                   <img src={othmanScreenshot} alt="Othman Tours Preview" className="w-full h-auto object-cover object-top" />
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </Section>
-
-      {/* ============================================================
-          PROMOTIONAL BANNER
-      ============================================================ */}
-      <Section className="py-16 bg-bgPrimary">
-        <div className="container mx-auto px-6">
-          <FadeIn>
-            <div className="relative overflow-hidden bg-textPrimary/5 backdrop-blur-md rounded-3xl border border-textPrimary/10 shadow-[inset_0_0_20px_rgba(139,92,246,0.15)] p-12 md:p-16 text-center">
-              {/* Subtle background glow inside the card */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-2xl bg-gradient-to-tr from-accentPrimary/20 to-accentSecondary/10 blur-[100px] pointer-events-none" />
-              
-              <div className="relative z-10">
-                <div className="inline-block px-4 py-1.5 rounded-full bg-accentPrimary/10 border border-accentPrimary/20 text-accentPrimary text-xs font-bold uppercase tracking-wider mb-6">
-                  NIDAM INTELLIGENCE V2.0 IS LIVE
-                </div>
-                <h3 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-textPrimary to-textSecondary">
-                  The Next Generation of Web Architecture
-                </h3>
-                <p className="text-textSecondary text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                  Experience unprecedented velocity. Our proprietary AI build system now delivers agency-quality platforms in 48 hours without compromising a single pixel.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <div className="relative group w-full sm:w-auto">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-40 group-hover:opacity-75 transition-all duration-500 pointer-events-none" />
-                    <Button to="/contact" variant="primary" className="relative w-full sm:w-auto px-8 py-4 text-sm font-semibold hover:-translate-y-1 transition-all duration-300 ease-out">
-                      Experience the Future
-                    </Button>
-                  </div>
-                  <Button to="/catalog" variant="outline" className="w-full sm:w-auto px-8 py-4 text-sm font-medium border-textPrimary/10 hover:bg-textPrimary/5 hover:border-textPrimary/20 transition-all duration-300 ease-out">
-                    Watch Demo
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </Section>
-
-      {/* ============================================================
-          HOW WE WORK — CLARIFY → CAPTURE → CONNECT → CONVERT
-      ============================================================ */}
-      <Section className="bg-bgSecondary border-y border-textPrimary/5">
-        <div className="container mx-auto px-6">
-
-          <FadeIn className="text-center mb-6">
-            <p className="text-xs uppercase tracking-widest text-accentPrimary mb-4">Our Method</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">How We Work</h2>
-            <p className="text-textSecondary text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              We don't just hand you a website and disappear. We build a structured system around your business — one that guides every visitor through a clear path until they become a paying client.
-            </p>
-          </FadeIn>
-
-          {/* 4C Flow Connector Strip */}
-          <FadeIn delay={100} className="flex items-center justify-center gap-0 mb-16 overflow-x-auto pb-2">
-            {['Clarify', 'Capture', 'Connect', 'Convert'].map((label, i) => (
-              <React.Fragment key={label}>
-                <div className={`flex-shrink-0 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border ${
-                  i === 0 ? 'border-accentSecondary/50 text-accentSecondary bg-accentSecondary/10' :
-                  i === 1 ? 'border-accentPrimary/50 text-accentPrimary bg-accentPrimary/10' :
-                  i === 2 ? 'border-accentLuxury/50 text-accentLuxury bg-accentLuxury/10' :
-                  'border-green-400/50 text-green-400 bg-green-400/10'
-                }`}>
-                  {label}
-                </div>
-                {i < 3 && (
-                  <div className="flex-shrink-0 w-8 h-px bg-textPrimary/20 relative">
-                    <ArrowRight size={10} className="absolute -right-1 -top-[5px] text-textSecondary/40" />
-                  </div>
-                )}
-              </React.Fragment>
-            ))}
-          </FadeIn>
-
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-            {[
-              {
-                number: '01',
-                keyword: 'Clarify',
-                title: 'We understand your business.',
-                desc: 'Before building anything, we ask the right questions. Who are your clients? What do they need to see before they trust you? We map the full picture first.',
-                tag: 'Discovery Call',
-                color: 'text-accentSecondary',
-                border: 'border-accentSecondary/30',
-                glow: 'shadow-[0_0_20px_rgba(99,202,183,0.12)]',
-                bg: 'bg-accentSecondary/5',
-              },
-              {
-                number: '02',
-                keyword: 'Capture',
-                title: 'We build your system.',
-                desc: 'A fast, clear website with a built-in lead form and WhatsApp trigger. Every page is designed with one goal: give your visitor a reason to take action — and make it effortless.',
-                tag: 'Build & Launch',
-                color: 'text-accentPrimary',
-                border: 'border-accentPrimary/30',
-                glow: 'shadow-[0_0_20px_rgba(139,92,246,0.12)]',
-                bg: 'bg-accentPrimary/5',
-              },
-              {
-                number: '03',
-                keyword: 'Connect',
-                title: 'We activate the follow-up.',
-                desc: 'When a lead comes in, your system responds instantly — automated WhatsApp messages, confirmation flows, and smart notifications keep the conversation alive without any manual effort.',
-                tag: 'Automation',
-                color: 'text-accentLuxury',
-                border: 'border-accentLuxury/30',
-                glow: 'shadow-[0_0_20px_rgba(212,175,55,0.12)]',
-                bg: 'bg-accentLuxury/5',
-              },
-              {
-                number: '04',
-                keyword: 'Convert',
-                title: 'Leads become clients.',
-                desc: 'With the right message, at the right moment, through the right channel — your visitor moves from curious to committed. That is what a system does that a website alone never can.',
-                tag: 'Revenue',
-                color: 'text-green-400',
-                border: 'border-green-400/30',
-                glow: 'shadow-[0_0_20px_rgba(74,222,128,0.12)]',
-                bg: 'bg-green-400/5',
-              },
-            ].map((step, i) => (
-              <FadeIn key={i} delay={i * 120} className="group">
-                <div className={`h-full rounded-2xl border ${step.border} ${step.glow} ${step.bg} p-7 flex flex-col gap-4 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 ease-out`}>
-                  <div className="flex items-center justify-between">
-                    <span className={`text-4xl font-serif font-bold opacity-20 ${step.color}`}>{step.number}</span>
-                    <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${step.border} ${step.color} bg-bgSecondary`}>{step.tag}</span>
-                  </div>
-                  <div>
-                    <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${step.color}`}>{step.keyword}</p>
-                    <h3 className="text-base font-semibold text-textPrimary leading-snug mb-3">{step.title}</h3>
-                    <p className="text-textSecondary text-sm leading-relaxed">{step.desc}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Closing line */}
-          <FadeIn delay={500} className="text-center">
-            <p className="text-textSecondary text-sm max-w-xl mx-auto">
-              Every client we work with goes through this exact process. It's not a formula — it's a commitment to making sure your investment actually works for your business.
-            </p>
-          </FadeIn>
-
-        </div>
-      </Section>
-
-      {/* ============================================================
-          ABOUT INTRO
-      ============================================================ */}
-      <Section className="bg-bgSecondary/30">
-        <div className="container mx-auto px-6">
-          <FadeIn>
-            <div className="flex flex-col md:flex-row items-center gap-16">
-              <div className="w-full md:w-1/2">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface">
-                  <img src="https://picsum.photos/600/800?grayscale" alt="Founder" className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary via-transparent to-transparent opacity-80" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="bg-bgPrimary/80 backdrop-blur-md border border-textPrimary/10 rounded-xl p-4">
-                      <p className="text-xs text-textSecondary mb-1">Solo Architect. AI-Amplified Output.</p>
-                      <p className="text-sm font-semibold">Precision-engineered. System-driven.</p>
+              {/* Right Side: Dimensional Alive Project Preview */}
+              <div className="w-full lg:w-[55%] relative z-10 lg:-mr-12 mt-10 lg:mt-0">
+                {/* Soft ambient glow behind image */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-accentSecondary/10 blur-[80px] rounded-full group-hover:scale-110 group-hover:bg-accentPrimary/20 transition-all duration-1000 ease-out pointer-events-none" />
+                
+                {/* Image Container with Perspective/Tilt simulation */}
+                <div className="relative transform-gpu perspective-1000 w-full">
+                  <div className="relative rounded-[2rem] overflow-hidden border border-textPrimary/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)] bg-surface/50 backdrop-blur-3xl transform-gpu rotate-y-[-2deg] rotate-x-[1deg] group-hover:rotate-y-0 group-hover:rotate-x-0 group-hover:scale-[1.02] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                    
+                    {/* Elegant Browser Chrome */}
+                    <div className="h-10 bg-bgPrimary/80 backdrop-blur-md border-b border-textPrimary/5 px-5 flex items-center justify-between">
+                       <div className="flex gap-1.5">
+                         <div className="w-2.5 h-2.5 rounded-full bg-textPrimary/10 group-hover:bg-[#FF5F56] transition-colors duration-500" />
+                         <div className="w-2.5 h-2.5 rounded-full bg-textPrimary/10 group-hover:bg-[#FFBD2E] transition-colors duration-500 delay-75" />
+                         <div className="w-2.5 h-2.5 rounded-full bg-textPrimary/10 group-hover:bg-[#27C93F] transition-colors duration-500 delay-150" />
+                       </div>
+                       <div className="px-4 py-1 rounded-md bg-surface border border-textPrimary/5 text-[9px] font-mono text-textSecondary/40 tracking-wider hidden sm:block">
+                         othman-tours.com
+                       </div>
+                       <div className="w-10 hidden sm:block" /> {/* spacer for balance */}
+                    </div>
+                    
+                    {/* Inner Image with parallax/shimmer */}
+                    <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-surface">
+                      <img src={othmanScreenshot} alt="Othman Tours Preview" className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] opacity-90 group-hover:opacity-100" />
+                      
+                      {/* Hover Shimmer Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity duration-1000 pointer-events-none" />
+                      
+                      {/* Interaction Pulse Overlay */}
+                      <div className="absolute bottom-6 right-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                         <span className="w-1.5 h-1.5 rounded-full bg-accentSecondary animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                         <span className="text-[9px] uppercase tracking-wider text-white/90 font-medium">Live System</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2">
-                <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">The Agency Promise</p>
-                <h2 className="text-4xl font-serif font-bold mb-6">A Calm Approach to Web Development</h2>
-                <p className="text-textSecondary mb-6 leading-relaxed">
-                  We built Nidam with one goal: to remove the technical stress from running a small business. You shouldn't have to worry about servers, codebases, or broken links.
-                </p>
-                <p className="text-textSecondary mb-8 leading-relaxed">
-                  We handle the engineering—delivering beautiful, fast websites that you fully own. And when things change, our monthly checks and rapid fixes ensure your digital presence is always perfect.
-                </p>
-                <div className="flex items-center gap-4">
-                  <Button to="/about" variant="outline" icon>Read Our Story</Button>
-                  <Link to="/contact" className="text-sm text-textSecondary hover:text-accentPrimary transition-colors flex items-center gap-1 group">
-                    Or book a strategy call <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
-                  </Link>
-                </div>
-              </div>
             </div>
           </FadeIn>
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
-          CATALOG GRID
+          PREMIUM CTA STATEMENT
       ============================================================ */}
-      <Section>
-        <div className="container mx-auto px-6">
-          <div className="flex justify-between items-end mb-16">
-            <FadeIn>
-              <h2 className="text-4xl font-serif font-bold">Select Your <br /><span className="text-accentPrimary">Starting Point</span></h2>
+      <section className="py-24 md:py-32 bg-bgPrimary relative overflow-hidden">
+        {/* Architectural Grid & Depth */}
+        <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-center">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_10%,transparent_100%)]" />
+          <svg className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterCTA">
+              <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterCTA)"/>
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <FadeIn>
+            <div className="relative overflow-hidden bg-surface/30 backdrop-blur-2xl rounded-[2.5rem] border border-textPrimary/10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] p-10 md:p-16 lg:p-20 group text-left max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+              
+              {/* Organic, offset atmospheric glows */}
+              <div className="absolute -top-[30%] -right-[10%] w-[70%] h-[150%] bg-gradient-to-bl from-accentPrimary/10 via-accentSecondary/5 to-transparent blur-[100px] pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-1000" />
+              <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[100%] bg-gradient-to-tr from-accentLuxury/5 via-transparent to-transparent blur-[80px] pointer-events-none group-hover:opacity-100 opacity-40 transition-opacity duration-1000" />
+              
+              {/* Asymmetrical Content */}
+              <div className="relative z-10 w-full md:w-[60%]">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-8 backdrop-blur-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-textSecondary" />
+                  <span className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary">The Nidam Standard</span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-textPrimary leading-[1.1] tracking-tight">
+                  Stop building brochures.<br />
+                  <span className="text-textSecondary/60 font-light mt-2 block">Start building systems.</span>
+                </h3>
+                <p className="text-textSecondary/90 text-base md:text-lg mb-10 leading-relaxed max-w-md">
+                  We replace scattered marketing efforts with a cohesive digital infrastructure. You get a premium visual identity; your business gets a machine that quietly converts visitors into clients.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row items-start gap-5">
+                  <div className="relative group/btn w-full sm:w-auto">
+                    {/* Magnetic Glow Spread */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary/30 via-accentSecondary/30 to-transparent rounded-full blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    <Button to="/contact" variant="primary" className="relative w-full sm:w-auto px-8 py-3.5 rounded-full font-medium hover:-translate-y-1 shadow-[0_0_20px_rgba(139,92,246,0.1)] border border-transparent hover:border-white/10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-bgPrimary hover:bg-bgSecondary overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                      <span className="relative z-10 flex items-center justify-center gap-2">Start Your Project <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-500" /></span>
+                    </Button>
+                  </div>
+                  
+                  <Button to="/catalog" variant="outline" className="group/sec w-full sm:w-auto px-8 py-3.5 rounded-full font-medium border-textPrimary/15 bg-transparent hover:bg-surface/50 hover:border-textPrimary/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] relative overflow-hidden shadow-sm hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-textPrimary/5 to-transparent translate-x-[-100%] group-hover/sec:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                    <span className="relative z-10 flex items-center justify-center gap-2 text-textSecondary group-hover/sec:text-textPrimary transition-colors duration-300">See How It Works</span>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Right Side: Architectural System Hint */}
+              <div className="w-full md:w-[40%] relative hidden md:flex flex-col gap-4 opacity-50 group-hover:opacity-100 transition-opacity duration-1000">
+                <div className="w-full h-14 rounded-2xl border border-textPrimary/5 bg-surface/30 backdrop-blur-md flex items-center px-5 gap-4 transform group-hover:translate-x-2 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                  <div className="w-2 h-2 rounded-full bg-textPrimary/20" />
+                  <div className="h-1.5 w-24 bg-textPrimary/10 rounded-full" />
+                </div>
+                <div className="w-[85%] h-14 rounded-2xl border border-textPrimary/5 bg-surface/30 backdrop-blur-md flex items-center px-5 gap-4 ml-auto transform group-hover:-translate-x-2 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75">
+                  <div className="w-2 h-2 rounded-full bg-accentPrimary/40" />
+                  <div className="h-1.5 w-16 bg-textPrimary/10 rounded-full" />
+                </div>
+                <div className="w-[90%] h-14 rounded-2xl border border-accentSecondary/20 bg-surface/40 backdrop-blur-md flex items-center px-5 gap-4 transform group-hover:translate-x-1 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-150 shadow-[0_10px_30px_rgba(34,211,238,0.05)]">
+                  <div className="w-2 h-2 rounded-full bg-accentSecondary/80" />
+                  <div className="h-1.5 w-20 bg-textPrimary/20 rounded-full" />
+                </div>
+              </div>
+              
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ============================================================
+          HOW WE WORK — CLARIFY → CAPTURE → CONNECT → CONVERT
+      ============================================================ */}
+      <section className="bg-bgSecondary relative overflow-hidden py-24 md:py-32 border-y border-textPrimary/5">
+        {/* Background Atmosphere */}
+        <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-center">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterMethod">
+              <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterMethod)"/>
+          </svg>
+          <div className="absolute top-0 left-[20%] w-[800px] h-[500px] bg-accentPrimary/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-0 right-[20%] w-[600px] h-[400px] bg-accentSecondary/5 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <FadeIn className="text-center mb-16 md:mb-24">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface/50 border border-textPrimary/10 mb-6 backdrop-blur-sm shadow-[0_0_15px_rgba(0,0,0,0.1)] cursor-default">
+               <span className="w-1.5 h-1.5 rounded-full bg-accentPrimary/80 animate-pulse shadow-[0_0_8px_rgba(139,92,246,0.5)]" />
+               <span className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary">System Methodology</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 tracking-tight">How We Work</h2>
+            <p className="text-textSecondary/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+              We don't just hand you a website and disappear. We engineer a structured ecosystem around your business — guiding every visitor through a clear path until they become a paying client.
+            </p>
+          </FadeIn>
+
+          {/* Ecosystem Container - enables interdependent hovering */}
+          <div className="relative group/ecosystem">
+            
+            {/* Elegant Background Flow Connector (Replaces literal arrows) */}
+            <div className="absolute top-[50%] left-[5%] right-[5%] h-px bg-gradient-to-r from-transparent via-textPrimary/10 to-transparent hidden lg:block z-0 pointer-events-none group-hover/ecosystem:via-textPrimary/20 transition-colors duration-1000" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+              {[
+                {
+                  number: '01',
+                  keyword: 'Clarify',
+                  title: 'We map the architecture.',
+                  desc: 'Before writing a line of code, we define the exact journey. Who is the target? What must they see to trust you? We engineer the blueprint.',
+                  color: 'text-accentSecondary',
+                  dotColor: 'bg-accentSecondary',
+                  borderColor: 'group-hover/card:border-accentSecondary/30',
+                  pillBorder: 'group-hover/card:border-accentSecondary/20',
+                  pillGlow: 'bg-accentSecondary/10',
+                  traceLine: 'bg-accentSecondary/60',
+                  offset: 'lg:-translate-y-4',
+                  ambientGlow: 'from-accentSecondary/10'
+                },
+                {
+                  number: '02',
+                  keyword: 'Capture',
+                  title: 'We build the engine.',
+                  desc: 'A high-performance interface with built-in lead mechanics. Every page forces a decision, turning passive traffic into actionable data.',
+                  color: 'text-accentPrimary',
+                  dotColor: 'bg-accentPrimary',
+                  borderColor: 'group-hover/card:border-accentPrimary/30',
+                  pillBorder: 'group-hover/card:border-accentPrimary/20',
+                  pillGlow: 'bg-accentPrimary/10',
+                  traceLine: 'bg-accentPrimary/60',
+                  offset: 'lg:translate-y-0',
+                  ambientGlow: 'from-accentPrimary/10'
+                },
+                {
+                  number: '03',
+                  keyword: 'Connect',
+                  title: 'We wire the automation.',
+                  desc: 'When a lead enters the system, sequences fire instantly. Automated WhatsApp triggers keep the connection alive while you sleep.',
+                  color: 'text-accentLuxury',
+                  dotColor: 'bg-accentLuxury',
+                  borderColor: 'group-hover/card:border-accentLuxury/30',
+                  pillBorder: 'group-hover/card:border-accentLuxury/20',
+                  pillGlow: 'bg-accentLuxury/10',
+                  traceLine: 'bg-accentLuxury/60',
+                  offset: 'lg:-translate-y-4',
+                  ambientGlow: 'from-accentLuxury/10'
+                },
+                {
+                  number: '04',
+                  keyword: 'Convert',
+                  title: 'Traffic becomes revenue.',
+                  desc: 'With precision timing and frictionless UX, your visitor transitions from curious to committed. This is what separates a system from a website.',
+                  color: 'text-green-400',
+                  dotColor: 'bg-green-400',
+                  borderColor: 'group-hover/card:border-green-400/30',
+                  pillBorder: 'group-hover/card:border-green-400/20',
+                  pillGlow: 'bg-green-400/10',
+                  traceLine: 'bg-green-400/60',
+                  offset: 'lg:translate-y-0',
+                  ambientGlow: 'from-green-400/10'
+                },
+              ].map((step, i) => (
+                <FadeIn key={i} delay={i * 150} className={`h-full ${step.offset}`}>
+                  <div className={`group/card h-full rounded-[2rem] border border-textPrimary/5 bg-surface/40 backdrop-blur-xl p-8 lg:p-10 flex flex-col relative overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 hover:bg-surface/60 ${step.borderColor} hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.3)] group-hover/ecosystem:opacity-40 hover:!opacity-100`}>
+                    
+                    {/* Embedded Background Number */}
+                    <div className="absolute -right-4 -bottom-8 text-[150px] font-serif font-black opacity-[0.02] pointer-events-none group-hover/card:-translate-y-4 group-hover/card:scale-105 transition-all duration-1000 ease-out z-0 select-none">
+                      {step.number}
+                    </div>
+
+                    {/* Interaction Ambient Glow */}
+                    <div className={`absolute inset-0 bg-gradient-to-b ${step.ambientGlow} to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 pointer-events-none z-0`} />
+
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col h-full">
+                      <div className="flex items-center justify-between mb-8">
+                        {/* Process Tag */}
+                        <div className={`relative px-3 py-1.5 rounded-md bg-bgPrimary/50 border border-textPrimary/5 text-[10px] uppercase tracking-wider font-semibold ${step.color} ${step.pillBorder} transition-colors duration-500`}>
+                           <div className={`absolute inset-0 ${step.pillGlow} blur-md opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 rounded-md`} />
+                           <span className="relative z-10 flex items-center gap-1.5">
+                             <span className={`w-1 h-1 rounded-full ${step.dotColor} opacity-50 group-hover/card:opacity-100 group-hover/card:animate-pulse transition-opacity duration-500 shadow-[0_0_5px_currentColor]`} />
+                             {step.keyword}
+                           </span>
+                        </div>
+                        {/* Phase Tag */}
+                        <span className="text-[10px] text-textSecondary/40 font-mono uppercase tracking-widest">Phase {step.number}</span>
+                      </div>
+
+                      <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-textPrimary group-hover/card:text-white transition-colors duration-500 tracking-tight leading-tight">
+                        {step.title}
+                      </h3>
+                      <p className="text-textSecondary/80 text-sm leading-relaxed flex-grow group-hover/card:text-textSecondary transition-colors duration-500">
+                        {step.desc}
+                      </p>
+                      
+                      {/* Subtle System Trace */}
+                      <div className="mt-8 pt-6 border-t border-textPrimary/5 flex items-center justify-between opacity-30 group-hover/card:opacity-100 transition-opacity duration-500">
+                         <span className="text-[9px] uppercase tracking-widest text-textSecondary/60 font-mono">System Link</span>
+                         <div className="flex gap-1">
+                           <div className={`w-1 h-px ${step.traceLine}`} />
+                           <div className={`w-4 h-px ${step.traceLine} group-hover/card:w-8 transition-all duration-700 ease-out`} />
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+          
+          {/* Closing line */}
+          <FadeIn delay={600} className="text-center mt-20">
+            <p className="text-textSecondary/80 text-sm max-w-xl mx-auto leading-relaxed">
+              Every client goes through this exact framework. It's not a generic formula — it's a commitment to making sure your digital investment actually translates to business revenue.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ============================================================
+          ABOUT INTRO / CRAFTSMANSHIP
+      ============================================================ */}
+      <section className="relative py-24 md:py-32 bg-bgPrimary overflow-hidden border-y border-textPrimary/5">
+        {/* Calm Atmospheric Background */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.025] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterAbout">
+              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterAbout)"/>
+          </svg>
+          {/* Subtle radial vignette lighting */}
+          <div className="absolute top-0 right-0 w-full md:w-[60%] h-full bg-gradient-to-l from-bgSecondary/20 via-transparent to-transparent opacity-50" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-accentSecondary/5 blur-[150px] rounded-full pointer-events-none" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+            
+            {/* Left Image: Tactile Realism & Parallax */}
+            <div className="w-full md:w-[45%] relative group/image">
+              <FadeIn delay={100}>
+                {/* Image Container with soft breathing motion */}
+                <div className="relative aspect-[3/4] md:aspect-[4/5] rounded-t-full rounded-b-[2.5rem] overflow-hidden bg-bgSecondary border border-textPrimary/5 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]">
+                  <img 
+                    src="https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?q=80&w=800&auto=format&fit=crop" 
+                    alt="Workspace Craftsmanship" 
+                    className="w-full h-full object-cover scale-105 group-hover/image:scale-100 transition-transform duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] opacity-70 mix-blend-luminosity hover:mix-blend-normal hover:opacity-90" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary/90 via-bgPrimary/20 to-transparent opacity-80" />
+                  
+                  {/* Philosophy Signature Card */}
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[85%] max-w-[320px]">
+                    <div className="bg-surface/60 backdrop-blur-2xl border border-white/5 rounded-2xl p-6 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transform translate-y-4 group-hover/image:translate-y-0 transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                      <div className="w-8 h-px bg-textSecondary/30 mb-4" />
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-textSecondary/60 font-mono mb-2">The Artisan Mindset</p>
+                      <p className="text-sm font-serif text-textPrimary/90 leading-relaxed italic">
+                        "We treat code like architecture—building to last, not just to launch."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Abstract structural trace behind image */}
+                <div className="absolute -z-10 top-10 -right-6 w-full h-full border border-textPrimary/5 rounded-t-full rounded-b-[2.5rem] transition-transform duration-1000 group-hover/image:-translate-x-2 group-hover/image:translate-y-2" />
+              </FadeIn>
+            </div>
+
+            {/* Right Content: Editorial Pacing */}
+            <div className="w-full md:w-[55%]">
+              <FadeIn delay={200}>
+                <div className="inline-flex items-center gap-4 mb-8">
+                  <div className="w-10 h-px bg-accentSecondary/40" />
+                  <p className="text-xs uppercase tracking-[0.2em] text-accentSecondary/80">The Agency Promise</p>
+                </div>
+                
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 text-textPrimary leading-[1.1] tracking-tight">
+                  A calm approach to <br />
+                  <span className="text-textSecondary/50 font-light italic mt-2 block">digital execution.</span>
+                </h2>
+                
+                <div className="space-y-6 text-textSecondary/80 text-base md:text-lg leading-relaxed max-w-lg">
+                  <p>
+                    We built NIDAM with one specific goal: to remove the technical anxiety from running a modern business. You shouldn't have to worry about broken links, server crashes, or chaotic codebases.
+                  </p>
+                  <p>
+                    We handle the engineering with quiet precision. We deliver beautiful, fast systems that you fully own. And when the digital landscape changes, our consistent monthly support ensures your presence remains perfectly intact.
+                  </p>
+                </div>
+                
+                <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                  <Button to="/about" variant="primary" className="group/btn relative px-8 py-3.5 rounded-full font-medium overflow-hidden border border-transparent hover:border-white/10 shadow-[0_10px_20px_-10px_rgba(139,92,246,0.2)] hover:shadow-[0_15px_30px_-10px_rgba(139,92,246,0.4)] transition-all duration-700 ease-out hover:-translate-y-0.5">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                    <span className="relative z-10 flex items-center gap-2">Discover Our Process</span>
+                  </Button>
+                  
+                  <Link to="/contact" className="group/link relative text-sm font-medium text-textSecondary hover:text-textPrimary transition-colors duration-500 flex items-center gap-2 py-2">
+                    <span className="relative overflow-hidden pb-1">
+                      Or book a strategy call
+                      <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-textPrimary/20 translate-x-[-100%] group-hover/link:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                    </span>
+                    <ArrowRight size={14} className="opacity-50 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all duration-500 ease-out" />
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          CATALOG GRID / SYSTEM STARTING POINTS
+      ============================================================ */}
+      <section className="relative py-24 md:py-32 bg-bgPrimary overflow-hidden border-y border-textPrimary/5 group/catalog">
+        {/* Atmospheric Background */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterCatalog">
+              <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterCatalog)"/>
+          </svg>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-gradient-to-tr from-accentPrimary/5 via-transparent to-accentSecondary/5 blur-[150px] rounded-full opacity-40 group-hover/catalog:opacity-80 transition-opacity duration-1000" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+            <FadeIn className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 tracking-tight leading-[1.1]">
+                Start With the Digital System <br className="hidden md:block" />
+                <span className="text-accentPrimary">You Need Most</span>
+              </h2>
+              <p className="text-textSecondary/90 text-lg leading-relaxed">
+                Every business starts from a different problem. Choose the infrastructure that matches your current growth goal, and we will build it with strategy, precision, and automation in mind.
+              </p>
             </FadeIn>
-            <FadeIn delay={200}>
-              <Link to="/catalog" className="text-textSecondary hover:text-textPrimary flex items-center gap-2 group">
-                View Full Catalog <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+            <FadeIn delay={200} className="shrink-0">
+              <Button to="/catalog" variant="outline" className="group px-7 py-3.5 rounded-full font-semibold border-textPrimary/15 hover:border-textPrimary/30 hover:bg-surface/50 transition-all duration-500 hover:-translate-y-0.5">
+                Explore Full Catalog <ArrowRight size={16} className="ml-1.5 inline-block group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
             </FadeIn>
           </div>
 
-          <ProjectGrid>
-            <FadeIn delay={0}>
-              <ProjectCard project={{
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            {[
+              {
                 id: 'othman-tours',
+                badge: 'High-Ticket Booking',
                 title: 'Othman Tours',
-                category: 'Luxury Transport',
-                description: 'A premium tourism transport website built for luxury journeys, fleet showcase, destinations, and B2B travel agencies.',
-                image: othmanScreenshot,
-                docsUrl: '/work/othman-tours',
-                docsButtonText: 'View Case Study',
-                demoUrl: 'https://othman-liard.vercel.app/'
-              }} />
-            </FadeIn>
-            {categories.slice(0, 2).map((categoryCard, i) => {
-              const customLabels = ['E-commerce', 'Professional Portfolio'];
-              return (
-                <FadeIn key={categoryCard.id} delay={(i + 1) * 100}>
-                  <ProjectCard project={{
-                    id: categoryCard.id,
-                    title: categoryCard.title,
-                    category: customLabels[i] || categoryCard.category,
-                    description: categoryCard.description,
-                    image: categoryCard.previewImage,
-                    docsUrl: categoryCard.detailRoute,
-                    demoUrl: categoryCard.liveDemoRoute
-                  }} />
-                </FadeIn>
-              )
-            })}
-          </ProjectGrid>
+                featured: true,
+                desc: 'A premium transport infrastructure designed to capture elite tourism clients and automate fleet reservations.',
+                bestFor: 'Luxury transport, B2B travel, and local agencies.',
+                img: othmanScreenshot,
+                docsUrl: '/case-studies/othman-tours',
+                demoUrl: 'https://othman-liard.vercel.app/',
+                offset: 'lg:mt-0'
+              },
+              {
+                id: 'saas-platform',
+                badge: 'Recurring Revenue',
+                title: 'Tech Dashboards',
+                featured: false,
+                desc: 'A conversion-focused product interface built to accelerate user onboarding and drive subscription growth.',
+                bestFor: 'SaaS startups, dashboards, and app platforms.',
+                img: categories[0]?.previewImage || 'https://picsum.photos/seed/saas/800/600',
+                docsUrl: '/catalog/saas',
+                demoUrl: '#',
+                offset: 'lg:mt-8'
+              },
+              {
+                id: 'ecommerce',
+                badge: 'Frictionless Commerce',
+                title: 'Premium Retail',
+                featured: false,
+                desc: 'An immersive shopping ecosystem engineered to elevate brand perception and maximize average order value.',
+                bestFor: 'Premium retail, watches, and luxury fashion.',
+                img: categories[1]?.previewImage || 'https://picsum.photos/seed/ecom/800/600',
+                docsUrl: '/catalog/ecommerce',
+                demoUrl: '#',
+                offset: 'lg:mt-0'
+              }
+            ].map((card, i) => (
+              <FadeIn key={card.id} delay={i * 150} className={`h-full ${card.offset}`}>
+                <div className="group/starter flex flex-col h-full bg-surface/30 backdrop-blur-xl border border-textPrimary/5 rounded-[1.5rem] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.25)] hover:border-textPrimary/10 hover:bg-surface/40 group-hover/catalog:opacity-60 hover:!opacity-100">
+                  
+                  {/* Image Container - Subtle Restraint */}
+                  <div className="relative aspect-[16/10] bg-bgSecondary border-b border-textPrimary/5 perspective-[1000px] overflow-hidden p-4 pb-0">
+                    
+                    {/* Browser Chrome Hints */}
+                    <div className="absolute top-4 left-6 flex gap-1.5 z-20 opacity-40 group-hover/starter:opacity-70 transition-opacity duration-700">
+                       <div className="w-1.5 h-1.5 rounded-full bg-textPrimary/50" />
+                       <div className="w-1.5 h-1.5 rounded-full bg-textPrimary/50" />
+                       <div className="w-1.5 h-1.5 rounded-full bg-textPrimary/50" />
+                    </div>
+
+                    <div className="absolute top-3 right-4 z-20">
+                      {card.featured && (
+                        <span className="px-2.5 py-1 rounded-full bg-accentSecondary/10 backdrop-blur-md border border-accentSecondary/20 text-[9px] font-bold uppercase tracking-widest text-accentSecondary shadow-[0_0_15px_rgba(99,202,183,0.1)] flex items-center gap-1.5">
+                          <span className="w-1 h-1 rounded-full bg-accentSecondary animate-pulse shadow-[0_0_5px_currentColor]" /> Strategic System
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="w-full h-full rounded-t-lg overflow-hidden relative shadow-[0_0_20px_rgba(0,0,0,0.15)] transform-gpu transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/starter:scale-[1.015] origin-bottom group-hover/starter:-translate-y-0.5 border border-textPrimary/10 border-b-0">
+                       <img src={card.img} alt={card.title} className="w-full h-full object-cover object-top opacity-80 group-hover/starter:opacity-100 transition-opacity duration-1000" />
+                       
+                       {/* Ambient Reflection */}
+                       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover/starter:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+                    </div>
+                    
+                    {/* Atmospheric Fade */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary/90 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  </div>
+
+                  {/* Content Container */}
+                  <div className="p-6 lg:p-8 flex flex-col flex-grow relative z-10 bg-transparent">
+                    {/* Badge */}
+                    <div className="mb-3">
+                       <span className="text-[10px] uppercase tracking-widest font-mono text-textSecondary/60">{card.badge}</span>
+                    </div>
+
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-textPrimary mb-3 tracking-tight group-hover/starter:text-accentPrimary transition-colors duration-500">{card.title}</h3>
+                    <p className="text-textSecondary/80 text-sm leading-relaxed mb-6 flex-grow">{card.desc}</p>
+                    
+                    {/* Best For - Soft Editorial */}
+                    <div className="mt-auto mb-6 pl-3 border-l border-textPrimary/10 group-hover/starter:border-accentPrimary/20 transition-colors duration-500">
+                      <p className="text-[9px] font-mono uppercase tracking-widest text-textPrimary/40 mb-1.5">Ideal Architecture For</p>
+                      <p className="text-xs text-textSecondary/90 font-medium leading-relaxed">{card.bestFor}</p>
+                    </div>
+
+                    {/* Buttons */}
+                    <div className="flex gap-2.5">
+                      <Button to={card.docsUrl} variant="primary" className="flex-[3] justify-center py-3 text-xs rounded-lg shadow-sm border border-transparent hover:border-white/10 relative overflow-hidden group/btn transition-all duration-500">
+                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                         <span className="relative z-10 font-semibold tracking-wide">Explore Architecture</span>
+                      </Button>
+                      <Button to={card.demoUrl} variant="outline" className="flex-[2] justify-center py-3 text-xs rounded-lg border-textPrimary/10 hover:bg-surface/60 hover:border-textPrimary/20 flex items-center gap-1.5 relative overflow-hidden group/btn2 transition-all duration-500">
+                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-textPrimary/5 to-transparent translate-x-[-100%] group-hover/btn2:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                         <ExternalLink size={13} className="relative z-10 opacity-50" /> <span className="relative z-10 font-medium">Live System</span>
+                      </Button>
+                    </div>
+                  </div>
+
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
           SERVICES — SYSTEM-BASED OFFERS
@@ -642,25 +1135,66 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          {/* Monthly Retainer Add-on */}
-          <FadeIn delay={400}>
-            <div className="max-w-5xl mx-auto rounded-2xl border border-textPrimary/10 bg-bgPrimary/60 backdrop-blur-sm p-8 flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-surface border border-textPrimary/10 flex items-center justify-center">
-                <Rocket size={20} className="text-accentSecondary" />
+          {/* Monthly Support - Emotional & Human Partnership */}
+          <FadeIn delay={400} className="mt-16">
+            <div className="relative max-w-4xl mx-auto rounded-[2rem] overflow-hidden group/support transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 border border-textPrimary/5 bg-surface/30 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:bg-surface/50">
+              
+              {/* Atmospheric Warmth */}
+              <div className="absolute inset-0 pointer-events-none z-0">
+                <svg className="absolute inset-0 w-full h-full opacity-[0.03] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="noiseFilterSupport">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/>
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#noiseFilterSupport)"/>
+                </svg>
+                {/* Soft warm radial */}
+                <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-[#d4af37]/5 via-transparent to-transparent blur-[80px] rounded-full opacity-30 group-hover/support:opacity-70 transition-opacity duration-1000" />
               </div>
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-accentSecondary">Optional Add-on · Monthly</span>
+
+              <div className="relative z-10 p-10 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-10">
+                
+                {/* Handcrafted Visual Indicator (Replacing corporate icon) */}
+                <div className="flex-shrink-0 relative">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-bgSecondary via-bgPrimary to-bgSecondary border border-textPrimary/10 shadow-sm flex items-center justify-center relative overflow-hidden transition-all duration-700">
+                     <div className="absolute inset-0 bg-[#d4af37]/5 opacity-0 group-hover/support:opacity-100 transition-opacity duration-1000" />
+                     <div className="w-4 h-4 rounded-full border border-textSecondary/40 group-hover/support:border-[#d4af37]/50 transition-colors duration-700 relative flex items-center justify-center">
+                       <div className="w-1.5 h-1.5 rounded-full bg-textSecondary/20 group-hover/support:bg-[#d4af37]/60 transition-colors duration-700" />
+                     </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-textPrimary mb-1">Growth Partner Retainer</h3>
-                <p className="text-textSecondary text-sm leading-relaxed max-w-2xl">
-                  We stay in your corner every month — monitoring performance, updating your content, refining your messages, and making sure your system keeps improving as your business grows. You focus on clients. We handle the rest.
-                </p>
-              </div>
-              <div className="flex flex-col items-center md:items-end gap-3 shrink-0">
-                <p className="text-textSecondary text-xs">From</p>
-                <p className="text-2xl font-serif font-bold text-textPrimary">$350<span className="text-sm text-textSecondary font-normal">/mo</span></p>
-                <Button to="/contact" variant="outline" className="whitespace-nowrap text-sm px-6 py-2.5">Add to My System</Button>
+                
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-flex items-center gap-3 mb-5 justify-center md:justify-start w-full">
+                    <div className="w-6 h-px bg-[#d4af37]/30" />
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-textSecondary/60">Long-Term Partnership</span>
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-textPrimary mb-5 tracking-tight group-hover/support:text-textPrimary transition-colors duration-500">
+                    Quiet support in the background.
+                  </h3>
+                  
+                  <div className="space-y-4 text-textSecondary/80 text-sm md:text-base leading-relaxed max-w-xl mx-auto md:mx-0">
+                    <p>
+                      We don’t just hand over a system and leave. We stay available as your business grows—updating content, handling the technical details, and making sure everything runs perfectly.
+                    </p>
+                    <p className="font-medium text-textSecondary/90">
+                      You focus on your clients. When something needs attention, we take care of it.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center md:items-end gap-5 shrink-0 mt-6 md:mt-0 pt-8 md:pt-0 border-t md:border-t-0 md:border-l border-textPrimary/5 md:pl-10">
+                  <div className="text-center md:text-right">
+                    <p className="text-[9px] uppercase tracking-[0.15em] text-textSecondary/50 mb-1.5 font-mono">Monthly Ongoing Support</p>
+                    <p className="text-3xl font-serif font-bold text-textPrimary group-hover/support:text-[#d4af37]/80 transition-colors duration-700">$350<span className="text-sm text-textSecondary/60 font-sans font-normal">/mo</span></p>
+                  </div>
+                  
+                  <Button to="/contact" variant="outline" className="relative group/btn overflow-hidden whitespace-nowrap text-xs font-medium px-8 py-3.5 rounded-xl border-textPrimary/10 hover:border-textPrimary/20 hover:bg-surface/80 transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-textPrimary/5 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                    <span className="relative z-10 text-textSecondary group-hover/btn:text-textPrimary transition-colors duration-500">Work Together Long-Term</span>
+                  </Button>
+                </div>
+
               </div>
             </div>
           </FadeIn>
@@ -677,129 +1211,248 @@ const Home: React.FC = () => {
       </Section>
 
       {/* ============================================================
-          INLINE CTA #2 — AUDIT NUDGE
+          FINAL INVITATION — HUMAN & CALM
       ============================================================ */}
-      <Section className="py-16 bg-bgPrimary border-b border-textPrimary/5">
-        <div className="container mx-auto px-6 text-center">
-          <FadeIn>
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-3">Free · No Obligation</p>
-            <h3 className="text-2xl font-serif font-bold mb-3">Not sure where you're losing clients? Find out — free.</h3>
-            <p className="text-textSecondary text-sm mb-6 max-w-md mx-auto">We'll review your website and tell you exactly what's stopping visitors from becoming leads.</p>
-            <div className="relative inline-block group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-500 pointer-events-none" />
-              <Button to="/contact" variant="primary" className="relative px-10 py-4 text-base font-semibold">
-                Request My Free Audit
-              </Button>
-            </div>
-            <p className="mt-4 text-xs text-textSecondary">Spots are limited — we review 4 businesses per week.</p>
-          </FadeIn>
+      <section className="relative py-32 md:py-48 border-t border-textPrimary/5 bg-bgPrimary overflow-hidden">
+        {/* Soft Atmospheric Depth */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.025] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterCTA">
+              <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterCTA)"/>
+          </svg>
+          <div className="absolute bottom-[-10%] left-[40%] w-[1000px] h-[600px] bg-gradient-to-tr from-bgSecondary/80 via-accentSecondary/5 to-transparent blur-[140px] rounded-[100%] opacity-50 transform rotate-12" />
         </div>
-      </Section>
 
-      {/* ============================================================
-          FINAL CTA BANNER — AUDIT CONVERSION
-      ============================================================ */}
-      <Section className="relative">
-        <MeshBackground />
-        <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="container mx-auto px-6 relative z-10 max-w-6xl">
           <FadeIn>
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-red-400">Every day without a system costs you a client</span>
-            </div>
+            {/* Asymmetrical human layout - deliberately offset */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-16 lg:gap-20 xl:gap-32">
+              
+              {/* Left Content (Editorial Pacing & Imbalance) */}
+              <div className="flex-1 text-center lg:text-left pt-6 lg:pl-4 relative">
+                
+                {/* Integrated Editorial Badge */}
+                <div className="flex items-start justify-center lg:justify-start gap-4 mb-14 opacity-80">
+                  <div className="w-px h-12 bg-gradient-to-b from-textPrimary/30 to-transparent hidden lg:block" />
+                  <div className="flex flex-col pt-1">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-textSecondary/50">Open Invitation</span>
+                    <span className="text-xs text-textSecondary/70 font-serif italic mt-1">A calm conversation about growth.</span>
+                  </div>
+                </div>
 
-            {/* Headline */}
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
-              You're Getting Visitors. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentPrimary via-accentSecondary to-accentLuxury bg-[length:200%_auto] animate-shimmer">
-                Are Any of Them Becoming Clients?
-              </span>
-            </h2>
+                <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-serif font-bold mb-10 leading-[1.05] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-textPrimary via-textPrimary/80 to-textPrimary/30 pb-2">
+                  Most websites aren't broken. <br className="hidden md:block" />
+                  <span className="text-textSecondary/50 font-light italic mt-3 block">They just lack direction.</span>
+                </h2>
 
-            {/* Body */}
-            <p className="text-textSecondary max-w-xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
-              Most business websites look fine — but quietly lose leads every single day. No clear call-to-action. No follow-up. No system. We'll audit your online presence and show you exactly where the gaps are.
-            </p>
-
-            {/* Primary CTA */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-40 group-hover:opacity-70 transition-all duration-500 pointer-events-none" />
-                <Button variant="primary" to="/contact" className="relative py-5 px-12 text-lg font-semibold">
-                  Request My Free Audit
-                </Button>
+                <div className="relative pl-0 lg:pl-6 border-l-0 lg:border-l border-textPrimary/10">
+                  <p className="text-textSecondary/80 text-base lg:text-lg leading-relaxed max-w-md mx-auto lg:mx-0 mb-6 font-medium">
+                    Visitors arrive, look around, and quietly disappear. The problem usually isn’t traffic—it’s that your digital presence doesn't tell them what to do next.
+                  </p>
+                  <p className="text-textSecondary/70 text-sm lg:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+                    We’ll review your exact setup and show you the structural gaps stopping your visitors from converting. No sales pressure. Just a calm, honest look at your business.
+                  </p>
+                </div>
               </div>
-              <Button to="/catalog" variant="outline" icon className="py-5 px-8">
-                See Our Work First
-              </Button>
-            </div>
 
-            {/* Trust / Urgency line */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-textSecondary">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle size={13} className="text-accentSecondary" /> Free — no strings attached
-              </span>
-              <span className="hidden sm:block w-px h-3 bg-textPrimary/20" />
-              <span className="flex items-center gap-1.5">
-                <Clock size={13} className="text-accentSecondary" /> Takes under 48 hours
-              </span>
-              <span className="hidden sm:block w-px h-3 bg-textPrimary/20" />
-              <span className="flex items-center gap-1.5">
-                <Shield size={13} className="text-accentSecondary" /> Only 4 audit spots per week
-              </span>
+              {/* Right Action Area (Asymmetrical offset - pushed down slightly) */}
+              <div className="w-full lg:w-[420px] lg:mt-32 flex flex-col items-center lg:items-start shrink-0 relative">
+                
+                <div className="w-full bg-surface/40 backdrop-blur-3xl border border-textPrimary/5 rounded-[2.5rem] p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.15)] relative group/cta overflow-hidden transition-all duration-[2000ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] hover:bg-surface/50">
+                  
+                  {/* Subtle hover glow inside card */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover/cta:opacity-100 transition-opacity duration-[2000ms]" />
+                  
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    
+                    {/* Highly Refined Button */}
+                    <Button variant="primary" to="/contact" className="w-full relative group/btn overflow-hidden py-[18px] px-6 rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_10px_20px_-10px_rgba(0,0,0,0.3)] border border-transparent hover:border-white/10 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_20px_40px_-10px_rgba(139,92,246,0.25)] bg-bgPrimary">
+                      {/* Deep internal gradient sweep */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-150%] group-hover/btn:translate-x-[150%] transition-transform duration-[1500ms] ease-in-out" />
+                      <span className="relative z-10 font-semibold tracking-wide text-sm text-textPrimary group-hover/btn:text-white transition-colors duration-700">Request Your Review</span>
+                    </Button>
+                    
+                    <div className="w-12 h-px bg-textPrimary/10 my-8" />
+                    
+                    <div className="relative">
+                      <div className="absolute left-1/2 -translate-x-1/2 -top-6 text-textPrimary/5 font-serif text-6xl select-none leading-none">"</div>
+                      <p className="text-[13px] text-textSecondary/80 leading-relaxed italic relative z-10 px-4 pt-2">
+                        We prefer quality conversations over volume. Every review is done carefully—never rushed.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Subtle structural tension dot */}
+                <div className="absolute -bottom-12 -right-6 w-2 h-2 rounded-full bg-textPrimary/10 hidden lg:block" />
+              </div>
+
             </div>
           </FadeIn>
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
-          FAQ
+          FAQ — CONVERSATIONAL & HUMAN
       ============================================================ */}
-      <Section className="bg-bgPrimary">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <FadeIn className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold">Frequently Asked Questions</h2>
-          </FadeIn>
-          <div className="space-y-4">
+      <section className="relative py-32 md:py-40 bg-bgPrimary overflow-hidden border-t border-textPrimary/5">
+        
+        {/* Deep Atmospheric Layering */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterFAQ">
+              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterFAQ)"/>
+          </svg>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-accentPrimary/5 via-bgSecondary/20 to-transparent blur-[120px] rounded-full opacity-60" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+          
+          {/* Asymmetrical Editorial Header */}
+          <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-textPrimary/10 pb-10">
+            <FadeIn className="flex-1">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-6 h-px bg-textPrimary/30" />
+                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-textSecondary/60">Honest Expectations</span>
+              </div>
+              <h2 className="text-3xl md:text-[2.75rem] font-serif font-bold leading-[1.1] tracking-tight text-textPrimary">
+                A Few Honest Answers.
+              </h2>
+            </FadeIn>
+            <FadeIn delay={100} className="md:w-64 shrink-0">
+              <p className="text-xs text-textSecondary/70 leading-relaxed italic border-l border-textPrimary/10 pl-4">
+                We believe in absolute transparency. Here is exactly how we work, what you own, and what happens next.
+              </p>
+            </FadeIn>
+          </div>
+
+          {/* Restrained Premium Accordion List */}
+          <div className="space-y-2">
             {[
-              { q: "How do you build websites so quickly?", a: "We use a proven, efficient development process and professional pre-built components. This allows us to focus entirely on customizing your site for your specific business goals without wasting time on repetitive setup." },
-              { q: "Is this templated or fully custom?", a: "You can choose from our catalog of proven layouts or request a fully custom build. In either case, every site is tailored specifically to your brand, audience, and functional needs." },
-              { q: "Do you work with all types of small businesses?", a: "Yes. Whether you are a local service provider, a wellness clinic, or a retail store, we build websites designed to help your specific business grow." },
-              { q: "Do you offer ongoing website support?", a: "Every package includes our dedicated monthly checks. We constantly monitor your site's health and perform any rapid fixes needed so you never have to worry." },
-              { q: "Do we own the website after delivery?", a: "Absolutely. You receive complete, 100% ownership of your website and all its assets. Host it with us or take it anywhere you like. No lock-in, ever." },
+              { 
+                q: "Why do you build things so fast?", 
+                a: "Because we don’t reinvent the wheel every time. We’ve spent years building a robust internal architecture. When we start your project, we aren’t coding a button from scratch—we’re immediately focusing on your business logic, your story, and how to convert your visitors." 
+              },
+              { 
+                q: "How custom is the work, really?", 
+                a: "Think of it like building a house. The foundation and plumbing are proven systems we use every time because they work flawlessly. The architecture, the interior design, and the way the rooms flow—that is entirely custom-designed for your brand and your specific clients." 
+              },
+              { 
+                q: "Will this system work for my specific industry?", 
+                a: "We don't specialize in a single industry; we specialize in human psychology. Whether you sell high-end consulting, local services, or luxury products, the core problem is always the same: gaining trust and guiding visitors to take action." 
+              },
+              { 
+                q: "What happens after the website goes live?", 
+                a: "We don’t just hand you a file and disappear. Most of our clients stay with us long-term. We monitor the system, make adjustments, and handle the technical updates quietly in the background so you can focus entirely on running your company." 
+              },
+              { 
+                q: "Do we really own the website completely?", 
+                a: "Absolutely. You own 100% of the code, the assets, and the accounts. You are never locked into our agency. If you ever decide to take the system somewhere else, you are completely free to do so without friction." 
+              },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 100}>
-                <details className="group bg-surface rounded-lg p-4 cursor-pointer hover:bg-surface/80 transition-all duration-300">
-                  <summary className="flex justify-between items-center font-medium list-none text-sm">
-                    {item.q}
-                    <Plus className="transition-transform group-open:rotate-45" size={20} />
+                <details className="group border-b border-textPrimary/5 pb-2 mb-2 cursor-pointer [&::-webkit-details-marker]:hidden relative">
+                  <summary className="flex justify-between items-center py-6 font-serif text-lg md:text-xl text-textPrimary/90 hover:text-textPrimary transition-colors duration-700 list-none outline-none select-none">
+                    <span className="group-open:text-accentPrimary transition-colors duration-700">{item.q}</span>
+                    <div className="w-10 h-10 rounded-full border border-textPrimary/5 bg-surface/20 flex items-center justify-center group-hover:bg-surface/50 group-hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.1)] group-open:bg-bgSecondary transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] shrink-0 ml-6 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-textPrimary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                      <Plus size={16} className="text-textSecondary/60 group-hover:text-textPrimary relative z-10 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] transform group-open:rotate-[135deg] group-open:text-textPrimary" />
+                    </div>
                   </summary>
-                  <p className="mt-4 text-textSecondary text-sm leading-relaxed border-t border-textPrimary/5 pt-4">{item.a}</p>
+                  
+                  {/* Subtle expansion physics */}
+                  <div className="overflow-hidden">
+                    <div className="pb-8 pt-2 opacity-0 -translate-y-4 group-open:opacity-100 group-open:translate-y-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+                      <p className="text-textSecondary/80 text-[15px] md:text-base leading-relaxed max-w-2xl border-l-2 border-textPrimary/10 pl-5 ml-1">
+                        {item.a}
+                      </p>
+                    </div>
+                  </div>
                 </details>
               </FadeIn>
             ))}
           </div>
+
         </div>
-      </Section>
+      </section>
 
       {/* ============================================================
-          NEWSLETTER
+          FOUNDER INSIGHTS — EDITORIAL & HUMAN
       ============================================================ */}
-      <Section className="py-12 border-t border-textPrimary/5">
-        <div className="container mx-auto px-6 text-center">
-          <h3 className="text-xl font-bold mb-4">Join the Nidam Mailing List</h3>
-          <p className="text-textSecondary mb-6 text-sm">Practical tips on growing your small business online. No spam.</p>
-          <div className="flex justify-center gap-2 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="email@domain.com"
-              className="bg-bgSecondary border border-textPrimary/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-accentPrimary focus:shadow-[0_0_10px_rgba(139,92,246,0.3)] transition-all"
-            />
-            <Button variant="secondary" className="whitespace-nowrap">Subscribe</Button>
-          </div>
+      <section className="relative py-24 md:py-32 bg-surface/30 border-t border-textPrimary/5 overflow-hidden">
+        
+        {/* Soft Background Warmth */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <svg className="absolute inset-0 w-full h-full opacity-[0.03] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilterNotes">
+              <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilterNotes)"/>
+          </svg>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-gradient-to-r from-accentPrimary/5 via-accentSecondary/5 to-transparent blur-[100px] rounded-[100%] opacity-40" />
         </div>
-      </Section>
+
+        <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+          <FadeIn>
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12 md:gap-20">
+              
+              {/* Left Content - Editorial Setup */}
+              <div className="flex-1 text-center md:text-left pt-2">
+                <div className="inline-flex items-center gap-3 mb-6 justify-center md:justify-start w-full">
+                  <div className="w-6 h-px bg-textPrimary/20" />
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-textSecondary/60">Occasional Notes</span>
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-textPrimary mb-6 tracking-tight">
+                  Quiet insights on building better systems.
+                </h3>
+                
+                <div className="max-w-sm mx-auto md:mx-0 border-l border-textPrimary/10 pl-5">
+                  <p className="text-textSecondary/80 text-sm md:text-base leading-relaxed italic">
+                    I occasionally share thoughts on digital architecture, client psychology, and the realities of running a modern business. No spam, just honest reflections from the desk.
+                  </p>
+                  <p className="text-[10px] text-textSecondary/50 mt-4 uppercase tracking-[0.2em] font-mono">— NIDAM Architecture Studio</p>
+                </div>
+              </div>
+
+              {/* Right Form Area - Tactile & Restrained */}
+              <div className="w-full md:w-[460px] shrink-0 mt-4 md:mt-12 flex flex-col items-center md:items-start relative group/form">
+                
+                {/* Form Container */}
+                <div className="w-full bg-surface/50 backdrop-blur-xl border border-textPrimary/10 rounded-2xl p-2 pl-6 flex flex-col sm:flex-row items-center gap-3 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_40px_-15px_rgba(0,0,0,0.15)] hover:bg-surface/80 hover:border-textPrimary/20 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] relative overflow-hidden">
+                  
+                  {/* Subtle hover gradient inside form */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover/form:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+
+                  <input
+                    type="email"
+                    placeholder="Where should I send the notes?"
+                    className="bg-transparent border-none text-sm flex-1 min-w-0 text-textPrimary placeholder:text-textSecondary/40 focus:outline-none focus:ring-0 py-3 relative z-10"
+                  />
+                  
+                  <button className="w-full sm:w-auto shrink-0 relative overflow-hidden px-6 py-3.5 rounded-xl bg-textPrimary text-bgPrimary font-medium text-xs whitespace-nowrap shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.25),0_10px_20px_-10px_rgba(255,255,255,0.2)] transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 group/submit">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-bgPrimary/20 to-transparent translate-x-[-150%] group-hover/submit:translate-x-[150%] transition-transform duration-[1500ms] ease-in-out" />
+                    <span className="relative z-10 tracking-wide text-bgPrimary/90 group-hover/submit:text-bgPrimary transition-colors duration-500">Send Me the Notes</span>
+                  </button>
+                </div>
+
+                {/* Subtext */}
+                <div className="flex items-center gap-2 mt-6 opacity-60 pl-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-textPrimary/30" />
+                  <p className="text-[9px] text-textSecondary uppercase tracking-[0.15em] font-mono">Sent roughly once a month.</p>
+                </div>
+
+              </div>
+
+            </div>
+          </FadeIn>
+        </div>
+      </section>
     </>
   );
 };
