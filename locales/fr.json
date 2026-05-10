@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Accueil", "about": "À propos", "work": "Nos Réalisations",
+    "caseStudies": "Études de cas", "blog": "Journal", "contact": "Contact",
+    "cta": "Appel stratégique"
+  },
+  "hero": {
+    "badge": "Agence de Systèmes Digitaux",
+    "h1a": "Nous ne créons pas des sites web.",
+    "h1b": "Nous construisons des systèmes clients.",
+    "sub": "Un site haute performance. Une capture de leads automatisée. Un suivi WhatsApp. Le tout connecté en un seul système qui transforme vos visiteurs en clients.",
+    "cta1": "Construire mon système",
+    "cta2": "Voir un résultat concret",
+    "trust": "Choisi par des entreprises prêtes à croître — pas seulement à exister en ligne.",
+    "stat1": "40+ systèmes déployés",
+    "stat2": "Du premier clic au client signé",
+    "stat3": "Résultats en 7 jours",
+    "float1Title": "Lead Capturé", "float1Sub": "Via page d'atterrissage",
+    "float2Title": "Session stratégique", "float2Sub": "Planifiée",
+    "float3Title": "Suivi automatisé", "float3Sub": "Message envoyé..."
+  },
+  "problem": {
+    "badge": "Le vrai problème",
+    "h2a": "Vous n'avez pas un problème de trafic.",
+    "h2b": "Vous avez un problème de flux.",
+    "step1Title": "Ils vous trouvent.",
+    "step1Body": "Quelqu'un voit votre publicité ou reçoit une recommandation. Il arrive sur votre site. C'est le moment clé — et la plupart des entreprises le gâchent.",
+    "step2Title": "Rien ne les retient.",
+    "step2Body": "Pas d'étape claire. Pas d'offre. Pas de formulaire. Ils lisent un peu, se perdent, et repartent. Vous n'avez jamais su qu'ils étaient là.",
+    "step3Title": "Le silence vous coûte cher.",
+    "step3Body": "Aucun suivi. Aucun système. Ce lead est devenu froid — et a probablement contacté un concurrent mieux préparé.",
+    "insight1": "La plupart des entreprises investissent en publicité, réseaux sociaux ou bouche-à-oreille — et envoient ensuite les gens sur un site qui ne fait rien. Les visiteurs arrivent et disparaissent.",
+    "insight2": "Ce n'est pas que les gens ne sont pas intéressés. C'est qu'il n'y a rien pour les guider. Chaque jour sans système, c'est une perte de revenus invisible et silencieuse.",
+    "insightCta": "C'est exactement ce que nous corrigeons."
+  },
+  "system": {
+    "badge": "Le Système",
+    "h2": "Quatre piliers. Un système complet.",
+    "sub": "La plupart des agences vous livrent un site et vous souhaitent bonne chance. Nous construisons un système où chaque composant joue un rôle précis pour transformer un inconnu en client payant.",
+    "pillars": [
+      { "title": "Votre présence digitale", "sub": "Les fondations", "body": "Un site optimisé pour la conversion, fonctionnel sur tous les appareils. Rapide, clair, et conçu pour inspirer confiance dès les premières secondes." },
+      { "title": "Système de capture de leads", "sub": "L'aimant", "body": "Formulaires stratégiques, pages d'offre et points d'entrée WhatsApp placés exactement là où l'intérêt est le plus fort. Nous captons l'intention avant qu'elle ne disparaisse." },
+      { "title": "Suivi automatisé", "sub": "Le moteur", "body": "Séquences WhatsApp, modèles de réponse et flux de relance qui maintiennent les leads au chaud et les guident vers la prise de rendez-vous — sans effort de votre part." },
+      { "title": "Flux de conversion et réservation", "sub": "La conclusion", "body": "Du premier message au rendez-vous confirmé. Des étapes claires, des signaux de confiance et un parcours de réservation si fluide qu'il supprime chaque hésitation." }
+    ]
+  },
+  "services": {
+    "badge": "Ce que nous construisons",
+    "h2": "Des systèmes conçus autour de vos objectifs.",
+    "sub": "Chaque système que nous construisons vise un seul objectif : transformer votre présence digitale en source régulière et automatisée de clients qualifiés.",
+    "cta": "Voir tous les systèmes"
+  },
+  "work": {
+    "badge": "Nos Réalisations",
+    "h2": "Systèmes réels. Résultats concrets.",
+    "sub": "Nous ne montrons pas de maquettes. Voici des systèmes construits pour de vrais clients.",
+    "cta": "Voir tous les systèmes"
+  },
+  "cta": {
+    "badge": "Prêt à commencer",
+    "h2a": "Arrêtez de perdre des clients",
+    "h2b": "dans le silence.",
+    "sub": "Chaque jour sans système client, c'est une perte de revenus invisible. Construisons le vôtre — rapidement, proprement, conçu pour convertir.",
+    "btn1": "Construire mon système",
+    "btn2": "Voir les études de cas",
+    "trust": "Sans contrat. Sans fioritures. Juste un système qui fonctionne."
+  },
+  "blog": {
+    "label": "Le Journal NIDAM",
+    "title1": "Observations &",
+    "title2": "Architecture.",
+    "sub": "Notes stratégiques sur la psychologie digitale, les comportements de conversion et les systèmes invisibles qui bâtissent des marques premium.",
+    "coverStory": "À la une",
+    "read": "Lire l'observation",
+    "readNotes": "Lire les notes",
+    "explore": "Explorer le système"
+  },
+  "contact": {
+    "label": "Révision du système",
+    "title1": "Débutez votre",
+    "title2": "architecture.",
+    "sub": "Nous ne créons pas seulement des interfaces. Nous concevons des systèmes complets d'acquisition client. Partagez l'état actuel de votre activité, et nous diagnostiquerons les points de friction.",
+    "process": "Le Processus",
+    "processBody": "À réception de votre demande, nous analyserons discrètement votre infrastructure digitale. Si une mise à niveau systémique offre un retour mesurable, nous vous inviterons à une revue architecturale privée.",
+    "direct": "Accès Direct",
+    "fields": {
+      "name": "Votre nom", "email": "Adresse e-mail",
+      "url": "URL ou nom de votre entreprise",
+      "message": "Où votre système crée-t-il des frictions ?"
+    },
+    "cta": "Planifier mon système"
+  },
+  "catalog": {
+    "label": "Architectures Vivantes",
+    "viewArchitecture": "Voir l'architecture",
+    "requestArchitecture": "Demander une architecture",
+    "exploreMethodology": "Explorer la méthodologie"
+  },
+  "footer": {
+    "tagline": "Nous construisons des systèmes, pas seulement des sites.",
+    "links": "Navigation",
+    "legal": "Tous droits réservés."
+  },
+  "common": {
+    "viewAll": "Voir tous les systèmes",
+    "nextChapter": "Le chapitre suivant",
+    "readObservation": "Lire l'observation",
+    "returnJournal": "Retour au journal",
+    "shareInsight": "Partager l'analyse",
+    "startConversation": "Démarrer la conversation",
+    "requestSystem": "Demander une revue système"
+  }
+}

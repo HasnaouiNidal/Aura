@@ -238,77 +238,99 @@ const Catalog: React.FC = () => {
             </FadeIn>
           </div>
 
-          {/* PROJECT 02 — WELLNESS CLINIC */}
+          {/* PROJECT 02 — LUMINA DENTAL */}
           <div className="mb-64">
             <FadeIn>
-               <div className="flex flex-col lg:flex-row-reverse justify-between items-start gap-16">
-                 
-                 <div className="w-full lg:w-1/2 lg:mt-32">
-                   <h3 className="text-4xl md:text-[4rem] font-serif font-light tracking-tighter leading-[1] mb-12 text-textPrimary">
-                     The illusion of<br />
-                     <span className="italic text-textSecondary/40 ml-12">effortless care.</span>
-                   </h3>
-                   
-                   <p className="text-[16px] text-textSecondary/60 font-light leading-[2] mb-16 max-w-md ml-0 md:ml-24">
-                     Patients were hesitating due to cold, clinical digital experiences. We engineered a calm, high-trust environment where the act of booking an appointment feels completely natural and incredibly safe.
-                   </p>
+               <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-16 relative">
+
+                 {/* Right: large atmospheric image */}
+                 <div className="w-full lg:w-[55%] z-10">
+                   <div className="relative h-[460px] md:h-[620px] overflow-hidden border border-textPrimary/[0.03] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.35)]">
+                     <img
+                       src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1400"
+                       alt="Lumina Dental Architecture"
+                       className="w-full h-full object-cover object-center filter contrast-[1.05] brightness-[0.9] transform scale-105 hover:scale-100 transition-all duration-[3000ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+                     />
+                     <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary via-transparent to-transparent opacity-50 pointer-events-none" />
+                   </div>
                  </div>
 
-                 <div className="w-full lg:w-[40%] relative">
-                    <div className="relative h-[400px] md:h-[600px] border-l border-t border-textPrimary/[0.05] bg-surface/5 flex items-center justify-center p-8 md:p-12">
-                      <div className="absolute top-10 left-10 text-[9px] uppercase tracking-[0.2em] font-light text-textSecondary/40">Appointment Flow</div>
-                      
-                      <div className="w-full flex flex-col gap-6 md:gap-8">
-                        <div className="w-full h-12 md:h-16 bg-surface/30 backdrop-blur-md border border-textPrimary/5 rounded-sm flex items-center px-6">
-                          <div className="w-2 h-2 rounded-full bg-accentSecondary/40" />
-                        </div>
-                        <div className="w-[85%] ml-auto h-12 md:h-16 bg-surface/30 backdrop-blur-md border border-textPrimary/5 rounded-sm flex items-center px-6">
-                          <div className="w-2 h-2 rounded-full bg-accentSecondary/40" />
-                        </div>
-                        <div className="w-[70%] ml-auto h-20 md:h-24 bg-surface/50 backdrop-blur-xl border border-textPrimary/10 shadow-2xl rounded-sm flex flex-col justify-center px-6 gap-3 transform -translate-x-6 md:-translate-x-12 translate-y-6">
-                          <div className="w-1/2 h-1.5 md:h-2 bg-textPrimary/20 rounded-full" />
-                          <div className="w-3/4 h-1.5 md:h-2 bg-textPrimary/10 rounded-full" />
-                        </div>
-                      </div>
-                    </div>
+                 {/* Left: editorial text block */}
+                 <div className="w-full lg:w-[45%] lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-20 mt-12 lg:mt-0 lg:pr-16">
+                   <div className="bg-surface/60 backdrop-blur-2xl p-10 md:p-16 border border-textPrimary/5 shadow-2xl">
+                     <div className="flex items-center gap-3 mb-8 opacity-60">
+                       <span className="text-[9px] uppercase tracking-[0.2em] font-light text-textSecondary/80">Dental & Wellness</span>
+                     </div>
+                     <h3 className="text-3xl md:text-[2.5rem] font-serif font-light tracking-tight leading-[1.1] mb-12 text-textPrimary">
+                       The illusion of<br />
+                       <span className="italic text-textSecondary/50">effortless care.</span>
+                     </h3>
+
+                     <div className="space-y-8 mb-16">
+                       <div>
+                         <p className="text-[10px] uppercase tracking-[0.1em] text-textSecondary/40 mb-2">The Problem</p>
+                         <p className="text-[14px] text-textSecondary/80 font-light leading-[1.8]">Patients were hesitating before booking. The digital experience communicated clinical cold instead of human warmth and safety.</p>
+                       </div>
+                       <div>
+                         <p className="text-[10px] uppercase tracking-[0.1em] text-textSecondary/40 mb-2">The System</p>
+                         <p className="text-[14px] text-textSecondary/80 font-light leading-[1.8]">A calm trust architecture. Soft visual hierarchy, instant WhatsApp capture, mobile-first onboarding designed around patient anxiety.</p>
+                       </div>
+                     </div>
+
+                     <Link to="/case-studies/lumina-dental" className="text-[10px] uppercase tracking-[0.2em] font-light text-textPrimary hover:text-textSecondary/50 transition-colors duration-500 border-b border-textPrimary/20 pb-1">
+                       View Architecture
+                     </Link>
+                   </div>
                  </div>
 
                </div>
             </FadeIn>
           </div>
 
-          {/* PROJECT 03 — PREMIUM RETAIL */}
+          {/* PROJECT 03 — ATELIER ESTATES */}
           <div>
             <FadeIn>
-               <div className="max-w-4xl mx-auto text-center mb-24">
-                 <div className="flex items-center justify-center gap-3 mb-12 opacity-60">
-                   <span className="text-[9px] uppercase tracking-[0.2em] font-light text-textSecondary/80">Luxury Commerce</span>
-                 </div>
-                 <h3 className="text-4xl md:text-[4.5rem] font-serif font-light tracking-tighter leading-[1] text-textPrimary">
-                   Desire <span className="italic text-textSecondary/40">engineered.</span>
-                 </h3>
-               </div>
+              <div className="flex flex-col lg:flex-row items-center relative gap-16 lg:gap-0">
 
-               <div className="relative w-full h-[400px] md:h-[700px] bg-bgPrimary border border-textPrimary/[0.03] overflow-hidden group">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(var(--app-textPrimary),0.03)_0%,transparent_70%)] pointer-events-none" />
-                  
-                  <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0">
-                    <div className="w-[80%] md:w-[40%] md:h-[80%] bg-surface/10 border md:border-r border-textPrimary/[0.05] p-8 md:p-10 flex flex-col justify-between transform md:-translate-x-10 group-hover:-translate-x-12 transition-transform duration-1000 z-10">
-                      <div className="w-16 h-[1px] bg-textPrimary/20 mb-8 md:mb-0" />
-                      <div>
-                        <p className="text-[10px] md:text-[12px] uppercase tracking-[0.1em] text-textSecondary/40 mb-4">The Psychology</p>
-                        <p className="text-[13px] md:text-[14px] text-textSecondary/80 font-light leading-[1.8]">Commoditized branding removed. Editorial product narrative installed. The checkout flow becomes a continuation of the luxury experience, not a transaction.</p>
-                      </div>
-                    </div>
-                    
-                    <div className="w-[60%] md:w-[30%] h-[200px] md:h-[60%] bg-surface/30 backdrop-blur-2xl border border-textPrimary/10 shadow-2xl p-6 md:p-8 transform md:translate-x-10 md:translate-y-10 group-hover:translate-x-12 group-hover:translate-y-8 transition-transform duration-1000 z-20 -mt-20 md:mt-0">
-                      <div className="w-full h-1/2 bg-bgSecondary border border-textPrimary/5 mb-6" />
-                      <div className="w-full h-8 bg-textPrimary/90 flex items-center justify-center">
-                        <span className="text-[9px] uppercase tracking-widest text-bgPrimary font-medium">Acquire</span>
-                      </div>
-                    </div>
+                {/* Left: large atmospheric image */}
+                <div className="w-full lg:w-[62%] z-10">
+                  <div className="relative h-[460px] md:h-[680px] overflow-hidden border border-textPrimary/[0.03] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.4)]">
+                    <img
+                      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1400"
+                      alt="Atelier Estates Architecture"
+                      className="w-full h-full object-cover object-center filter contrast-[1.05] brightness-[0.9] transform scale-105 hover:scale-100 transition-all duration-[3000ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bgPrimary via-transparent to-transparent opacity-60 pointer-events-none" />
                   </div>
-               </div>
+                </div>
+
+                {/* Right: editorial text block overlapping image */}
+                <div className="w-full lg:w-[45%] lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 z-20 mt-12 lg:mt-0 lg:pl-16">
+                  <div className="bg-surface/60 backdrop-blur-2xl p-10 md:p-16 border border-textPrimary/5 shadow-2xl">
+                    <div className="flex items-center gap-3 mb-8 opacity-60">
+                      <span className="text-[9px] uppercase tracking-[0.2em] font-light text-textSecondary/80">Luxury Real Estate</span>
+                    </div>
+                    <h3 className="text-3xl md:text-[2.5rem] font-serif font-light tracking-tight leading-[1.1] mb-12 text-textPrimary">
+                      Luxury begins<br />
+                      <span className="italic text-textSecondary/50">before the first visit.</span>
+                    </h3>
+                    <div className="space-y-8 mb-16">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.1em] text-textSecondary/40 mb-2">The Problem</p>
+                        <p className="text-[14px] text-textSecondary/80 font-light leading-[1.8]">Generic listings communicated facts, never feeling. High-end buyers projected no emotional life into the properties they viewed.</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.1em] text-textSecondary/40 mb-2">The System</p>
+                        <p className="text-[14px] text-textSecondary/80 font-light leading-[1.8]">An immersive editorial acquisition experience. Cinematic browsing, lifestyle storytelling, and a frictionless private enquiry path.</p>
+                      </div>
+                    </div>
+                    <Link to="/case-studies/atelier-estates" className="text-[10px] uppercase tracking-[0.2em] font-light text-textPrimary hover:text-textSecondary/50 transition-colors duration-500 border-b border-textPrimary/20 pb-1">
+                      View Architecture
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
             </FadeIn>
           </div>
 

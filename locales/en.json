@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Home", "about": "About", "work": "Our Work",
+    "caseStudies": "Case Studies", "blog": "Blog", "contact": "Contact",
+    "cta": "Book Strategy Call"
+  },
+  "hero": {
+    "badge": "Digital Systems Agency",
+    "h1a": "We Don't Build Websites.",
+    "h1b": "We Build Client Systems.",
+    "sub": "A high-performance website. Automated lead capture. WhatsApp follow-up. All connected into one system that moves people from their first click to becoming your client.",
+    "cta1": "Build My Client System",
+    "cta2": "See a Real Result",
+    "trust": "Trusted by service businesses ready to grow — not just go online.",
+    "stat1": "40+ systems deployed",
+    "stat2": "From first click to signed client",
+    "stat3": "Results in 7 days",
+    "float1Title": "Lead Captured", "float1Sub": "Via Landing Page",
+    "float2Title": "Strategy Session", "float2Sub": "Scheduled",
+    "float3Title": "Automated Follow-up", "float3Sub": "Message delivered..."
+  },
+  "problem": {
+    "badge": "The Real Issue",
+    "h2a": "You Don't Have a Traffic Problem.",
+    "h2b": "You Have a Flow Problem.",
+    "step1Title": "They find you.",
+    "step1Body": "Someone sees your ad or gets a referral. They land on your site. That's the moment — and most businesses waste it.",
+    "step2Title": "Nothing captures them.",
+    "step2Body": "No clear next step. No offer. No form. They read a bit, get confused, and leave. You never knew they were there.",
+    "step3Title": "The silence costs you.",
+    "step3Body": "No follow-up. No system. That lead went cold — and probably hired someone else who had a process ready.",
+    "insight1": "Most businesses spend money on ads, social media, or word of mouth — and then send people to a website that doesn't do anything. The visitors arrive and disappear.",
+    "insight2": "It's not that people aren't interested. It's that there's nothing pulling them forward. Every day without a system is another day of invisible, silent revenue loss.",
+    "insightCta": "That's exactly what we fix."
+  },
+  "system": {
+    "badge": "The System",
+    "h2": "Four Pillars. One Complete System.",
+    "sub": "Most agencies give you a website and wish you luck. We build a system where each part serves a specific job, and together they move someone from a stranger to a paying client.",
+    "pillars": [
+      { "title": "Your Digital Presence", "sub": "The Foundation", "body": "A conversion-optimized site that works on every device. Built to load fast, communicate clearly, and give visitors an immediate reason to trust you." },
+      { "title": "Lead Capture System", "sub": "The Magnet", "body": "Strategic forms, offer pages, and WhatsApp entry points placed exactly where interest peaks. We capture intent before it disappears." },
+      { "title": "Automated Follow-Up", "sub": "The Engine", "body": "WhatsApp sequences, response templates, and timing flows that keep leads warm and move them toward booking — without you lifting a finger." },
+      { "title": "Conversion & Booking Flow", "sub": "The Close", "body": "From first message to confirmed appointment. Clear steps, trust signals, and a booking path so smooth it removes every reason to hesitate." }
+    ]
+  },
+  "services": {
+    "badge": "What We Build",
+    "h2": "Systems Built Around Your Business Goals.",
+    "sub": "Every system we build is designed around one objective: turning your digital presence into a consistent, automated source of qualified clients.",
+    "cta": "See Full System Details"
+  },
+  "work": {
+    "badge": "Our Work",
+    "h2": "Real Systems. Real Results.",
+    "sub": "We don't show mockups. Here are systems we've built for real clients.",
+    "cta": "View All Systems"
+  },
+  "cta": {
+    "badge": "Ready to Start",
+    "h2a": "Stop Losing Clients",
+    "h2b": "to Silence.",
+    "sub": "Every day without a client system is a day of invisible revenue loss. Let's build yours — fast, clean, and built to convert.",
+    "btn1": "Build My System Now",
+    "btn2": "See Case Studies",
+    "trust": "No contracts. No bloat. Just a system that works."
+  },
+  "blog": {
+    "label": "The NIDAM Journal",
+    "title1": "Observations &",
+    "title2": "Architecture.",
+    "sub": "Strategic notes on digital psychology, conversion behavior, and the invisible systems that build premium brands.",
+    "coverStory": "Cover Story",
+    "read": "Read Observation",
+    "readNotes": "Read Notes",
+    "explore": "Explore System"
+  },
+  "contact": {
+    "label": "System Review",
+    "title1": "Begin your",
+    "title2": "architecture.",
+    "sub": "We don't just build interfaces. We engineer complete client acquisition flows. Share the current state of your business, and we will diagnose the friction points in your system.",
+    "process": "The Process",
+    "processBody": "Upon receiving your inquiry, we will quietly review your existing digital infrastructure. If we believe a systemic upgrade will yield measurable ROI, we will invite you to a private architectural review.",
+    "direct": "Direct Access",
+    "fields": {
+      "name": "Your Name", "email": "Email Address",
+      "url": "Current Website URL or Business Name",
+      "message": "Where is your system currently creating friction?"
+    },
+    "cta": "Plan My System"
+  },
+  "catalog": {
+    "label": "Living Architectures",
+    "viewArchitecture": "View Architecture",
+    "requestArchitecture": "Request Architecture",
+    "exploreMethodology": "Explore the methodology"
+  },
+  "footer": {
+    "tagline": "We build systems, not just websites.",
+    "links": "Navigation",
+    "legal": "All rights reserved."
+  },
+  "common": {
+    "viewAll": "View all systems",
+    "nextChapter": "The Next Chapter",
+    "readObservation": "Read Observation",
+    "returnJournal": "Return to Journal",
+    "shareInsight": "Share Insight",
+    "startConversation": "Start the Conversation",
+    "requestSystem": "Request System Review"
+  }
+}

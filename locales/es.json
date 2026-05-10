@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Inicio", "about": "Nosotros", "work": "Nuestro Trabajo",
+    "caseStudies": "Casos de Éxito", "blog": "Diario", "contact": "Contacto",
+    "cta": "Llamada estratégica"
+  },
+  "hero": {
+    "badge": "Agencia de Sistemas Digitales",
+    "h1a": "No construimos sitios web.",
+    "h1b": "Construimos sistemas para clientes.",
+    "sub": "Un sitio web de alto rendimiento. Captación automática de leads. Seguimiento por WhatsApp. Todo conectado en un solo sistema que convierte visitas en clientes reales.",
+    "cta1": "Crear mi sistema",
+    "cta2": "Ver un resultado real",
+    "trust": "Elegido por negocios listos para crecer — no solo para estar en internet.",
+    "stat1": "40+ sistemas desplegados",
+    "stat2": "Del primer clic al cliente firmado",
+    "stat3": "Resultados en 7 días",
+    "float1Title": "Lead Capturado", "float1Sub": "Vía página de destino",
+    "float2Title": "Sesión estratégica", "float2Sub": "Programada",
+    "float3Title": "Seguimiento automático", "float3Sub": "Mensaje enviado..."
+  },
+  "problem": {
+    "badge": "El Problema Real",
+    "h2a": "No tienes un problema de tráfico.",
+    "h2b": "Tienes un problema de flujo.",
+    "step1Title": "Te encuentran.",
+    "step1Body": "Alguien ve tu anuncio o recibe una recomendación. Llega a tu sitio. Ese es el momento clave — y la mayoría de los negocios lo desperdician.",
+    "step2Title": "Nada los retiene.",
+    "step2Body": "Sin un paso claro. Sin oferta. Sin formulario. Leen un poco, se confunden y se van. Nunca supiste que estuvieron allí.",
+    "step3Title": "El silencio te cuesta.",
+    "step3Body": "Sin seguimiento. Sin sistema. Ese lead se enfrió — y probablemente contrató a alguien con un proceso listo.",
+    "insight1": "La mayoría de los negocios invierten en anuncios, redes sociales o recomendaciones — y luego envían a la gente a un sitio web que no hace nada. Los visitantes llegan y desaparecen.",
+    "insight2": "No es que la gente no esté interesada. Es que no hay nada que los guíe hacia adelante. Cada día sin un sistema es un día de pérdida de ingresos invisible y silenciosa.",
+    "insightCta": "Eso es exactamente lo que nosotros resolvemos."
+  },
+  "system": {
+    "badge": "El Sistema",
+    "h2": "Cuatro pilares. Un sistema completo.",
+    "sub": "La mayoría de las agencias te entregan un sitio y te desean suerte. Nosotros construimos un sistema donde cada parte cumple una función específica para convertir a un desconocido en cliente.",
+    "pillars": [
+      { "title": "Tu presencia digital", "sub": "La base", "body": "Un sitio optimizado para la conversión, funcional en todos los dispositivos. Rápido, claro y diseñado para generar confianza desde el primer segundo." },
+      { "title": "Sistema de captación de leads", "sub": "El imán", "body": "Formularios estratégicos, páginas de oferta y puntos de entrada WhatsApp colocados justo donde el interés alcanza su punto máximo." },
+      { "title": "Seguimiento automatizado", "sub": "El motor", "body": "Secuencias de WhatsApp, plantillas de respuesta y flujos de seguimiento que mantienen los leads activos y los acercan a la reserva — sin que muevas un dedo." },
+      { "title": "Flujo de conversión y reserva", "sub": "El cierre", "body": "Del primer mensaje a la cita confirmada. Pasos claros, señales de confianza y un camino tan fluido que elimina cualquier razón para dudar." }
+    ]
+  },
+  "services": {
+    "badge": "Qué construimos",
+    "h2": "Sistemas diseñados para tus objetivos.",
+    "sub": "Cada sistema que construimos tiene un objetivo: convertir tu presencia digital en una fuente constante y automatizada de clientes cualificados.",
+    "cta": "Ver todos los sistemas"
+  },
+  "work": {
+    "badge": "Nuestro Trabajo",
+    "h2": "Sistemas reales. Resultados concretos.",
+    "sub": "No mostramos maquetas. Aquí están los sistemas que hemos construido para clientes reales.",
+    "cta": "Ver todos los sistemas"
+  },
+  "cta": {
+    "badge": "Listo para empezar",
+    "h2a": "Deja de perder clientes",
+    "h2b": "en el silencio.",
+    "sub": "Cada día sin un sistema es un día de ingresos perdidos. Construyamos el tuyo — rápido, limpio y diseñado para convertir.",
+    "btn1": "Crear mi sistema ahora",
+    "btn2": "Ver casos de éxito",
+    "trust": "Sin contratos. Sin excesos. Solo un sistema que funciona."
+  },
+  "blog": {
+    "label": "El Diario NIDAM",
+    "title1": "Observaciones &",
+    "title2": "Arquitectura.",
+    "sub": "Notas estratégicas sobre psicología digital, comportamiento de conversión y los sistemas invisibles que construyen marcas de alto nivel.",
+    "coverStory": "Historia principal",
+    "read": "Leer observación",
+    "readNotes": "Leer notas",
+    "explore": "Explorar sistema"
+  },
+  "contact": {
+    "label": "Revisión del Sistema",
+    "title1": "Comienza tu",
+    "title2": "arquitectura.",
+    "sub": "No solo creamos interfaces. Diseñamos sistemas completos de captación de clientes. Cuéntanos el estado de tu negocio y diagnosticaremos los puntos de fricción.",
+    "process": "El Proceso",
+    "processBody": "Al recibir tu consulta, revisaremos tu infraestructura digital. Si una mejora sistémica generará un retorno medible, te invitaremos a una revisión privada.",
+    "direct": "Acceso Directo",
+    "fields": {
+      "name": "Tu nombre", "email": "Correo electrónico",
+      "url": "URL o nombre de tu empresa",
+      "message": "¿Dónde genera fricción tu sistema?"
+    },
+    "cta": "Planificar mi sistema"
+  },
+  "catalog": {
+    "label": "Arquitecturas Vivas",
+    "viewArchitecture": "Ver arquitectura",
+    "requestArchitecture": "Solicitar arquitectura",
+    "exploreMethodology": "Explorar la metodología"
+  },
+  "footer": {
+    "tagline": "Construimos sistemas, no solo sitios web.",
+    "links": "Navegación",
+    "legal": "Todos los derechos reservados."
+  },
+  "common": {
+    "viewAll": "Ver todos los sistemas",
+    "nextChapter": "El próximo capítulo",
+    "readObservation": "Leer observación",
+    "returnJournal": "Volver al diario",
+    "shareInsight": "Compartir análisis",
+    "startConversation": "Iniciar conversación",
+    "requestSystem": "Solicitar revisión"
+  }
+}

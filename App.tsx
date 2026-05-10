@@ -9,6 +9,9 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import CaseStudies from './pages/CaseStudies';
 import OthmanCaseStudy from './pages/OthmanCaseStudy';
+import LuminaDental from './pages/LuminaDental';
+import AtelierEstates from './pages/AtelierEstates';
+import TrustArchitecture from './pages/TrustArchitecture';
 import ArticlePage from './pages/ArticlePage';
 
 const App: React.FC = () => {
@@ -27,6 +30,9 @@ const App: React.FC = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/case-studies/othman-tours" element={<OthmanCaseStudy />} />
+              <Route path="/case-studies/lumina-dental" element={<LuminaDental />} />
+              <Route path="/case-studies/atelier-estates" element={<AtelierEstates />} />
+              <Route path="/case-studies/lumina-dental/trust-architecture" element={<TrustArchitecture />} />
             </Routes>
           </Layout>
         } />
