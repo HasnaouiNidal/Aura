@@ -18,18 +18,26 @@ const Home: React.FC = () => {
       {/* ============================================================
           HERO SECTION
       ============================================================ */}
-     <div className="relative min-h-[calc(100svh-80px)] flex flex-col justify-start pt-28 md:pt-32 lg:pt-36 pb-20 overflow-hidden">
+     <div className="relative min-h-[calc(100vh-20px)] flex flex-col justify-center pt-20 md:pt-24 lg:pt-20 pb-10 overflow-hidden">
   {/* Subtle Noise Texture & Glows Container */}
   <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-    <svg className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="absolute inset-0 w-full h-full opacity-[0.02] mix-blend-overlay"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <filter id="noiseFilter">
-        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.8"
+          numOctaves="3"
+          stitchTiles="stitch"
+        />
       </filter>
       <rect width="100%" height="100%" filter="url(#noiseFilter)" />
     </svg>
 
     <FadeIn className="absolute inset-0">
-      <div className="absolute top-[35%] left-[55%] -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[620px] h-[300px] md:h-[620px] bg-gradient-to-tr from-accentSecondary/20 via-accentPrimary/15 to-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
+      <div className="absolute top-[36%] left-[55%] -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[620px] h-[300px] md:h-[620px] bg-gradient-to-tr from-accentSecondary/20 via-accentPrimary/15 to-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
       <div className="absolute top-[62%] left-[35%] -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[460px] h-[250px] md:h-[460px] bg-accentLuxury/10 blur-[100px] rounded-full mix-blend-screen" />
     </FadeIn>
   </div>
@@ -38,51 +46,86 @@ const Home: React.FC = () => {
 
   <div className="container mx-auto px-6 relative z-10 text-center">
     <div className="relative max-w-6xl mx-auto">
-
       {/* Floating Element: Lead Capture */}
-      <FadeIn delay={600} className="absolute top-[8%] left-0 hidden xl:block z-0 pointer-events-none">
-        <div className="w-48 p-3 bg-surface/30 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(139,92,246,0.08)] flex items-center gap-3 -rotate-12 opacity-90 animate-[float-micro_10s_ease-in-out_infinite]" style={{ animationDelay: '0s' }}>
+      <FadeIn
+        delay={600}
+        className="absolute top-[12%] left-0 hidden xl:block z-0 pointer-events-none"
+      >
+        <div
+          className="w-48 p-3 bg-surface/30 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(139,92,246,0.08)] flex items-center gap-3 -rotate-12 opacity-90 animate-[float-micro_10s_ease-in-out_infinite]"
+          style={{ animationDelay: "0s" }}
+        >
           <div className="w-8 h-8 rounded-full bg-accentPrimary/10 flex items-center justify-center shrink-0">
             <UserPlus size={14} className="text-accentPrimary/80" />
           </div>
+
           <div className="text-left">
-            <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">Lead Captured</p>
-            <p className="text-[9px] text-textSecondary/60">Via Landing Page</p>
+            <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">
+              Lead Captured
+            </p>
+            <p className="text-[9px] text-textSecondary/60">
+              Via Landing Page
+            </p>
           </div>
         </div>
       </FadeIn>
 
       {/* Floating Element: Booking Confirmed */}
-      <FadeIn delay={1000} className="absolute top-[58%] left-6 hidden xl:block z-0 pointer-events-none">
-        <div className="w-44 p-2.5 bg-surface/25 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(212,175,55,0.08)] flex items-center gap-3 rotate-2 opacity-90 animate-[float-micro_12s_ease-in-out_infinite]" style={{ animationDelay: '3s' }}>
+      <FadeIn
+        delay={1000}
+        className="absolute top-[52%] left-6 hidden xl:block z-0 pointer-events-none"
+      >
+        <div
+          className="w-44 p-2.5 bg-surface/25 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(212,175,55,0.08)] flex items-center gap-3 rotate-2 opacity-90 animate-[float-micro_12s_ease-in-out_infinite]"
+          style={{ animationDelay: "3s" }}
+        >
           <div className="w-7 h-7 rounded-full bg-accentLuxury/10 flex items-center justify-center shrink-0">
             <CalendarCheck size={12} className="text-accentLuxury/80" />
           </div>
+
           <div className="text-left">
-            <p className="text-[9px] font-bold text-textPrimary/80 mb-0.5">Strategy Session</p>
-            <p className="text-[8px] text-textSecondary/60">Scheduled</p>
+            <p className="text-[9px] font-bold text-textPrimary/80 mb-0.5">
+              Strategy Session
+            </p>
+            <p className="text-[8px] text-textSecondary/60">
+              Scheduled
+            </p>
           </div>
         </div>
       </FadeIn>
 
       {/* Floating Element: WhatsApp Follow-up */}
-      <FadeIn delay={800} className="absolute top-[35%] right-0 hidden xl:block z-0 pointer-events-none">
-        <div className="w-52 p-3 bg-surface/30 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(34,211,238,0.08)] flex items-center gap-3 rotate-3 opacity-90 animate-[float-micro_14s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}>
+      <FadeIn
+        delay={800}
+        className="absolute top-[38%] right-0 hidden xl:block z-0 pointer-events-none"
+      >
+        <div
+          className="w-52 p-3 bg-surface/30 backdrop-blur-md border border-textPrimary/10 rounded-2xl shadow-[0_10px_40px_rgba(34,211,238,0.08)] flex items-center gap-3 rotate-3 opacity-90 animate-[float-micro_14s_ease-in-out_infinite]"
+          style={{ animationDelay: "1s" }}
+        >
           <div className="w-8 h-8 rounded-full bg-[#25D366]/10 flex items-center justify-center shrink-0">
             <MessageCircle size={14} className="text-[#25D366]/80" />
           </div>
+
           <div className="text-left">
-            <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">Automated Follow-up</p>
-            <p className="text-[9px] text-textSecondary/60">Message delivered...</p>
+            <p className="text-[10px] font-bold text-textPrimary/80 mb-0.5">
+              Automated Follow-up
+            </p>
+            <p className="text-[9px] text-textSecondary/60">
+              Message delivered...
+            </p>
           </div>
         </div>
       </FadeIn>
 
       {/* Eyebrow badge */}
       <FadeIn delay={100}>
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-6 backdrop-blur-md hover:bg-textPrimary/10 transition-colors cursor-default relative z-10">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 mb-5 backdrop-blur-md hover:bg-textPrimary/10 transition-colors cursor-default relative z-10">
           <span className="w-2 h-2 rounded-full bg-accentSecondary animate-pulse" />
-          <span className="text-xs font-medium tracking-wider uppercase text-accentSecondary" style={{ fontFamily: "'Sora', sans-serif" }}>
+          <span
+            className="text-xs font-medium tracking-wider uppercase text-accentSecondary"
+            style={{ fontFamily: "'Sora', sans-serif" }}
+          >
             Digital Systems Agency
           </span>
         </div>
@@ -90,9 +133,13 @@ const Home: React.FC = () => {
 
       {/* Main Headline */}
       <FadeIn delay={200}>
-        <h1 className="text-[clamp(2.4rem,6vw,6rem)] font-bold mb-6 leading-[1.03] tracking-tight relative z-10" style={{ fontFamily: "'Sora', sans-serif" }}>
-          We Don't Build Websites. <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPrimary via-accentSecondary to-accentPrimary bg-[length:200%_auto] animate-[shimmer_12s_linear_infinite]">
+        <h1
+          className="text-[clamp(2.2rem,4.9vw,4.8rem)] font-bold mb-4 leading-[1.03] tracking-tight relative z-10"
+          style={{ fontFamily: "'Sora', sans-serif" }}
+        >
+          We Don't Build Websites.{" "}
+          <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentPrimary via-textPrimary to-accentSecondary bg-[length:200%_auto] animate-[shimmer_12s_linear_infinite]">
             We Build Client Systems.
           </span>
         </h1>
@@ -100,24 +147,34 @@ const Home: React.FC = () => {
 
       {/* Subheadline */}
       <FadeIn delay={300}>
-        <p className="text-base md:text-xl text-textSecondary max-w-3xl mx-auto mb-9 leading-relaxed relative z-10">
+        <p className="text-base md:text-lg text-textSecondary max-w-3xl mx-auto mb-6 leading-relaxed relative z-10">
           A connected digital system that brings people from social media or search,
-          sends them to a clear website, captures their interest, follows up on WhatsApp,
-          organizes them in a CRM, and shows you what is working through simple reports.
+          sends them to a clear website, captures their interest, follows up on
+          WhatsApp, organizes them in a CRM, and shows you what is working through
+          simple reports.
         </p>
       </FadeIn>
 
       {/* CTAs */}
       <FadeIn delay={400}>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 relative z-10">
           <div className="relative group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0">
             <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-700 pointer-events-none" />
-            <Button to="/contact" variant="primary" className="relative w-full px-9 py-4 text-sm font-semibold tracking-wide flex justify-center hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-500">
+
+            <Button
+              to="/contact"
+              variant="primary"
+              className="relative w-full px-9 py-4 text-sm font-semibold tracking-wide flex justify-center hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-500"
+            >
               Build My Client System
             </Button>
           </div>
 
-          <Button to="#how-we-work" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-9 py-4 text-sm font-medium border-textPrimary/20 hover:border-accentSecondary/40 hover:bg-accentSecondary/5 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] flex justify-center transition-all duration-500">
+          <Button
+            to="#how-we-work"
+            variant="outline"
+            className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-9 py-4 text-sm font-medium border-textPrimary/20 hover:border-accentSecondary/40 hover:bg-accentSecondary/5 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] flex justify-center transition-all duration-500"
+          >
             See How It Works
           </Button>
         </div>
@@ -125,22 +182,45 @@ const Home: React.FC = () => {
 
       {/* System Flow */}
       <FadeIn delay={450}>
-        <div className="flex flex-wrap justify-center items-center gap-2 max-w-4xl mx-auto mb-10 text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-textSecondary/70 relative z-10">
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Social Media / SEO</span>
+        <div className="flex flex-wrap justify-center items-center gap-2 max-w-4xl mx-auto mb-6 text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-textSecondary/70 relative z-10">
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Social Media / SEO
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Website</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Website
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Lead Form</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Lead Form
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">WhatsApp</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            WhatsApp
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">CRM</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            CRM
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Automation</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Automation
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Dashboard</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Dashboard
+          </span>
           <span className="text-textSecondary/40">→</span>
-          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">Better Decisions</span>
+
+          <span className="rounded-full border border-textPrimary/10 bg-surface/40 backdrop-blur-sm px-3 py-2">
+            Better Decisions
+          </span>
         </div>
       </FadeIn>
 
@@ -149,18 +229,22 @@ const Home: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-3 text-xs text-textSecondary font-medium relative z-10">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-textPrimary/5 border border-textPrimary/10 backdrop-blur-sm">
             <Shield size={14} className="text-accentSecondary" />
-            Trusted by service businesses ready to grow — not just go online.
+            <span>
+              Trusted by service businesses ready to grow — not just go online.
+            </span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-2">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-1">
             <span className="flex items-center gap-1.5">
               <Star size={12} className="text-accentLuxury fill-accentLuxury" />
               Captures leads clearly
             </span>
+
             <span className="flex items-center gap-1.5">
               <Star size={12} className="text-accentLuxury fill-accentLuxury" />
               Follows up automatically
             </span>
+
             <span className="flex items-center gap-1.5">
               <Star size={12} className="text-accentLuxury fill-accentLuxury" />
               Reports what works
@@ -174,7 +258,7 @@ const Home: React.FC = () => {
     <div className="absolute top-1/2 right-0 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-textPrimary/10 to-transparent hidden lg:block" />
   </div>
 
-  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-textSecondary/70 hidden md:block">
+  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 animate-bounce text-textSecondary/70 hidden md:block">
     <ChevronDown size={22} />
   </div>
 </div>
