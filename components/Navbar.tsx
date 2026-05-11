@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Premium Language Switcher */}
-          <div className="relative" ref={langRef}>
+          {/* <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangOpen(p => !p)}
               className="flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] font-light text-textSecondary/80 hover:text-textPrimary transition-colors duration-300 border border-textPrimary/10 px-3 py-1.5 hover:border-textPrimary/30"
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
 
           <Button variant="primary" to="/contact" className="px-6 py-2 h-10 text-xs">
             {t('nav.cta')}

@@ -1,7 +1,11 @@
 {
   "nav": {
-    "home": "Главная", "about": "О нас", "work": "Работы",
-    "caseStudies": "Кейсы", "blog": "Журнал", "contact": "Контакты",
+    "home": "Главная",
+    "about": "О нас",
+    "work": "Работы",
+    "caseStudies": "Кейсы",
+    "blog": "Журнал",
+    "contact": "Контакты",
     "cta": "Стратег. звонок"
   },
   "hero": {
@@ -15,9 +19,12 @@
     "stat1": "40+ систем запущено",
     "stat2": "От первого клика до подписанного договора",
     "stat3": "Результат за 7 дней",
-    "float1Title": "Заявка получена", "float1Sub": "Через лендинг",
-    "float2Title": "Стратегическая сессия", "float2Sub": "Назначена",
-    "float3Title": "Авто-напоминание", "float3Sub": "Сообщение доставлено..."
+    "float1Title": "Заявка получена",
+    "float1Sub": "Через лендинг",
+    "float2Title": "Стратегическая сессия",
+    "float2Sub": "Назначена",
+    "float3Title": "Авто-напоминание",
+    "float3Sub": "Сообщение доставлено..."
   },
   "problem": {
     "badge": "Настоящая проблема",
@@ -38,10 +45,26 @@
     "h2": "Четыре опоры. Одна целостная система.",
     "sub": "Большинство агентств делают сайт и желают удачи. Мы строим систему, где каждый элемент выполняет конкретную задачу и вместе превращают незнакомца в клиента.",
     "pillars": [
-      { "title": "Ваше цифровое присутствие", "sub": "Фундамент", "body": "Сайт, оптимизированный под конверсию, работающий на любом устройстве. Быстрый, понятный и внушающий доверие с первых секунд." },
-      { "title": "Система сбора заявок", "sub": "Магнит", "body": "Стратегические формы, офферные страницы и точки входа WhatsApp — там, где интерес достигает пика. Мы фиксируем намерение до того, как оно исчезнет." },
-      { "title": "Автоматизированные касания", "sub": "Двигатель", "body": "Цепочки WhatsApp, шаблоны ответов и сценарии прогрева, которые удерживают заявки и подводят к записи — без вашего участия." },
-      { "title": "Поток конверсии и записи", "sub": "Закрытие", "body": "От первого сообщения до подтверждённой встречи. Чёткие шаги, сигналы доверия и путь к записи настолько удобный, что убирает все причины колебаться." }
+      {
+        "title": "Ваше цифровое присутствие",
+        "sub": "Фундамент",
+        "body": "Сайт, оптимизированный под конверсию, работающий на любом устройстве. Быстрый, понятный и внушающий доверие с первых секунд."
+      },
+      {
+        "title": "Система сбора заявок",
+        "sub": "Магнит",
+        "body": "Стратегические формы, офферные страницы и точки входа WhatsApp — там, где интерес достигает пика. Мы фиксируем намерение до того, как оно исчезнет."
+      },
+      {
+        "title": "Автоматизированные касания",
+        "sub": "Двигатель",
+        "body": "Цепочки WhatsApp, шаблоны ответов и сценарии прогрева, которые удерживают заявки и подводят к записи — без вашего участия."
+      },
+      {
+        "title": "Поток конверсии и записи",
+        "sub": "Закрытие",
+        "body": "От первого сообщения до подтверждённой встречи. Чёткие шаги, сигналы доверия и путь к записи настолько удобный, что убирает все причины колебаться."
+      }
     ]
   },
   "services": {
@@ -84,17 +107,16 @@
     "processBody": "Получив заявку, мы проанализируем вашу цифровую инфраструктуру. Если обновление даст измеримый результат, пригласим на закрытую консультацию.",
     "direct": "Прямой контакт",
     "fields": {
-      "name": "Ваше имя", "email": "Электронная почта",
+      "name": "Ваше имя",
+      "email": "Электронная почта",
       "url": "Сайт или название компании",
       "message": "Где ваша система теряет клиентов?"
     },
     "cta": "Создать мою систему"
   },
   "catalog": {
-    "label": "Живые архитектуры",
-    "viewArchitecture": "Посмотреть",
-    "requestArchitecture": "Запросить архитектуру",
-    "exploreMethodology": "Методология"
+    "exploreMethodology": "Explore the methodology",
+    "requestArchitecture": "Request Architecture"
   },
   "footer": {
     "tagline": "Мы строим системы, а не просто сайты.",
@@ -109,5 +131,78 @@
     "shareInsight": "Поделиться",
     "startConversation": "Начать разговор",
     "requestSystem": "Запросить аудит"
+  },
+  "catalogPage": {
+    "heroBadge": "High-Performance Infrastructure",
+    "heroTitleA": "We don't build",
+    "heroTitleB": "websites.",
+    "heroDesc": "Every system inside NIDAM is engineered to attract attention, guide trust, and quietly convert visitors into clients.",
+    "float1": "Inquiry Received",
+    "float2Type": "System Action",
+    "float2Text": "The conversation continues automatically.",
+    "float3Title": "Booked",
+    "float3Sub": "Via CRM",
+    "problemTitleA": "Most businesses",
+    "problemTitleB": "already get visitors.",
+    "phase1": "Phase 01",
+    "phase1Text": "Visitor arrives.",
+    "phase2": "Phase 02",
+    "phase2Text": "Confusion.",
+    "phase3": "Phase 03",
+    "phase3Text": "Silence.",
+    "phase4": "Phase 04",
+    "phase4Text": "Lost client.",
+    "architectureOfLoss": "The architecture of loss.",
+    "methodologyBadge": "The Methodology",
+    "methodTitleA": "We don't show websites.",
+    "methodTitleB": "We engineer the invisible.",
+    "method1TitleA": "Interest should never",
+    "method1TitleB": "disappear silently.",
+    "method1Desc": "Frictionless data collection points that feel natural, not intrusive. The moment attention is captured, the system activates without hesitation.",
+    "method2Title": "The conversation continues.",
+    "method2Desc": "Intelligent sequences that nurture trust while you sleep. They aren't generic blasts—they are carefully calibrated emotional follow-ups designed to bring them back.",
+    "method3TitleA": "Momentum",
+    "method3TitleB": "uninterrupted.",
+    "method3Desc": "Seamless scheduling infrastructure synced directly to your CRM. The layout is psychologically engineered to drive a single, inevitable action: Booking.",
+    "livingArchitecturesA": "Living",
+    "livingArchitecturesB": "Architectures.",
+    "proj1Badge": "Luxury Transport",
+    "proj1TitleA": "High-ticket trust,",
+    "proj1TitleB": "automated.",
+    "theImplication": "The Implication",
+    "proj1Imp": "High-net-worth clients vanish at the slightest friction. The brand required a system that felt as premium as their fleet.",
+    "theSystem": "The System",
+    "proj1Sys": "Frictionless WhatsApp booking flow. Automated destination quoting. An uncompromising trust architecture.",
+    "viewArchitecture": "View Architecture",
+    "proj2Badge": "Dental & Wellness",
+    "proj2TitleA": "The illusion of",
+    "proj2TitleB": "effortless care.",
+    "theProblem": "The Problem",
+    "proj2Prob": "Patients were hesitating before booking. The digital experience communicated clinical cold instead of human warmth and safety.",
+    "proj2Sys": "A calm trust architecture. Soft visual hierarchy, instant WhatsApp capture, mobile-first onboarding designed around patient anxiety.",
+    "proj3Badge": "Luxury Real Estate",
+    "proj3TitleA": "Luxury begins",
+    "proj3TitleB": "before the first visit.",
+    "proj3Prob": "Generic listings communicated facts, never feeling. High-end buyers projected no emotional life into the properties they viewed.",
+    "proj3Sys": "An immersive editorial acquisition experience. Cinematic browsing, lifestyle storytelling, and a frictionless private enquiry path.",
+    "thinkTitleA": "Structure before",
+    "thinkTitleB": "aesthetics.",
+    "think1": "01 / Quiet Conversion",
+    "think1Text": "The best systems feel entirely invisible. We remove friction, ensuring the path from discovery to booking feels like a natural progression, never a forceful push.",
+    "think2": "02 / Trust Architecture",
+    "think2Text": "Trust isn't earned through loud marketing. It is established through editorial spacing, flawless performance, and an aura of uncompromising quality.",
+    "think3": "03 / Relentless Momentum",
+    "think3Text": "True business momentum means decoupling your time from your lead acquisition. Our architectures capture, nurture, and book automatically. <span className=\"italic text-textPrimary\">While you sleep.</span>",
+    "ctaTitleA": "Your business already has attention.",
+    "ctaTitleB": "Now it needs direction."
+  },
+  "caseStudiesPage": {
+    "badge": "Our Work",
+    "title": "Case Studies",
+    "desc": "Real websites built with strategy, design, and AI-powered engineering.",
+    "project1Title": "Othman Tours",
+    "project1Cat": "Luxury Transport",
+    "project1Desc": "A premium tourism transport website built for luxury journeys, fleet showcase, destinations, and B2B travel agencies.",
+    "viewCaseStudy": "View Case Study"
   }
 }
