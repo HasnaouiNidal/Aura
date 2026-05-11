@@ -98,22 +98,42 @@ const Home: React.FC = () => {
             {/* Subheadline */}
             <FadeIn delay={300}>
               <p className="text-base md:text-lg text-textSecondary max-w-2xl mx-auto mb-8 leading-relaxed relative z-10">
-                A high-performance website. Automated lead capture. WhatsApp follow-up. All connected into one system that moves people from their first click to becoming your client.
+                A connected digital system that brings people from social media or search, sends them to a clear website, captures their interest, follows up on WhatsApp, organizes them in a CRM, and shows you what is working through simple reports.
               </p>
             </FadeIn>
 
             {/* CTAs */}
             <FadeIn delay={400}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 relative z-10">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 relative z-10">
                 <div className="relative group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0">
                   <div className="absolute -inset-1 bg-gradient-to-r from-accentPrimary to-accentSecondary rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-all duration-700 pointer-events-none" />
                   <Button to="/contact" variant="primary" className="relative w-full px-8 py-3.5 text-sm font-semibold tracking-wide flex justify-center hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-500">
                     Build My Client System
                   </Button>
                 </div>
-                <Button to="/case-studies/othman-tours" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-accentSecondary/40 hover:bg-accentSecondary/5 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] flex justify-center transition-all duration-500">
-                  See a Real Result
+                <Button to="#how-we-work" variant="outline" className="w-full sm:w-auto max-w-xs sm:max-w-none mx-auto sm:mx-0 px-8 py-3.5 text-sm font-medium border-textPrimary/20 hover:border-accentSecondary/40 hover:bg-accentSecondary/5 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] flex justify-center transition-all duration-500">
+                  See How It Works
                 </Button>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={450}>
+              <div className="flex flex-wrap justify-center items-center gap-2 max-w-3xl mx-auto mb-10 text-[11px] uppercase tracking-[0.28em] text-textSecondary/70">
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Social Media / SEO</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Website</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Lead Form</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">WhatsApp</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">CRM</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Automation</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Dashboard</span>
+                <span className="text-textSecondary/40">→</span>
+                <span className="rounded-full border border-textPrimary/10 bg-surface/30 px-3 py-2">Better Decisions</span>
               </div>
             </FadeIn>
 
@@ -124,9 +144,9 @@ const Home: React.FC = () => {
                   <Shield size={14} className="text-accentSecondary" /> Trusted by service businesses ready to grow — not just go online.
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-textSecondary/80 mt-2">
-                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> 40+ systems deployed</span>
-                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> From first click to signed client</span>
-                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Results in 7 days</span>
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> A system that captures leads, follows up, and reports clearly</span>
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> From first click to client, not just a pretty homepage</span>
+                  <span className="flex items-center gap-1.5"><Star size={12} className="text-accentLuxury fill-accentLuxury" /> Built for premium services and reliable growth</span>
                 </div>
               </div>
             </FadeIn>
@@ -183,8 +203,8 @@ const Home: React.FC = () => {
                 { 
                   delay: 200, 
                   number: '01', 
-                  title: 'They find you.', 
-                  body: "Someone sees your ad or gets a referral. They land on your site. That's the moment — and most businesses waste it.", 
+                  title: 'People discover you', 
+                  body: 'They see your post, ad, website, or recommendation. Interest exists, but interest alone does not create clients.', 
                   color: 'text-textPrimary',
                   bgAccent: 'group-hover:bg-textPrimary/[0.02]',
                   borderHover: 'hover:border-textPrimary/15'
@@ -192,8 +212,8 @@ const Home: React.FC = () => {
                 { 
                   delay: 400, 
                   number: '02', 
-                  title: 'Nothing captures them.', 
-                  body: "No clear next step. No offer. No form. They read a bit, get confused, and leave. You never knew they were there.", 
+                  title: 'Nothing captures them', 
+                  body: 'If there is no clear form, WhatsApp path, or next step, the visitor leaves and you never know they were interested.', 
                   color: 'text-accentPrimary',
                   bgAccent: 'group-hover:bg-accentPrimary/[0.03]',
                   borderHover: 'hover:border-accentPrimary/30',
@@ -202,8 +222,8 @@ const Home: React.FC = () => {
                 { 
                   delay: 600, 
                   number: '03', 
-                  title: 'The silence costs you.', 
-                  body: 'No follow-up. No system. That lead went cold — and probably hired someone else who had a process ready.', 
+                  title: 'Follow-up is missing', 
+                  body: 'Messages stay scattered, leads are forgotten, and the business owner keeps guessing instead of growing.', 
                   color: 'text-textSecondary',
                   bgAccent: 'group-hover:bg-textPrimary/[0.02]',
                   borderHover: 'hover:border-textPrimary/15'
@@ -228,18 +248,10 @@ const Home: React.FC = () => {
             <div className="max-w-3xl mx-auto bg-surface/40 backdrop-blur-xl border border-textPrimary/10 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden group hover:border-textPrimary/20 transition-colors duration-500">
               <div className="absolute inset-0 bg-gradient-to-b from-textPrimary/[0.02] to-transparent opacity-50 pointer-events-none" />
               
-              <div className="relative z-10 space-y-5">
-                <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
-                  Most businesses spend money on ads, social media, or word of mouth — and then send people to a website that doesn't do anything. The visitors arrive and disappear.
+              <div className="relative z-10">
+                <p className="text-textPrimary text-lg md:text-xl font-semibold tracking-wide">
+                  NIDAM fixes the path between attention and revenue.
                 </p>
-                <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
-                  It's not that people aren't interested. It's that there's nothing pulling them forward. Every day without a system is another day of invisible, silent revenue loss.
-                </p>
-                <div className="pt-6 mt-6 border-t border-textPrimary/10">
-                  <p className="text-textPrimary text-lg md:text-xl font-semibold tracking-wide">
-                    That's exactly what we fix.
-                  </p>
-                </div>
               </div>
             </div>
           </FadeIn>
@@ -247,134 +259,81 @@ const Home: React.FC = () => {
       </section>
 
       {/* ============================================================
-          FEATURES — SYSTEM PILLARS
+          THE NIDAM CLIENT SYSTEM
       ============================================================ */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-bgPrimary">
         {/* Atmospheric Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
-            <filter id="noiseFilterSystem">
+            <filter id="noiseFilterSystemMap">
               <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
             </filter>
-            <rect width="100%" height="100%" filter="url(#noiseFilterSystem)"/>
+            <rect width="100%" height="100%" filter="url(#noiseFilterSystemMap)"/>
           </svg>
-          <div className="absolute top-[20%] left-[20%] w-[500px] h-[500px] bg-accentPrimary/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[20%] right-[20%] w-[600px] h-[400px] bg-accentSecondary/5 blur-[120px] rounded-full" />
+          <div className="absolute top-[20%] left-[18%] w-[450px] h-[450px] bg-accentPrimary/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[15%] right-[18%] w-[550px] h-[380px] bg-accentSecondary/5 blur-[120px] rounded-full" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <FadeIn className="text-center mb-20 md:mb-28 max-w-3xl mx-auto">
-            <p className="text-[10px] font-semibold tracking-widest uppercase text-textSecondary mb-6">What We Actually Build</p>
+          <FadeIn className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-[10px] uppercase tracking-widest text-textSecondary mb-6">The NIDAM Client System</p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] tracking-tight mb-6">
-              Not a Website.<br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentPrimary via-accentSecondary to-accentLuxury">A Complete Client System.</span>
+              One connected structure. Every part has a role.
             </h2>
             <p className="text-textSecondary/90 text-base md:text-lg leading-relaxed">
-              Every business we work with gets a connected infrastructure — engineered to attract, capture, follow up, and convert. Quietly. Automatically.
+              We build each piece so traffic, leads, follow-up, organization and growth reporting work together as one operating system.
             </p>
           </FadeIn>
 
-          <div className="relative">
-            {/* Elegant Subconscious Connection Path (Desktop) */}
-            <div className="absolute top-[35%] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-textPrimary/10 to-transparent hidden lg:block z-0" />
-            <div className="absolute top-[35%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
-            <div className="absolute top-[35%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
-            <div className="absolute top-[35%] left-[75%] -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-textPrimary/20 hidden lg:block z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
-              {[
-                { 
-                  icon: TrendingUp, 
-                  title: 'Visitor Flow', 
-                  desc: 'Every pixel directs traffic forward. No dead ends. The architecture forces a decision.', 
-                  delay: 200, 
-                  color: 'text-textPrimary/70', 
-                  bg: 'bg-surface/30', 
-                  borderHover: 'hover:border-textPrimary/30',
-                  glowHover: 'from-textPrimary/[0.03]',
-                  iconBorderHover: 'group-hover:border-textPrimary/20',
-                  offset: 'lg:mt-4',
-                  importance: 'normal',
-                  iconGlow: 'from-textPrimary/5'
-                },
-                { 
-                  icon: Zap, 
-                  title: 'Instant Capture', 
-                  desc: 'Smart forms and psychological triggers convert anonymous visitors into named leads the second they show intent.', 
-                  delay: 400, 
-                  color: 'text-accentPrimary', 
-                  bg: 'bg-surface/50', 
-                  borderHover: 'hover:border-accentPrimary/40',
-                  glowHover: 'from-accentPrimary/[0.05]',
-                  iconBorderHover: 'group-hover:border-accentPrimary/30',
-                  offset: 'lg:-mt-2',
-                  importance: 'high',
-                  iconGlow: 'from-accentPrimary/20'
-                },
-                { 
-                  icon: BarChart3, 
-                  title: 'Automated Follow-up', 
-                  desc: 'The system initiates contact. WhatsApp sequences fire immediately, preventing leads from cooling down while you sleep.', 
-                  delay: 600, 
-                  color: 'text-accentSecondary', 
-                  bg: 'bg-surface/50', 
-                  borderHover: 'hover:border-accentSecondary/40',
-                  glowHover: 'from-accentSecondary/[0.05]',
-                  iconBorderHover: 'group-hover:border-accentSecondary/30',
-                  offset: 'lg:-mt-4',
-                  importance: 'high',
-                  iconGlow: 'from-accentSecondary/20'
-                },
-                { 
-                  icon: Rocket, 
-                  title: 'Scale & Predict', 
-                  desc: 'The foundation is set. Your client acquisition becomes a predictable, measurable engine.', 
-                  delay: 800, 
-                  color: 'text-textSecondary/80', 
-                  bg: 'bg-surface/20', 
-                  borderHover: 'hover:border-accentLuxury/30',
-                  glowHover: 'from-accentLuxury/[0.03]',
-                  iconBorderHover: 'group-hover:border-accentLuxury/20',
-                  offset: 'lg:mt-6',
-                  importance: 'low',
-                  iconGlow: 'from-accentLuxury/10'
-                },
-              ].map((feature, i) => (
-                <FadeIn key={i} delay={feature.delay} className={`h-full ${feature.offset}`}>
-                  <div className={`h-full ${feature.bg} backdrop-blur-xl border border-textPrimary/5 rounded-3xl p-8 relative group hover:-translate-y-2 ${feature.borderHover} hover:bg-surface/60 transition-all duration-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.3)] flex flex-col`}>
-                    
-                    {/* Interaction Glow */}
-                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-b ${feature.glowHover} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
-
-                    {/* Integrated Icon Area */}
-                    <div className="relative mb-10 self-start">
-                      <div className={`absolute inset-0 bg-gradient-to-tr ${feature.iconGlow} to-transparent blur-[12px] rounded-full scale-[1.5] opacity-50 group-hover:opacity-100 transition-all duration-700`} />
-                      <div className={`w-12 h-12 rounded-2xl bg-bgPrimary/60 border border-textPrimary/5 flex items-center justify-center relative z-10 ${feature.iconBorderHover} transition-colors duration-700 shadow-sm`}>
-                        <feature.icon className={`${feature.color} group-hover:scale-110 transition-transform duration-700`} size={20} strokeWidth={1.5} />
-                      </div>
-                    </div>
-
-                    <h3 className={`text-xl font-serif font-semibold mb-4 tracking-wide ${feature.importance === 'high' ? 'text-textPrimary' : 'text-textPrimary/90'}`}>{feature.title}</h3>
-                    <p className={`text-sm leading-relaxed ${feature.importance === 'high' ? 'text-textSecondary/90' : 'text-textSecondary/70'} flex-grow`}>{feature.desc}</p>
-                    
-                    {/* UI Micro-signals */}
-                    {feature.title === 'Instant Capture' && (
-                      <div className="mt-6 inline-flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accentPrimary animate-pulse shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-                        <span className="text-[9px] uppercase tracking-wider text-textSecondary font-medium">Lead Syncing</span>
-                      </div>
-                    )}
-                    {feature.title === 'Automated Follow-up' && (
-                      <div className="mt-6 inline-flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accentSecondary animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
-                        <span className="text-[9px] uppercase tracking-wider text-textSecondary font-medium">Message Sent</span>
-                      </div>
-                    )}
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Attract',
+                includes: 'Social media management, SEO, content direction.',
+                desc: 'We help people discover your business through better digital presence.',
+              },
+              {
+                title: 'Convert',
+                includes: 'Website or landing page.',
+                desc: 'We create a clear page that explains your offer, builds trust, and guides visitors to take action.',
+              },
+              {
+                title: 'Capture',
+                includes: 'Lead forms and WhatsApp CTA.',
+                desc: 'We collect the right information from interested visitors before they disappear.',
+              },
+              {
+                title: 'Follow Up',
+                includes: 'WhatsApp Business flow and automation.',
+                desc: 'We create simple follow-up flows so leads receive the right message at the right time.',
+              },
+              {
+                title: 'Organize',
+                includes: 'CRM setup.',
+                desc: 'We organize every lead so you know who is new, who is interested, who needs follow-up, and who became a client.',
+              },
+              {
+                title: 'Improve',
+                includes: 'Reporting dashboard, business analysis, customer journey optimization.',
+                desc: 'We show what is working, what is not, and what should be improved next.',
+              },
+            ].map((step, i) => (
+              <FadeIn key={step.title} delay={i * 100}>
+                <div className="bg-surface/30 backdrop-blur-xl border border-textPrimary/5 rounded-[2rem] p-8 hover:-translate-y-1 transition-all duration-500 shadow-sm">
+                  <div className="text-[11px] uppercase tracking-[0.3em] text-textSecondary/60 mb-4 font-medium">Step {String(i + 1).padStart(2, '0')}</div>
+                  <h3 className="text-2xl font-serif font-bold mb-4 text-textPrimary">{step.title}</h3>
+                  <p className="text-sm text-textSecondary/90 mb-4 leading-relaxed">{step.includes}</p>
+                  <p className="text-textSecondary/80 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
+
+          <FadeIn delay={500}>
+            <p className="text-center text-textSecondary/80 text-sm max-w-2xl mx-auto mt-12">
+              This is why we call it a system: every part is connected to the next one.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -384,72 +343,71 @@ const Home: React.FC = () => {
       <Section className="bg-bgSecondary/40 border-y border-textPrimary/5">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
-            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">How We Think</p>
+            <p className="text-xs uppercase tracking-widest text-accentSecondary mb-4">Not Separate Services</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold">
-              Built on Clarity.<br />
-              <span className="text-textSecondary font-light text-3xl md:text-4xl">Designed for Results.</span>
+              One Growth Machine.
             </h2>
             <p className="text-textSecondary text-base max-w-xl mx-auto mt-6 leading-relaxed">
-              We don't build for aesthetics alone. Every decision — structure, message, flow — is made to move your visitor one step closer to becoming a client.
+              Most agencies sell separate services: a website here, social media there, maybe a dashboard later. NIDAM connects everything into one operating system for your digital presence.
             </p>
           </FadeIn>
 
-          {/* Philosophy Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            {[
-              {
-                icon: Layers,
-                color: 'text-accentPrimary',
-                title: 'Structure Before Design',
-                desc: 'A beautiful website that confuses visitors is just an expensive mistake. We map the client journey first — then build around it.',
-              },
-              {
-                icon: Zap,
-                color: 'text-accentSecondary',
-                title: 'Every Touchpoint Is Intentional',
-                desc: 'From the first headline to the final follow-up message, each moment is designed to reduce friction and deepen trust.',
-              },
-              {
-                icon: Globe,
-                color: 'text-accentLuxury',
-                title: 'Systems That Work Without You',
-                desc: 'The best client systems run quietly in the background. Leads arrive, inquiries are captured, and conversations begin — while you focus on your work.',
-              },
-            ].map((card, i) => (
-              <FadeIn key={i} delay={i * 100}>
-                <div className="bg-surface/40 border border-textPrimary/5 rounded-2xl p-8 text-center hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out h-full flex flex-col items-center">
-                  <div className="flex justify-center mb-5">
-                    <div className="w-10 h-10 rounded-full bg-textPrimary/5 flex items-center justify-center">
-                      <card.icon size={18} className={card.color} />
-                    </div>
-                  </div>
-                  <p className={`text-sm font-bold uppercase tracking-widest mb-3 ${card.color}`}>{card.title}</p>
-                  <p className="text-textSecondary text-sm leading-relaxed">{card.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center mb-16">
+            <div>
+              <div className="rounded-[2rem] border border-textPrimary/10 bg-surface/40 backdrop-blur-xl p-8 shadow-sm">
+                <h3 className="text-3xl font-serif font-bold text-textPrimary mb-6">A system built around every stage.</h3>
+                <div className="space-y-5 text-textSecondary/85 text-sm leading-relaxed">
+                  <p>When every tool is separate, the result is scattered: website visitors drop off, leads are missed, and no one knows where growth comes from.</p>
+                  <p>We bring the pieces together so the website, forms, WhatsApp flow, CRM, automation and reporting all work as one clear machine.</p>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-[2rem] border border-textPrimary/10 bg-surface/30 p-8 shadow-sm">
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {['Website', 'Forms', 'WhatsApp', 'CRM', 'Automation', 'Reports', 'Analysis'].map((item, i) => (
+                    <span key={item} className="rounded-full border border-textPrimary/10 bg-bgPrimary/70 px-4 py-2 text-[11px] text-textSecondary/80 uppercase tracking-[0.25em]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="h-px bg-textPrimary/10 my-4" />
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-accentSecondary" />
+                    <p className="text-sm text-textSecondary/90">Website + Forms</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-accentPrimary" />
+                    <p className="text-sm text-textSecondary/90">WhatsApp + CRM</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-accentLuxury" />
+                    <p className="text-sm text-textSecondary/90">Automation + Reports</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeIn className="text-center mb-8">
+            <p className="text-sm uppercase tracking-[0.24em] text-textSecondary/60 mb-6">Where Businesses Usually Lose Clients</p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { quote: "Nidam made getting our clinic online completely stress-free. We chose a beautiful layout from their catalog, and within days, we had a fully functional site we completely own.", name: 'Sarah M.', role: 'Owner', company: 'Wellness Clinic', initials: 'SM' },
-              { quote: "Having peace of mind knowing Nidam handles our monthly website checks and fixes is invaluable. They are calm, professional, and reliably deliver exactly what we need.", name: 'David T.', role: 'Director', company: 'Local Accounting', initials: 'DT' },
-              { quote: "We had a custom idea for our bakery's ordering system. Nidam built the front-end and back-end flawlessly. Excellent communication and a truly premium service.", name: 'Elena R.', role: 'Founder', company: 'Artisan Bakes', initials: 'ER' },
-            ].map((t, i) => (
-              <FadeIn key={i} delay={i * 100}>
-                <div className="bg-gradient-to-br from-surface to-bgSecondary p-8 rounded-2xl border border-textPrimary/5 relative hover:-translate-y-1.5 hover:shadow-2xl hover:border-accentPrimary/50 transition-all duration-300 ease-out flex flex-col h-full">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, s) => <Star key={s} size={12} className="text-accentLuxury fill-accentLuxury" />)}
-                  </div>
-                  <div className="text-accentPrimary text-4xl font-serif absolute top-4 left-6 opacity-20">"</div>
-                  <p className="text-textSecondary mb-6 mt-4 relative z-10 text-sm leading-relaxed flex-1">{t.quote}</p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-textPrimary/5">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accentPrimary/40 to-accentSecondary/20 flex items-center justify-center text-xs font-bold">{t.initials}</div>
-                    <div>
-                      <h4 className="font-semibold text-sm">{t.name}</h4>
-                      <p className="text-xs text-textSecondary">{t.role}, {t.company}</p>
-                    </div>
+              'The website looks good but does not guide action',
+              'WhatsApp messages are manual and chaotic',
+              'Leads are not stored anywhere',
+              'No one knows which channel brings clients',
+              'The business grows by guessing, not by data',
+            ].map((item, i) => (
+              <FadeIn key={item} delay={i * 100}>
+                <div className="bg-surface/40 border border-textPrimary/10 rounded-3xl p-8 text-textSecondary/85 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.2)] transition-all duration-300">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="mt-1 w-3 h-3 rounded-full bg-accentSecondary/80" />
+                    <p className="text-sm leading-relaxed">{item}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -498,20 +456,20 @@ const Home: React.FC = () => {
               
               {/* Left Side: Strategic Framing */}
               <div className="w-full lg:w-[45%] lg:pr-16 relative z-10">
-                <h3 className="text-4xl md:text-5xl font-serif font-bold mb-5 text-textPrimary tracking-tight">Othman Tours</h3>
+                <h3 className="text-4xl md:text-5xl font-serif font-bold mb-5 text-textPrimary tracking-tight">Othman Tours — Tourism Client System</h3>
                 <p className="text-textSecondary/80 text-sm md:text-base leading-relaxed mb-10 max-w-md">
-                  A high-end transportation brand needed more than a digital brochure. They needed a high-performance booking engine disguised as a luxury web experience.
+                  A premium tourism brand needed more than a beautiful website. It needed a clear path from discovery to booking.
                 </p>
 
                 {/* Strategic Details */}
-                <div className="space-y-6 mb-12">
+                <div className="space-y-6 mb-8">
                   <div className="flex items-start gap-4 group/item">
                     <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentPrimary/10 transition-colors duration-500">
                       <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentPrimary transition-colors duration-500" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-textPrimary mb-1">Luxury Positioning</p>
-                      <p className="text-xs text-textSecondary/70 leading-relaxed">Elevated visual identity to attract high-ticket B2B and private clientele.</p>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Social media direction</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">A refined presence aimed at premium travelers and tour planners.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 group/item">
@@ -519,16 +477,64 @@ const Home: React.FC = () => {
                       <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentSecondary transition-colors duration-500" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-textPrimary mb-1">Booking-Focused System</p>
-                      <p className="text-xs text-textSecondary/70 leading-relaxed">Frictionless fleet selection process integrated directly with WhatsApp automation.</p>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Premium website experience</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">A luxury homepage and booking landing flow that makes choosing easy.</p>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentLuxury/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentLuxury transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Booking-focused landing flow</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">A clear offer and next step that keeps visitors moving toward inquiry.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentPrimary/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentPrimary transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">WhatsApp inquiry path</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">Instant messaging makes it easy for guests to ask questions and book.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentSecondary/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentSecondary transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Lead organization</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">Every inquiry is stored and surfaced in a CRM so nothing slips through.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-6 h-6 rounded-full bg-textPrimary/5 flex items-center justify-center shrink-0 group-hover/item:bg-accentLuxury/10 transition-colors duration-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-textSecondary group-hover/item:bg-accentLuxury transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-textPrimary mb-1">Reporting structure</p>
+                      <p className="text-xs text-textSecondary/70 leading-relaxed">Simple dashboards show what is working and what should be improved next.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-textPrimary/10 bg-surface/30 p-4 text-sm text-textSecondary/70 mb-10">
+                  <div className="font-semibold text-textPrimary mb-3">System flow</div>
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.28em]">
+                    {['Instagram', 'Website', 'Booking Request', 'WhatsApp', 'CRM', 'Follow-up'].map((step, index) => (
+                      <React.Fragment key={step}>
+                        <span className="rounded-full bg-bgPrimary/90 px-3 py-2 border border-textPrimary/10">{step}</span>
+                        {index < 5 && <span className="text-textSecondary/40">→</span>}
+                      </React.Fragment>
+                    ))}
                   </div>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-5">
                   <Button to="/case-studies/othman-tours" variant="primary" className="group/btn px-8 py-3.5 rounded-full overflow-hidden relative shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-700 hover:-translate-y-1 border border-transparent hover:border-white/10">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
-                    <span className="relative z-10 flex items-center gap-2 text-sm font-medium">Read Case Study <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" /></span>
+                    <span className="relative z-10 flex items-center gap-2 text-sm font-medium">View The Full System <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" /></span>
                   </Button>
                 </div>
               </div>
@@ -654,7 +660,7 @@ const Home: React.FC = () => {
       {/* ============================================================
           HOW WE WORK — CLARIFY → CAPTURE → CONNECT → CONVERT
       ============================================================ */}
-      <section className="bg-bgSecondary relative overflow-hidden py-24 md:py-32 border-y border-textPrimary/5">
+      <section id="how-we-work" className="bg-bgSecondary relative overflow-hidden py-24 md:py-32 border-y border-textPrimary/5">
         {/* Background Atmosphere */}
         <div className="absolute inset-0 pointer-events-none z-0 flex items-center justify-center">
           <svg className="absolute inset-0 w-full h-full opacity-[0.015] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
@@ -685,13 +691,13 @@ const Home: React.FC = () => {
             {/* Elegant Background Flow Connector (Replaces literal arrows) */}
             <div className="absolute top-[50%] left-[5%] right-[5%] h-px bg-gradient-to-r from-transparent via-textPrimary/10 to-transparent hidden lg:block z-0 pointer-events-none group-hover/ecosystem:via-textPrimary/20 transition-colors duration-1000" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
               {[
                 {
                   number: '01',
-                  keyword: 'Clarify',
-                  title: 'We map the architecture.',
-                  desc: 'Before writing a line of code, we define the exact journey. Who is the target? What must they see to trust you? We engineer the blueprint.',
+                  keyword: 'Map',
+                  title: 'We understand your business.',
+                  desc: 'We understand your business, your clients, your offer, and where people currently get lost.',
                   color: 'text-accentSecondary',
                   dotColor: 'bg-accentSecondary',
                   borderColor: 'group-hover/card:border-accentSecondary/30',
@@ -703,9 +709,9 @@ const Home: React.FC = () => {
                 },
                 {
                   number: '02',
-                  keyword: 'Capture',
-                  title: 'We build the engine.',
-                  desc: 'A high-performance interface with built-in lead mechanics. Every page forces a decision, turning passive traffic into actionable data.',
+                  keyword: 'Build',
+                  title: 'We create the system.',
+                  desc: 'We create the website, landing pages, forms, WhatsApp flow, CRM structure, and automation.',
                   color: 'text-accentPrimary',
                   dotColor: 'bg-accentPrimary',
                   borderColor: 'group-hover/card:border-accentPrimary/30',
@@ -718,8 +724,8 @@ const Home: React.FC = () => {
                 {
                   number: '03',
                   keyword: 'Connect',
-                  title: 'We wire the automation.',
-                  desc: 'When a lead enters the system, sequences fire instantly. Automated WhatsApp triggers keep the connection alive while you sleep.',
+                  title: 'We link every touchpoint.',
+                  desc: 'We connect every touchpoint so the visitor has a clear journey from first click to client.',
                   color: 'text-accentLuxury',
                   dotColor: 'bg-accentLuxury',
                   borderColor: 'group-hover/card:border-accentLuxury/30',
@@ -731,9 +737,9 @@ const Home: React.FC = () => {
                 },
                 {
                   number: '04',
-                  keyword: 'Convert',
-                  title: 'Traffic becomes revenue.',
-                  desc: 'With precision timing and frictionless UX, your visitor transitions from curious to committed. This is what separates a system from a website.',
+                  keyword: 'Measure',
+                  title: 'We build dashboards.',
+                  desc: 'We build dashboards and reports so you can see what is happening.',
                   color: 'text-green-400',
                   dotColor: 'bg-green-400',
                   borderColor: 'group-hover/card:border-green-400/30',
@@ -742,6 +748,20 @@ const Home: React.FC = () => {
                   traceLine: 'bg-green-400/60',
                   offset: 'lg:translate-y-0',
                   ambientGlow: 'from-green-400/10'
+                },
+                {
+                  number: '05',
+                  keyword: 'Improve',
+                  title: 'We refine the journey.',
+                  desc: 'We analyze behavior and improve the journey over time.',
+                  color: 'text-textSecondary',
+                  dotColor: 'bg-textSecondary',
+                  borderColor: 'group-hover/card:border-textSecondary/30',
+                  pillBorder: 'group-hover/card:border-textSecondary/20',
+                  pillGlow: 'bg-textSecondary/10',
+                  traceLine: 'bg-textSecondary/60',
+                  offset: 'lg:-translate-y-4',
+                  ambientGlow: 'from-textSecondary/10'
                 },
               ].map((step, i) => (
                 <FadeIn key={i} delay={i * 150} className={`h-full ${step.offset}`}>
@@ -1081,28 +1101,28 @@ const Home: React.FC = () => {
               {
                 badge: 'Step 03',
                 name: 'Lead System',
-                tagline: 'Turn your website into a client machine.',
-                desc: 'We add lead capture, an automated WhatsApp response, and a follow-up flow on top of your foundation. Every visitor who shows interest gets a message before they forget you exist.',
+                tagline: 'We add capture, WhatsApp, and follow-up automation.',
+                desc: 'We add lead capture, an automated WhatsApp response, and a follow-up flow on top of your foundation. Every interested visitor receives a timely reply before they disappear.',
                 outcome: 'You get a system that captures and follows up with leads automatically — 24/7.',
                 color: 'text-accentPrimary',
                 border: 'border-accentPrimary/50',
                 bg: 'bg-accentPrimary/8',
                 glow: 'hover:shadow-[0_0_40px_rgba(139,92,246,0.20)]',
                 price: 'From $3,500',
-                featured: true,
+                featured: false,
               },
               {
                 badge: 'Step 04',
                 name: 'Full Growth System',
-                tagline: 'Everything. Done. For you.',
-                desc: 'From the first click to the signed contract — we build and connect every piece of your digital presence. Website, lead capture, WhatsApp automation, follow-up sequences, and ongoing optimization.',
+                tagline: 'We connect the full digital side into one machine.',
+                desc: 'We build and link your website, forms, WhatsApp flow, CRM, automation, reports, and social direction so your digital presence works as a single system.',
                 outcome: 'You get a complete client-acquisition system that runs while you focus on delivery.',
                 color: 'text-accentLuxury',
                 border: 'border-accentLuxury/40',
                 bg: 'bg-accentLuxury/5',
-                glow: 'hover:shadow-[0_0_30px_rgba(212,175,55,0.12)]',
+                glow: 'hover:shadow-[0_0_40px_rgba(212,175,55,0.2)]',
                 price: 'From $6,500',
-                featured: false,
+                featured: true,
               },
             ].map((offer, i) => (
               <FadeIn key={i} delay={i * 100}>
@@ -1243,16 +1263,16 @@ const Home: React.FC = () => {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-serif font-bold mb-10 leading-[1.05] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-textPrimary via-textPrimary/80 to-textPrimary/30 pb-2">
-                  Most websites aren't broken. <br className="hidden md:block" />
-                  <span className="text-textSecondary/50 font-light italic mt-3 block">They just lack direction.</span>
+                  Ready to turn your digital presence into a system? <br className="hidden md:block" />
+                  <span className="text-textSecondary/50 font-light italic mt-3 block">A single structure for your website, WhatsApp, CRM, and follow-up.</span>
                 </h2>
 
                 <div className="relative pl-0 lg:pl-6 border-l-0 lg:border-l border-textPrimary/10">
                   <p className="text-textSecondary/80 text-base lg:text-lg leading-relaxed max-w-md mx-auto lg:mx-0 mb-6 font-medium">
-                    Visitors arrive, look around, and quietly disappear. The problem usually isn’t traffic—it’s that your digital presence doesn't tell them what to do next.
+                    If your website, WhatsApp, social media, and client follow-up feel scattered, NIDAM can connect them into one clear structure.
                   </p>
                   <p className="text-textSecondary/70 text-sm lg:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
-                    We’ll review your exact setup and show you the structural gaps stopping your visitors from converting. No sales pressure. Just a calm, honest look at your business.
+                    We start with the path your visitors take and turn it into a calm, connected system that moves people toward becoming clients.
                   </p>
                 </div>
               </div>
@@ -1271,7 +1291,12 @@ const Home: React.FC = () => {
                     <Button variant="primary" to="/contact" className="w-full relative group/btn overflow-hidden py-[18px] px-6 rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_10px_20px_-10px_rgba(0,0,0,0.3)] border border-transparent hover:border-white/10 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_20px_40px_-10px_rgba(139,92,246,0.25)] bg-bgPrimary">
                       {/* Deep internal gradient sweep */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-150%] group-hover/btn:translate-x-[150%] transition-transform duration-[1500ms] ease-in-out" />
-                      <span className="relative z-10 font-semibold tracking-wide text-sm text-textPrimary group-hover/btn:text-white transition-colors duration-700">Request Your Review</span>
+                      <span className="relative z-10 font-semibold tracking-wide text-sm text-textPrimary group-hover/btn:text-white transition-colors duration-700">Book a Strategy Call</span>
+                    </Button>
+
+                    <Button to="/catalog" variant="outline" className="w-full mt-4 relative overflow-hidden py-[16px] px-6 rounded-2xl text-sm font-semibold border-textPrimary/15 hover:border-textPrimary/30 hover:bg-surface/50 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-textPrimary/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out" />
+                      <span className="relative z-10">See Our Work</span>
                     </Button>
                     
                     <div className="w-12 h-px bg-textPrimary/10 my-8" />
