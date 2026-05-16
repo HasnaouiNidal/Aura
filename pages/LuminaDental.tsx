@@ -32,7 +32,7 @@ const SectionLabel = ({
 }) => (
   <div className="mb-5 flex items-center gap-3">
     <span className="h-px w-10 bg-slate-300" />
-    <span className="rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-600 dark:text-cyan-400 shadow-sm dark:shadow-none backdrop-blur">
+    <span className="rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-600 dark:text-teal-400 shadow-sm dark:shadow-none backdrop-blur">
       {eyebrow || label}
     </span>
   </div>
@@ -51,12 +51,12 @@ const FloatingHeroBadge = ({
 }) => (
   <div
     className={cn(
-      "absolute hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-5 py-4 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-cyan-200 hover:shadow-[0_26px_80px_rgba(14,165,233,0.16)] md:block",
+      "absolute hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-5 py-4 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-teal-200 hover:shadow-[0_26px_80px_rgba(14,165,233,0.16)] md:block",
       className
     )}
   >
     <div className="flex items-center gap-3">
-      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border bg-cyan-50 dark:bg-cyan-950/50 text-cyan-600 dark:text-cyan-400 border-cyan-100 dark:border-cyan-900/50">
+      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border bg-teal-50 dark:bg-teal-950/50 text-teal-600 dark:text-teal-400 border-teal-100 dark:border-teal-900/50">
         {icon}
       </div>
       <div>
@@ -78,10 +78,10 @@ const Badge = ({
   children: React.ReactNode;
   icon?: React.ReactNode;
 }) => (
-  <div className="group relative flex items-center gap-2 overflow-hidden rounded-full border border-slate-200 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-400 shadow-[0_16px_45px_rgba(15,23,42,0.04)] dark:shadow-none backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:text-white hover:shadow-[0_22px_70px_rgba(14,165,233,0.25)]">
-    <span className="absolute inset-0 -z-10 translate-y-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-transform duration-500 group-hover:translate-y-0" />
+  <div className="group relative flex items-center gap-2 overflow-hidden rounded-full border border-slate-200 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-400 shadow-[0_16px_45px_rgba(15,23,42,0.04)] dark:shadow-none backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-teal-300 hover:text-white hover:shadow-[0_22px_70px_rgba(14,165,233,0.25)]">
+    <span className="absolute inset-0 -z-10 translate-y-full bg-gradient-to-r from-teal-400 to-sky-500 transition-transform duration-500 group-hover:translate-y-0" />
     {icon && (
-      <span className="text-cyan-500 transition-colors duration-500 group-hover:text-white">
+      <span className="text-teal-500 transition-colors duration-500 group-hover:text-white">
         {icon}
       </span>
     )}
@@ -100,20 +100,20 @@ const PremiumCard = ({
 }) => (
   <div
     className={cn(
-      "group relative overflow-hidden rounded-[2rem] border border-slate-200/80 dark:border-slate-800/80 bg-white/85 dark:bg-slate-900/85 p-7 shadow-[0_24px_80px_rgba(15,23,42,0.05)] dark:shadow-none backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-cyan-200 hover:bg-white hover:shadow-[0_35px_110px_rgba(14,165,233,0.13)]",
+      "group relative overflow-hidden rounded-[2rem] border border-slate-200/80 dark:border-slate-800/80 bg-white/85 dark:bg-slate-900/85 p-7 shadow-[0_24px_80px_rgba(15,23,42,0.05)] dark:shadow-none backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-teal-200 hover:bg-white hover:shadow-[0_35px_110px_rgba(14,165,233,0.13)]",
       className
     )}
   >
     <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-cyan-100 blur-[60px]" />
-      <div className="absolute -bottom-24 -left-24 h-52 w-52 rounded-full bg-violet-100 blur-[70px]" />
+      <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-teal-100 blur-[60px]" />
+      <div className="absolute -bottom-24 -left-24 h-52 w-52 rounded-full bg-indigo-100 blur-[70px]" />
     </div>
 
     <div className="relative z-10">{children}</div>
 
     {bar && (
       <div className="absolute bottom-0 left-0 h-[3px] w-full bg-slate-100 dark:bg-slate-800">
-        <div className="h-full w-10 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-700 group-hover:w-full" />
+        <div className="h-full w-10 bg-gradient-to-r from-teal-400 to-sky-500 transition-all duration-700 group-hover:w-full" />
       </div>
     )}
   </div>
@@ -133,12 +133,12 @@ const GradientButton = ({
     className={cn(
       "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-4 text-sm font-semibold transition-all duration-500",
       variant === "primary"
-        ? "bg-gradient-to-r from-violet-600 to-blue-600 text-white shadow-[0_18px_45px_rgba(37,99,235,0.25)] hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(37,99,235,0.35)]"
-        : "border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 shadow-sm dark:shadow-none hover:-translate-y-1 hover:border-cyan-300 hover:text-white hover:shadow-[0_22px_70px_rgba(14,165,233,0.22)]"
+        ? "bg-gradient-to-r from-indigo-600 to-sky-600 text-white shadow-[0_18px_45px_rgba(37,99,235,0.25)] hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(37,99,235,0.35)]"
+        : "border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 shadow-sm dark:shadow-none hover:-translate-y-1 hover:border-teal-300 hover:text-white hover:shadow-[0_22px_70px_rgba(14,165,233,0.22)]"
     )}
   >
     {variant === "secondary" && (
-      <span className="absolute inset-0 -z-10 translate-y-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-transform duration-500 group-hover:translate-y-0" />
+      <span className="absolute inset-0 -z-10 translate-y-full bg-gradient-to-r from-teal-400 to-sky-500 transition-transform duration-500 group-hover:translate-y-0" />
     )}
 
     {children}
@@ -152,26 +152,26 @@ const GradientButton = ({
 );
 
 const FlowPill = ({ children }: { children: React.ReactNode }) => (
-  <div className="group relative overflow-hidden rounded-full border border-slate-200 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400 shadow-sm dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:text-white hover:shadow-[0_18px_50px_rgba(14,165,233,0.20)]">
-    <span className="absolute inset-0 -z-10 scale-x-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-transform duration-500 group-hover:scale-x-100" />
+  <div className="group relative overflow-hidden rounded-full border border-slate-200 dark:border-slate-800 bg-white/85 dark:bg-slate-900/85 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400 shadow-sm dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-teal-300 hover:text-white hover:shadow-[0_18px_50px_rgba(14,165,233,0.20)]">
+    <span className="absolute inset-0 -z-10 scale-x-0 bg-gradient-to-r from-teal-400 to-sky-500 transition-transform duration-500 group-hover:scale-x-100" />
     {children}
   </div>
 );
 
 const FlowArrow = () => (
-  <div className="hidden h-px w-8 bg-gradient-to-r from-slate-200 via-violet-200 to-slate-200 md:block" />
+  <div className="hidden h-px w-8 bg-gradient-to-r from-slate-200 via-indigo-200 to-slate-200 md:block" />
 );
 
 const IconCircle = ({
   icon,
-  color = "cyan",
+  color = "teal",
 }: {
   icon: React.ReactNode;
-  color?: "cyan" | "violet" | "amber" | "emerald" | "slate";
+  color?: "teal" | "indigo" | "amber" | "emerald" | "slate";
 }) => {
   const styles = {
-    cyan: "bg-cyan-50 dark:bg-cyan-950/50 text-cyan-600 dark:text-cyan-400 border-cyan-100 dark:border-cyan-900/50",
-    violet: "bg-violet-50 dark:bg-violet-950/50 text-violet-600 dark:text-violet-400 border-violet-100 dark:border-violet-900/50",
+    teal: "bg-teal-50 dark:bg-teal-950/50 text-teal-600 dark:text-teal-400 border-teal-100 dark:border-teal-900/50",
+    indigo: "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/50",
     amber: "bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 border-amber-100 dark:border-amber-900/50",
     emerald: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/50",
     slate: "bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border-slate-100 dark:border-slate-800",
@@ -343,9 +343,9 @@ const LuminaDental = () => {
   return (
     <main className="min-h-screen overflow-hidden bg-[#fbfbfc] dark:bg-slate-950 text-slate-950 dark:text-slate-50">
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[700px] w-[900px] -translate-x-1/2 rounded-full bg-violet-100/40 dark:bg-violet-900/20 blur-[130px]" />
-        <div className="absolute right-[-250px] top-[700px] h-[600px] w-[600px] rounded-full bg-cyan-100/40 dark:bg-cyan-900/20 blur-[140px]" />
-        <div className="absolute bottom-[500px] left-[-300px] h-[700px] w-[700px] rounded-full bg-blue-100/40 dark:bg-blue-900/20 blur-[140px]" />
+        <div className="absolute left-1/2 top-0 h-[700px] w-[900px] -translate-x-1/2 rounded-full bg-indigo-100/40 dark:bg-indigo-900/20 blur-[130px]" />
+        <div className="absolute right-[-250px] top-[700px] h-[600px] w-[600px] rounded-full bg-teal-100/40 dark:bg-teal-900/20 blur-[140px]" />
+        <div className="absolute bottom-[500px] left-[-300px] h-[700px] w-[700px] rounded-full bg-sky-100/40 dark:bg-sky-900/20 blur-[140px]" />
       </div>
 
       {/* SECTION 1 — HERO */}
@@ -417,8 +417,8 @@ const LuminaDental = () => {
               title="Service Clarity"
             />
 
-            <div className="group relative rounded-[2.4rem] border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 p-4 shadow-[0_40px_140px_rgba(15,23,42,0.14)] backdrop-blur transition-all duration-700 hover:-translate-y-3 hover:border-cyan-200 hover:shadow-[0_55px_160px_rgba(14,165,233,0.18)]">
-              <div className="pointer-events-none absolute inset-0 rounded-[2.4rem] bg-gradient-to-br from-cyan-100/0 via-white/0 to-violet-100/0 transition-all duration-700 group-hover:from-cyan-100/40 group-hover:to-violet-100/40" />
+            <div className="group relative rounded-[2.4rem] border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 p-4 shadow-[0_40px_140px_rgba(15,23,42,0.14)] backdrop-blur transition-all duration-700 hover:-translate-y-3 hover:border-teal-200 hover:shadow-[0_55px_160px_rgba(14,165,233,0.18)]">
+              <div className="pointer-events-none absolute inset-0 rounded-[2.4rem] bg-gradient-to-br from-teal-100/0 via-white/0 to-indigo-100/0 transition-all duration-700 group-hover:from-teal-100/40 group-hover:to-indigo-100/40" />
 
               <div className="relative rounded-[1.8rem] bg-slate-900 dark:bg-slate-950 p-3 shadow-inner">
                 <div className="mb-3 flex gap-2 px-2">
@@ -435,7 +435,7 @@ const LuminaDental = () => {
               </div>
             </div>
 
-            <div className="absolute -bottom-8 right-8 hidden w-44 rounded-[1.7rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3 shadow-[0_30px_90px_rgba(15,23,42,0.12)] transition-all duration-700 hover:-translate-y-3 hover:rotate-1 hover:border-cyan-200 hover:shadow-[0_36px_100px_rgba(14,165,233,0.18)] md:block">
+            <div className="absolute -bottom-8 right-8 hidden w-44 rounded-[1.7rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3 shadow-[0_30px_90px_rgba(15,23,42,0.12)] transition-all duration-700 hover:-translate-y-3 hover:rotate-1 hover:border-teal-200 hover:shadow-[0_36px_100px_rgba(14,165,233,0.18)] md:block">
               <div className="rounded-[1.2rem] bg-slate-950 dark:bg-slate-900 p-2">
                 <img
                   src={luminaScreenshot}
@@ -490,26 +490,26 @@ const LuminaDental = () => {
                 className="relative min-h-[190px] cursor-pointer"
               >
                 <div className="flex items-start justify-between">
-                  <span className="font-serif text-6xl font-semibold text-slate-100 transition-colors duration-500 group-hover:text-cyan-100">
+                  <span className="font-serif text-6xl font-semibold text-slate-100 transition-colors duration-500 group-hover:text-teal-100">
                     0{index + 1}
                   </span>
 
-                  <span className="flex h-10 w-10 scale-90 items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-cyan-500 opacity-0 shadow-sm dark:shadow-none transition-all duration-500 group-hover:scale-100 group-hover:opacity-100">
+                  <span className="flex h-10 w-10 scale-90 items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-teal-500 opacity-0 shadow-sm dark:shadow-none transition-all duration-500 group-hover:scale-100 group-hover:opacity-100">
                     <ArrowRight size={16} />
                   </span>
                 </div>
 
-                <h3 className="mt-7 text-xl font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+                <h3 className="mt-7 text-xl font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                   {item}
                 </h3>
               </PremiumCard>
             ))}
           </div>
 
-          <div className="group mt-10 rounded-[2.2rem] border border-red-100 dark:border-red-900/50 bg-gradient-to-br from-white to-red-50/30 p-7 shadow-[0_20px_70px_rgba(15,23,42,0.04)] dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-[0_28px_90px_rgba(14,165,233,0.12)]">
+          <div className="group mt-10 rounded-[2.2rem] border border-red-100 dark:border-red-900/50 bg-gradient-to-br from-white to-red-50/30 p-7 shadow-[0_20px_70px_rgba(15,23,42,0.04)] dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:shadow-[0_28px_90px_rgba(14,165,233,0.12)]">
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-red-400 transition-all duration-500 group-hover:bg-cyan-400" />
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 transition-colors duration-500 group-hover:text-cyan-600">
+              <span className="h-3 w-3 rounded-full bg-red-400 transition-all duration-500 group-hover:bg-teal-400" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 transition-colors duration-500 group-hover:text-teal-600">
                 Before NIDAM
               </p>
             </div>
@@ -521,7 +521,7 @@ const LuminaDental = () => {
                 <React.Fragment key={item}>
                   <FlowPill>{item}</FlowPill>
                   {index < 4 && (
-                    <div className="h-px w-8 bg-gradient-to-r from-red-200 to-slate-200 transition-all duration-500 group-hover:from-cyan-300 group-hover:to-blue-300" />
+                    <div className="h-px w-8 bg-gradient-to-r from-red-200 to-slate-200 transition-all duration-500 group-hover:from-teal-300 group-hover:to-sky-300" />
                   )}
                 </React.Fragment>
               ))}
@@ -535,7 +535,7 @@ const LuminaDental = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-5 flex justify-center">
-              <span className="rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-600 dark:text-cyan-400 shadow-sm dark:shadow-none">
+              <span className="rounded-full border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-600 dark:text-teal-400 shadow-sm dark:shadow-none">
                 How NIDAM built the system
               </span>
             </div>
@@ -559,15 +559,15 @@ const LuminaDental = () => {
               >
                 <div className="mb-6 flex items-center justify-between">
                   <div className="transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                    <IconCircle icon={phase.icon} color="violet" />
+                    <IconCircle icon={phase.icon} color="indigo" />
                   </div>
 
-                  <span className="font-serif text-6xl font-semibold text-slate-100 transition-colors duration-500 group-hover:text-cyan-100">
+                  <span className="font-serif text-6xl font-semibold text-slate-100 transition-colors duration-500 group-hover:text-teal-100">
                     {phase.number}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+                <h3 className="text-lg font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                   {phase.title}
                 </h3>
 
@@ -575,7 +575,7 @@ const LuminaDental = () => {
                   {phase.text}
                 </p>
 
-                <div className="mt-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-500 opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
+                <div className="mt-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-500 opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
                   Open phase logic <ArrowRight size={13} />
                 </div>
               </PremiumCard>
@@ -598,8 +598,8 @@ const LuminaDental = () => {
               NIDAM started by understanding the patient journey. We studied how a patient discovers a dental clinic, what creates fear, what builds trust, and what must happen before someone sends an appointment request.
             </p>
 
-            <div className="mt-8 rounded-[2rem] border border-violet-100 dark:border-violet-900/50 bg-violet-50/40 dark:bg-violet-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:bg-cyan-50/40 dark:bg-cyan-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+            <div className="mt-8 rounded-[2rem] border border-indigo-100 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:bg-teal-50/40 dark:bg-teal-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
                 Why this phase matters
               </p>
               <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
@@ -615,11 +615,11 @@ const LuminaDental = () => {
               ].map((item) => (
                 <PremiumCard key={item} className="cursor-pointer p-5">
                   <div className="flex items-start gap-3">
-                    <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-cyan-50 dark:bg-cyan-950/50 text-cyan-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 group-hover:text-white">
+                    <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-teal-50 dark:bg-teal-950/50 text-teal-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500 group-hover:text-white">
                       <Check size={15} />
                     </span>
 
-                    <p className="text-sm font-semibold leading-6 text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-blue-600">
+                    <p className="text-sm font-semibold leading-6 text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-sky-600">
                       {item}
                     </p>
                   </div>
@@ -627,7 +627,7 @@ const LuminaDental = () => {
               ))}
             </div>
 
-            <div className="mt-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.05)] dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-[0_30px_90px_rgba(14,165,233,0.12)]">
+            <div className="mt-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.05)] dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:shadow-[0_30px_90px_rgba(14,165,233,0.12)]">
               <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
                 Patient journey map
               </p>
@@ -666,13 +666,13 @@ const LuminaDental = () => {
                 {codeFeatures.map((feature) => (
                   <div
                     key={feature}
-                    className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-5 py-4 shadow-sm dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:bg-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.10)]"
+                    className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-5 py-4 shadow-sm dark:shadow-none transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:bg-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.10)]"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cyan-50 dark:bg-cyan-950/50 text-cyan-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 group-hover:text-white">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-teal-50 dark:bg-teal-950/50 text-teal-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500 group-hover:text-white">
                         <Check size={15} />
                       </span>
-                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors duration-500 group-hover:text-blue-600">
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors duration-500 group-hover:text-sky-600">
                         {feature}
                       </span>
                     </div>
@@ -680,8 +680,8 @@ const LuminaDental = () => {
                 ))}
               </div>
 
-              <div className="mt-7 rounded-[2rem] border border-cyan-100 dark:border-cyan-900/50 bg-cyan-50/40 dark:bg-cyan-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:bg-cyan-50 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400">
+              <div className="mt-7 rounded-[2rem] border border-teal-100 dark:border-teal-900/50 bg-teal-50/40 dark:bg-teal-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal-300 hover:bg-teal-50 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-600 dark:text-teal-400">
                   What this phase solved
                 </p>
                 <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
@@ -699,7 +699,7 @@ const LuminaDental = () => {
                 )}
               </div>
 
-              <div className="group rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-[0_40px_130px_rgba(15,23,42,0.12)] transition-all duration-700 hover:-translate-y-3 hover:border-cyan-200 hover:shadow-[0_55px_160px_rgba(14,165,233,0.18)]">
+              <div className="group rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-[0_40px_130px_rgba(15,23,42,0.12)] transition-all duration-700 hover:-translate-y-3 hover:border-teal-200 hover:shadow-[0_55px_160px_rgba(14,165,233,0.18)]">
                 <div className="rounded-[1.8rem] bg-slate-950 dark:bg-slate-900 p-4">
                   <div className="mb-4 flex items-center justify-between">
                     <div className="flex gap-2">
@@ -720,9 +720,9 @@ const LuminaDental = () => {
                 </div>
               </div>
 
-              <div className="mt-5 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-950 dark:bg-slate-900 p-6 text-white shadow-[0_30px_100px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300">
+              <div className="mt-5 rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-950 dark:bg-slate-900 p-6 text-white shadow-[0_30px_100px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1 hover:border-teal-300">
                 <div className="mb-4 flex items-center gap-3">
-                  <Code2 className="text-cyan-300" size={18} />
+                  <Code2 className="text-teal-300" size={18} />
                   <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
                     Interface logic
                   </span>
@@ -763,9 +763,9 @@ const LuminaDental = () => {
                   <PremiumCard key={service} className="cursor-pointer p-5">
                     <div className="flex items-center gap-3">
                       <div className="transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
-                        <IconCircle icon={<Sparkles size={16} />} color="violet" />
+                        <IconCircle icon={<Sparkles size={16} />} color="indigo" />
                       </div>
-                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-blue-600">
+                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-sky-600">
                         {service}
                       </p>
                     </div>
@@ -773,17 +773,17 @@ const LuminaDental = () => {
                 ))}
               </div>
 
-              <div className="mt-7 rounded-[2rem] border border-violet-100 dark:border-violet-900/50 bg-violet-50/40 dark:bg-violet-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:bg-cyan-50/40 dark:bg-cyan-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
+              <div className="mt-7 rounded-[2rem] border border-indigo-100 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:bg-teal-50/40 dark:bg-teal-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
                 <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
                   Social media was treated as a trust engine, not a random posting space.
                 </p>
               </div>
             </div>
 
-            <div className="group rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-3 hover:border-cyan-200 hover:shadow-[0_50px_150px_rgba(14,165,233,0.16)]">
+            <div className="group rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-3 hover:border-teal-200 hover:shadow-[0_50px_150px_rgba(14,165,233,0.16)]">
               <div className="mb-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <IconCircle icon={<Instagram size={18} />} color="violet" />
+                  <IconCircle icon={<Instagram size={18} />} color="indigo" />
                   <div>
                     <p className="text-sm font-semibold text-slate-950 dark:text-slate-50">
                       Lumina Dental
@@ -794,7 +794,7 @@ const LuminaDental = () => {
                   </div>
                 </div>
 
-                <button className="rounded-full bg-slate-950 dark:bg-slate-900 px-4 py-2 text-xs font-semibold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500">
+                <button className="rounded-full bg-slate-950 dark:bg-slate-900 px-4 py-2 text-xs font-semibold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500">
                   Follow
                 </button>
               </div>
@@ -804,7 +804,7 @@ const LuminaDental = () => {
                   "Treatments", "Our Team", "The Clinic", "Before/After", "Testimonials", "Patient Care",
                 ].map((highlight) => (
                   <div key={highlight} className="min-w-[76px] text-center">
-                    <div className="mx-auto mb-2 h-16 w-16 rounded-full border border-violet-200 bg-gradient-to-br from-violet-50 to-blue-50 p-1 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300">
+                    <div className="mx-auto mb-2 h-16 w-16 rounded-full border border-indigo-200 bg-gradient-to-br from-indigo-50 to-sky-50 p-1 transition-all duration-500 hover:-translate-y-1 hover:border-teal-300">
                       <div className="h-full w-full rounded-full bg-white dark:bg-slate-900" />
                     </div>
                     <p className="text-[10px] font-semibold text-slate-500 dark:text-slate-400">
@@ -819,9 +819,9 @@ const LuminaDental = () => {
                   <div
                     key={index}
                     className={cn(
-                      "aspect-square rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br shadow-sm dark:shadow-none transition duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-[0_20px_60px_rgba(14,165,233,0.12)]",
+                      "aspect-square rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br shadow-sm dark:shadow-none transition duration-500 hover:-translate-y-1 hover:border-teal-300 hover:shadow-[0_20px_60px_rgba(14,165,233,0.12)]",
                       index % 3 === 0 && "from-slate-900 to-slate-700",
-                      index % 3 === 1 && "from-cyan-50 to-violet-100",
+                      index % 3 === 1 && "from-teal-50 to-indigo-100",
                       index % 3 === 2 && "from-white to-slate-100"
                     )}
                   />
@@ -853,10 +853,10 @@ const LuminaDental = () => {
                 ].map((step, index) => (
                   <PremiumCard key={step} className="cursor-pointer p-5">
                     <div className="flex items-center gap-4">
-                      <span className="font-serif text-3xl font-semibold text-slate-200 dark:text-slate-700 transition-colors duration-500 group-hover:text-cyan-100">
+                      <span className="font-serif text-3xl font-semibold text-slate-200 dark:text-slate-700 transition-colors duration-500 group-hover:text-teal-100">
                         0{index + 1}
                       </span>
-                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-blue-600">
+                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-sky-600">
                         {step}
                       </p>
                     </div>
@@ -866,7 +866,7 @@ const LuminaDental = () => {
             </div>
 
             <div>
-              <div className="group rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/50 bg-gradient-to-br from-white to-emerald-50/40 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-3 hover:border-cyan-200 hover:shadow-[0_50px_150px_rgba(14,165,233,0.16)]">
+              <div className="group rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/50 bg-gradient-to-br from-white to-emerald-50/40 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-3 hover:border-teal-200 hover:shadow-[0_50px_150px_rgba(14,165,233,0.16)]">
                 <div className="mb-6 flex items-center gap-3">
                   <IconCircle icon={<MessageCircle size={18} />} color="emerald" />
                   <div>
@@ -880,7 +880,7 @@ const LuminaDental = () => {
                 </div>
 
                 <div className="rounded-[2rem] bg-slate-950 dark:bg-slate-900 p-5 transition-all duration-700 group-hover:bg-[#061624]">
-                  <div className="ml-auto max-w-[88%] rounded-2xl rounded-tr-sm bg-emerald-500 px-5 py-4 text-sm leading-7 text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500">
+                  <div className="ml-auto max-w-[88%] rounded-2xl rounded-tr-sm bg-emerald-500 px-5 py-4 text-sm leading-7 text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500">
                     Hi Lumina Dental, I would like to schedule a consultation.<br />
                     Treatment: ______<br />
                     Preferred day: ______<br />
@@ -900,10 +900,10 @@ const LuminaDental = () => {
                 ].map((benefit) => (
                   <PremiumCard key={benefit} className="cursor-pointer p-5">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 group-hover:text-white">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500 group-hover:text-white">
                         <Check size={15} />
                       </span>
-                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-blue-600">
+                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 transition-colors duration-500 group-hover:text-sky-600">
                         {benefit}
                       </p>
                     </div>
@@ -934,7 +934,7 @@ const LuminaDental = () => {
                 After the inquiry enters the system, it should not disappear inside random messages. NIDAM mapped a simple CRM logic so every patient inquiry can be tracked and followed up correctly.
               </p>
 
-              <div className="mt-8 rounded-[2rem] border border-cyan-100 dark:border-cyan-900/50 bg-cyan-50/40 dark:bg-cyan-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:bg-cyan-50 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
+              <div className="mt-8 rounded-[2rem] border border-teal-100 dark:border-teal-900/50 bg-teal-50/40 dark:bg-teal-950/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal-300 hover:bg-teal-50 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
                 <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
                   Patient opportunities should be visible, organized, and actionable.
                 </p>
@@ -949,23 +949,23 @@ const LuminaDental = () => {
                   return (
                     <div
                       key={stage}
-                      className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/70 p-4 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-200 hover:bg-white hover:shadow-[0_25px_80px_rgba(14,165,233,0.12)]"
+                      className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/70 p-4 transition-all duration-500 hover:-translate-y-2 hover:border-teal-200 hover:bg-white hover:shadow-[0_25px_80px_rgba(14,165,233,0.12)]"
                     >
                       <div className="absolute bottom-0 left-0 h-[3px] w-full bg-slate-100 dark:bg-slate-800">
-                        <div className="h-full w-8 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-700 group-hover:w-full" />
+                        <div className="h-full w-8 bg-gradient-to-r from-teal-400 to-sky-500 transition-all duration-700 group-hover:w-full" />
                       </div>
 
                       <div className="mb-4 flex items-center justify-between">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400 transition-colors duration-500 group-hover:text-cyan-600">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400 transition-colors duration-500 group-hover:text-teal-600">
                           {stage}
                         </p>
 
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-900 text-xs font-semibold text-slate-400 dark:text-slate-500 shadow-sm dark:shadow-none transition-all duration-500 group-hover:bg-blue-500 group-hover:text-white">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-900 text-xs font-semibold text-slate-400 dark:text-slate-500 shadow-sm dark:shadow-none transition-all duration-500 group-hover:bg-sky-500 group-hover:text-white">
                           {index + 1}
                         </span>
                       </div>
 
-                      <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm dark:shadow-none transition-all duration-500 group-hover:border-cyan-100">
+                      <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm dark:shadow-none transition-all duration-500 group-hover:border-teal-100">
                         <p className="text-sm font-semibold leading-6 text-slate-950 dark:text-slate-50">
                           {lead.title}
                         </p>
@@ -1007,7 +1007,7 @@ const LuminaDental = () => {
                   <PremiumCard key={lead.title} className="cursor-pointer p-5">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <p className="text-lg font-semibold text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+                        <p className="text-lg font-semibold text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                           {lead.title}
                         </p>
 
@@ -1019,7 +1019,7 @@ const LuminaDental = () => {
                         </div>
                       </div>
 
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-cyan-50 dark:bg-cyan-950/50 text-cyan-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-500 group-hover:text-white">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-teal-50 dark:bg-teal-950/50 text-teal-500 transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-sky-500 group-hover:text-white">
                         <Database size={17} />
                       </span>
                     </div>
@@ -1045,7 +1045,7 @@ const LuminaDental = () => {
               NIDAM also designed the project as a measurable system. The goal was not only to launch a beautiful clinic page, but to create a structure that can later show where appointment inquiries come from, what services patients view, and where the patient journey can improve.
             </p>
 
-            <div className="mt-8 rounded-[2rem] border border-amber-100 dark:border-amber-900/50 bg-amber-50/50 dark:bg-amber-950/50 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:bg-cyan-50/40 dark:bg-cyan-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
+            <div className="mt-8 rounded-[2rem] border border-amber-100 dark:border-amber-900/50 bg-amber-50/50 dark:bg-amber-950/50 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:bg-teal-50/40 dark:bg-teal-950/40 hover:shadow-[0_24px_80px_rgba(14,165,233,0.12)]">
               <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
                 Most serious inquiries can come after patients explore treatment pages and then move to WhatsApp. This means reassurance and page hierarchy matter.
               </p>
@@ -1057,7 +1057,7 @@ const LuminaDental = () => {
             </p>
           </div>
 
-          <div className="rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-2 hover:border-cyan-200 hover:shadow-[0_45px_130px_rgba(14,165,233,0.14)]">
+          <div className="rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-2 hover:border-teal-200 hover:shadow-[0_45px_130px_rgba(14,165,233,0.14)]">
             <div className="mb-8 flex items-center justify-between">
               <div>
                 <p className="text-sm font-semibold text-slate-950 dark:text-slate-50">
@@ -1074,16 +1074,16 @@ const LuminaDental = () => {
               {reportItems.map((item, index) => (
                 <div
                   key={item}
-                  className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/70 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:bg-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.10)]"
+                  className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/70 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:bg-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.10)]"
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500 transition-colors duration-500 group-hover:text-cyan-600">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500 transition-colors duration-500 group-hover:text-teal-600">
                     {item}
                   </p>
 
                   <div className="mt-4 h-2 rounded-full bg-slate-200 dark:bg-slate-700">
                     <div
                       className={cn(
-                        "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-700 group-hover:w-full",
+                        "h-2 rounded-full bg-gradient-to-r from-teal-400 to-sky-500 transition-all duration-700 group-hover:w-full",
                         index === 0 && "w-[45%]",
                         index === 1 && "w-[52%]",
                         index === 2 && "w-[58%]",
@@ -1114,7 +1114,7 @@ const LuminaDental = () => {
           <SectionLabel label="The full system at a glance" />
 
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-8 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-2 hover:border-cyan-200 hover:shadow-[0_45px_130px_rgba(14,165,233,0.14)]">
+            <div className="rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-8 shadow-[0_35px_110px_rgba(15,23,42,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.5)] transition-all duration-700 hover:-translate-y-2 hover:border-teal-200 hover:shadow-[0_45px_130px_rgba(14,165,233,0.14)]">
               <div className="mx-auto flex max-w-xl flex-col items-center gap-4">
                 {[
                   "NIDAM Media Team",
@@ -1124,12 +1124,12 @@ const LuminaDental = () => {
                   "Reporting & Optimization",
                 ].map((item, index, array) => (
                   <React.Fragment key={item}>
-                    <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-r from-white to-slate-50 px-6 py-5 text-center text-sm font-semibold text-slate-800 dark:text-slate-200 shadow-sm dark:shadow-none transition duration-500 hover:-translate-y-1 hover:border-cyan-300 hover:text-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.12)]">
-                      <span className="absolute inset-0 -z-10 scale-x-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-transform duration-500 group-hover:scale-x-100" />
+                    <div className="group relative w-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-r from-white to-slate-50 px-6 py-5 text-center text-sm font-semibold text-slate-800 dark:text-slate-200 shadow-sm dark:shadow-none transition duration-500 hover:-translate-y-1 hover:border-teal-300 hover:text-white hover:shadow-[0_20px_70px_rgba(14,165,233,0.12)]">
+                      <span className="absolute inset-0 -z-10 scale-x-0 bg-gradient-to-r from-teal-400 to-sky-500 transition-transform duration-500 group-hover:scale-x-100" />
                       {item}
                     </div>
                     {index < array.length - 1 && (
-                      <div className="h-8 w-px bg-gradient-to-b from-violet-200 to-cyan-200" />
+                      <div className="h-8 w-px bg-gradient-to-b from-indigo-200 to-teal-200" />
                     )}
                   </React.Fragment>
                 ))}
@@ -1145,11 +1145,11 @@ const LuminaDental = () => {
                 {systemChecklist.map((item) => (
                   <div
                     key={item}
-                    className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:text-blue-600 hover:shadow-[0_18px_50px_rgba(14,165,233,0.10)]"
+                    className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:text-sky-600 hover:shadow-[0_18px_50px_rgba(14,165,233,0.10)]"
                   >
                     <div className="flex items-center gap-3">
-                      <Check size={17} className="text-cyan-500" />
-                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors duration-500 group-hover:text-blue-600">
+                      <Check size={17} className="text-teal-500" />
+                      <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors duration-500 group-hover:text-sky-600">
                         {item}
                       </span>
                     </div>
@@ -1176,7 +1176,7 @@ const LuminaDental = () => {
                 {beforeItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-red-100 dark:border-red-900/50 bg-white dark:bg-slate-900 px-5 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:text-blue-600"
+                    className="rounded-2xl border border-red-100 dark:border-red-900/50 bg-white dark:bg-slate-900 px-5 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:text-sky-600"
                   >
                     {item}
                   </div>
@@ -1184,7 +1184,7 @@ const LuminaDental = () => {
               </div>
             </PremiumCard>
 
-            <PremiumCard className="bg-gradient-to-br from-white to-cyan-50/40 p-8">
+            <PremiumCard className="bg-gradient-to-br from-white to-teal-50/40 p-8">
               <h3 className="font-serif text-5xl font-semibold tracking-[-0.05em] text-slate-950 dark:text-slate-50">
                 After
               </h3>
@@ -1193,7 +1193,7 @@ const LuminaDental = () => {
                 {afterItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-cyan-100 dark:border-cyan-900/50 bg-white dark:bg-slate-900 px-5 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-200 hover:text-blue-600"
+                    className="rounded-2xl border border-teal-100 dark:border-teal-900/50 bg-white dark:bg-slate-900 px-5 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300 transition-all duration-500 hover:-translate-y-1 hover:border-teal-200 hover:text-sky-600"
                   >
                     {item}
                   </div>
@@ -1211,8 +1211,8 @@ const LuminaDental = () => {
 
           <div className="grid gap-5 md:grid-cols-3">
             <PremiumCard>
-              <IconCircle icon={<Users size={18} />} color="violet" />
-              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+              <IconCircle icon={<Users size={18} />} color="indigo" />
+              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                 NIDAM Strategy Team
               </h3>
               <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
@@ -1221,8 +1221,8 @@ const LuminaDental = () => {
             </PremiumCard>
 
             <PremiumCard>
-              <IconCircle icon={<Code2 size={18} />} color="cyan" />
-              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+              <IconCircle icon={<Code2 size={18} />} color="teal" />
+              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                 NIDAM Code Team
               </h3>
               <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
@@ -1232,7 +1232,7 @@ const LuminaDental = () => {
 
             <PremiumCard>
               <IconCircle icon={<Instagram size={18} />} color="amber" />
-              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+              <h3 className="mt-7 font-serif text-3xl font-semibold tracking-[-0.04em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                 NIDAM Media Team
               </h3>
               <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
@@ -1274,7 +1274,7 @@ const LuminaDental = () => {
             {outcomeCards.map((outcome) => (
               <PremiumCard key={outcome} className="cursor-pointer p-6">
                 <IconCircle icon={<TrendingUp size={18} />} color="emerald" />
-                <h3 className="mt-6 text-xl font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-blue-600">
+                <h3 className="mt-6 text-xl font-semibold tracking-[-0.03em] text-slate-950 dark:text-slate-50 transition-colors duration-500 group-hover:text-sky-600">
                   {outcome}
                 </h3>
               </PremiumCard>
@@ -1287,12 +1287,12 @@ const LuminaDental = () => {
       <section className="px-6 pb-28 pt-10 lg:px-10 lg:pb-36">
         <div className="mx-auto max-w-7xl">
           <div className="relative overflow-hidden rounded-[3rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-[0_45px_140px_rgba(15,23,42,0.10)] md:p-14 lg:p-20">
-            <div className="absolute right-[-160px] top-[-160px] h-[420px] w-[420px] rounded-full bg-violet-100 blur-[100px]" />
-            <div className="absolute bottom-[-160px] left-[-160px] h-[420px] w-[420px] rounded-full bg-cyan-100 blur-[100px]" />
+            <div className="absolute right-[-160px] top-[-160px] h-[420px] w-[420px] rounded-full bg-indigo-100 blur-[100px]" />
+            <div className="absolute bottom-[-160px] left-[-160px] h-[420px] w-[420px] rounded-full bg-teal-100 blur-[100px]" />
 
             <div className="relative grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div>
-                <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-600 dark:text-cyan-400">
+                <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-600 dark:text-teal-400">
                   No fake promises. Just better digital structure.
                 </p>
 
@@ -1315,7 +1315,7 @@ const LuminaDental = () => {
                 </div>
               </div>
 
-              <div className="rounded-[2.4rem] border border-slate-200 dark:border-slate-800 bg-slate-950 dark:bg-slate-900 p-7 text-white shadow-[0_30px_90px_rgba(15,23,42,0.14)] transition-all duration-700 hover:-translate-y-3 hover:border-cyan-300 hover:shadow-[0_45px_130px_rgba(14,165,233,0.18)]">
+              <div className="rounded-[2.4rem] border border-slate-200 dark:border-slate-800 bg-slate-950 dark:bg-slate-900 p-7 text-white shadow-[0_30px_90px_rgba(15,23,42,0.14)] transition-all duration-700 hover:-translate-y-3 hover:border-teal-300 hover:shadow-[0_45px_130px_rgba(14,165,233,0.18)]">
                 <div className="mb-8 flex items-center justify-between">
                   <div>
                     <p className="text-sm font-semibold">NIDAM System</p>
@@ -1332,12 +1332,12 @@ const LuminaDental = () => {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 dark:bg-slate-900/5 px-5 py-4 transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10 dark:bg-slate-900/10"
+                      className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 dark:bg-slate-900/5 px-5 py-4 transition-all duration-500 hover:-translate-y-1 hover:border-teal-300/40 hover:bg-white/10 dark:bg-slate-900/10"
                     >
                       <span className="text-sm text-slate-200 dark:text-slate-700">{item}</span>
                       <Check
                         size={16}
-                        className="text-cyan-300 transition-transform duration-500 group-hover:scale-125"
+                        className="text-teal-300 transition-transform duration-500 group-hover:scale-125"
                       />
                     </div>
                   ))}
